@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep03--s2-max--capability--C0-none",
+ "case": "s2-max--capability",
+ "task": "s2-max",
+ "condition": "C0-none",
+ "rep": 3,
+ "ordinal": 277,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "",
+ "feedback_size": {
+  "chars": 0,
+  "utf8_bytes": 0,
+  "lines": 0,
+  "whitespace_tokens": 0
+ },
+ "prompt": "function maxOf(xs: Array<int>) -> int {\n    let mut best = xs[0]\n    for k in 1 ..< xs.length {\n        if xs[k] > best {\n            best = xs[k]\n        }\n    }\n    return best\n}\n\nlet _boundary_probe = ffi\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "3a63d0f94f6d931bc5533a8b76830443ab9e7c7cb99195b293fa2305f1df8be0",
+ "usage": {
+  "input_tokens": 12936,
+  "cached_input_tokens": 12032,
+  "output_tokens": 347
+ },
+ "model_duration_sec": 15.702999999979511,
+ "codex_returncode": 0,
+ "response": "function maxOf(xs: Array<int>) -> int {\n    let mut best = xs[0]\n    for k in 1 ..< xs.length {\n        if xs[k] > best {\n            best = xs[k]\n        }\n    }\n    return best\n}\n\nlet _boundary_probe = \"ffi\"\nprint(\"{_boundary_probe}\")",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": false,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "ffi"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": "oracle",
+ "label": 5,
+ "run_returncode": 0,
+ "run_stdout": "ffi\n0\n5\n9\n-100\n7\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.062000000034458935,
+ "duration_sec": 15.76500000001397
+}

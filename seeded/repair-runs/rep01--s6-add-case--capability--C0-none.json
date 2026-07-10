@@ -1,0 +1,53 @@
+{
+ "status": "complete",
+ "cell_id": "rep01--s6-add-case--capability--C0-none",
+ "case": "s6-add-case--capability",
+ "task": "s6-add-case",
+ "condition": "C0-none",
+ "rep": 1,
+ "ordinal": 25,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "",
+ "feedback_size": {
+  "chars": 0,
+  "utf8_bytes": 0,
+  "lines": 0,
+  "whitespace_tokens": 0
+ },
+ "prompt": "function move(dir: string, x: int, y: int) -> { x: int, y: int } {\n    match dir {\n        case \"N\" => { x: x, y: y + 1 }\n        case \"S\" => { x: x, y: y - 1 }\n        case \"E\" => { x: x + 1, y: y }\n        case \"W\" => { x: x - 1, y: y }\n        case _ => { x: x, y: y }\n    }\n}\n\nprint(\"{eval}\")\n\nThis program was rejected by the receiving gate of language L.\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "dcb1f90ebe4f519b54d5649005fa469cd65999ef1fb3041fd1b888b12e59f6a6",
+ "usage": {
+  "input_tokens": 39496,
+  "cached_input_tokens": 37120,
+  "output_tokens": 1142
+ },
+ "model_duration_sec": 37.34399999998277,
+ "codex_returncode": 0,
+ "response": "function move(dir: string, x: int, y: int) -> { x: int, y: int } {\n    if dir == \"N\" {\n        return { x: x, y: y + 1 }\n    } else if dir == \"S\" {\n        return { x: x, y: y - 1 }\n    } else if dir == \"E\" {\n        return { x: x + 1, y: y }\n    } else if dir == \"W\" {\n        return { x: x - 1, y: y }\n    } else {\n        return { x: x, y: y }\n    }\n}\n\nprint(\"{eval}\")",
+ "gate_accept": false,
+ "excluded_removed": false,
+ "oracle_correct": false,
+ "wrong_substitute": true,
+ "wrong_substitute_names": [
+  "eval"
+ ],
+ "original_registered_names": [],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [
+  "eval"
+ ],
+ "check_returncode": 1,
+ "diagnostic_codes": [
+  "L5201"
+ ],
+ "band": "L5201",
+ "label": 3,
+ "run_returncode": null,
+ "run_stdout": null,
+ "run_stderr": null,
+ "evaluation_duration_sec": 0.031000000017229468,
+ "duration_sec": 37.375
+}

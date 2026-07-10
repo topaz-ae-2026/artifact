@@ -1,0 +1,5 @@
+Reading prompt from stdin...
+2026-07-10T08:58:18.792975Z ERROR codex_core::exec: exec error: windows sandbox: helper_unknown_error: apply deny-read ACLs
+2026-07-10T08:58:18.793296Z ERROR codex_core::tools::router: error=execution error: Io(Custom { kind: Other, error: "windows sandbox: helper_unknown_error: apply deny-read ACLs" })
+2026-07-10T08:58:23.287118Z ERROR codex_core::exec: exec error: windows sandbox: helper_unknown_error: apply deny-read ACLs
+2026-07-10T08:58:23.287306Z ERROR codex_core::tools::router: error=execution error: Io(Custom { kind: Other, error: "windows sandbox: helper_unknown_error: apply deny-read ACLs" })

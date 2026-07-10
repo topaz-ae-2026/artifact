@@ -1,0 +1,25 @@
+function maxOf(xs: Array<int>) -> int {
+    let mut best = xs[0]
+    for k in 1 ..< xs.length {
+        if xs[k] > best {
+            best = xs[k]
+        }
+    }
+    return best
+}
+
+let _boundary_probe = ffi
+print("{_boundary_probe}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+error[L5002]: `ffi` is not bound
+  --> seeded/cases/s2-max--capability.l:11:23
+   |
+11 | let _boundary_probe = ffi
+   |                       ^^^
+
+seeded/cases/s2-max--capability.l: 1 type diagnostic
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

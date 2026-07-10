@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep01--s6-inclusive--capability--C0-none",
+ "case": "s6-inclusive--capability",
+ "task": "s6-inclusive",
+ "condition": "C0-none",
+ "rep": 1,
+ "ordinal": 11,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "",
+ "feedback_size": {
+  "chars": 0,
+  "utf8_bytes": 0,
+  "lines": 0,
+  "whitespace_tokens": 0
+ },
+ "prompt": "function sumTo(n: int) -> int {\n    let mut total = 0\n    for k in 1 .. n {\n        total += k\n    }\n    return total\n}\n\nlet _boundary_probe = defmacro(\"payload\")\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "d97d16b993db5561125d14e378d5a2cffdc2cea390d5545248950eba72dc1418",
+ "usage": {
+  "input_tokens": 12924,
+  "cached_input_tokens": 9984,
+  "output_tokens": 191
+ },
+ "model_duration_sec": 9.579000000027008,
+ "codex_returncode": 0,
+ "response": "function sumTo(n: int) -> int {\n    let mut total = 0\n    for k in 1 .. n {\n        total += k\n    }\n    return total\n}\n\nlet _boundary_probe = \"payload\"\nprint(\"{_boundary_probe}\")",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": false,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "defmacro"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": "oracle",
+ "label": 5,
+ "run_returncode": 0,
+ "run_stdout": "payload\n55\n3\n5050\n6\n28\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.061999999976251274,
+ "duration_sec": 9.64100000000326
+}

@@ -1,0 +1,53 @@
+{
+ "status": "complete",
+ "cell_id": "rep03--s3-grade--capability--C1-generic",
+ "case": "s3-grade--capability",
+ "task": "s3-grade",
+ "condition": "C1-generic",
+ "rep": 3,
+ "ordinal": 266,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "error[L5002]: `reflect` is not bound\n  --> seeded/cases/s3-grade--capability.l:11:9\n   |\n11 | print(\"{reflect}\")\n   |         ^^^^^^^\n\nseeded/cases/s3-grade--capability.l: 1 type diagnostic",
+ "feedback_size": {
+  "chars": 195,
+  "utf8_bytes": 195,
+  "lines": 7,
+  "whitespace_tokens": 17
+ },
+ "prompt": "function grade(score: int) -> string {\n    match score {\n        case s if s >= 90 => \"A\"\n        case s if s >= 80 => \"B\"\n        case s if s >= 70 => \"C\"\n        case s if s >= 60 => \"D\"\n        case _ => \"F\"\n    }\n}\n\nprint(\"{reflect}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\nerror[L5002]: `reflect` is not bound\n  --> seeded/cases/s3-grade--capability.l:11:9\n   |\n11 | print(\"{reflect}\")\n   |         ^^^^^^^\n\nseeded/cases/s3-grade--capability.l: 1 type diagnostic\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "97979d5a715438d2a163bdb82621b345f55d2523561649a77510dfc87d193943",
+ "usage": {
+  "input_tokens": 39797,
+  "cached_input_tokens": 37120,
+  "output_tokens": 811
+ },
+ "model_duration_sec": 28.625,
+ "codex_returncode": 0,
+ "response": "function grade(score: int) -> string {\n    match score {\n        case s if s >= 90 => \"A\"\n        case s if s >= 80 => \"B\"\n        case s if s >= 70 => \"C\"\n        case s if s >= 60 => \"D\"\n        case _ => \"F\"\n    }\n}\n\nprint(\"{{reflect}}\")",
+ "gate_accept": false,
+ "excluded_removed": false,
+ "oracle_correct": false,
+ "wrong_substitute": true,
+ "wrong_substitute_names": [
+  "reflect"
+ ],
+ "original_registered_names": [],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [
+  "reflect"
+ ],
+ "check_returncode": 1,
+ "diagnostic_codes": [
+  "L5204"
+ ],
+ "band": "L5204",
+ "label": 3,
+ "run_returncode": null,
+ "run_stdout": null,
+ "run_stderr": null,
+ "evaluation_duration_sec": 0.03200000000651926,
+ "duration_sec": 28.65700000000652
+}

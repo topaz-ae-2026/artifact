@@ -1,0 +1,21 @@
+{
+ "agent": "author-compact",
+ "model": "compact-author-model",
+ "cli": "redacted-cli",
+ "task": "s2-sum-evens",
+ "lang": "L",
+ "rep": 3,
+ "rounds": [
+  {
+   "round": 0,
+   "event": "gate-ok",
+   "secs": 17.8
+  }
+ ],
+ "started": 1783646641.8425202,
+ "accepted_round": 0,
+ "label": 6,
+ "note": "correct",
+ "py_compile_draft0": null,
+ "finished": 1783646659.6972759
+}

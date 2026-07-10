@@ -1,0 +1,8 @@
+{"code":"L0001","severity":"error","message":"unknown character ```","primary":{"file":"gated.l","line":3,"col":16,"endLine":3,"endCol":17,"lo":85,"hi":86,"message":""},"secondary":[],"notes":[]}
+{"code":"L0001","severity":"error","message":"unknown character `$`","primary":{"file":"gated.l","line":3,"col":19,"endLine":3,"endCol":20,"lo":88,"hi":89,"message":""},"secondary":[],"notes":[]}
+{"code":"L0001","severity":"error","message":"unknown character ```","primary":{"file":"gated.l","line":3,"col":26,"endLine":3,"endCol":27,"lo":95,"hi":96,"message":""},"secondary":[],"notes":[]}
+{"code":"L0001","severity":"error","message":"unknown character ```","primary":{"file":"gated.l","line":5,"col":12,"endLine":5,"endCol":13,"lo":115,"hi":116,"message":""},"secondary":[],"notes":[]}
+{"code":"L0001","severity":"error","message":"unknown character `$`","primary":{"file":"gated.l","line":5,"col":13,"endLine":5,"endCol":14,"lo":116,"hi":117,"message":""},"secondary":[],"notes":[]}
+{"code":"L0001","severity":"error","message":"unknown character `$`","primary":{"file":"gated.l","line":5,"col":18,"endLine":5,"endCol":19,"lo":121,"hi":122,"message":""},"secondary":[],"notes":[]}
+{"code":"L0001","severity":"error","message":"unknown character ```","primary":{"file":"gated.l","line":5,"col":26,"endLine":5,"endCol":27,"lo":129,"hi":130,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected `{`","primary":{"file":"gated.l","line":1,"col":41,"endLine":1,"endCol":42,"lo":40,"hi":41,"message":""},"secondary":[],"notes":[]}

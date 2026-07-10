@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep02--s2-sum-evens--capability--C0-none",
+ "case": "s2-sum-evens--capability",
+ "task": "s2-sum-evens",
+ "condition": "C0-none",
+ "rep": 2,
+ "ordinal": 169,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "",
+ "feedback_size": {
+  "chars": 0,
+  "utf8_bytes": 0,
+  "lines": 0,
+  "whitespace_tokens": 0
+ },
+ "prompt": "function sumEvens(xs: Array<int>) -> int {\n    let mut total = 0\n    for x in xs {\n        if x % 2 == 0 {\n            total += x\n        }\n    }\n    return total\n}\n\nlet _boundary_probe = require(\"payload\")\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "79ed721e6f6d10440fbcea70a43fd983bdfdc7f2c5b5f30e59ab0243eeeebaf1",
+ "usage": {
+  "input_tokens": 12934,
+  "cached_input_tokens": 12032,
+  "output_tokens": 164
+ },
+ "model_duration_sec": 7.186999999976251,
+ "codex_returncode": 0,
+ "response": "function sumEvens(xs: Array<int>) -> int {\n    let mut total = 0\n    for x in xs {\n        if x % 2 == 0 {\n            total += x\n        }\n    }\n    return total\n}",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": true,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "require"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": null,
+ "label": 6,
+ "run_returncode": 0,
+ "run_stdout": "12\n0\n0\n36\n8\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.06300000002374873,
+ "duration_sec": 7.25
+}

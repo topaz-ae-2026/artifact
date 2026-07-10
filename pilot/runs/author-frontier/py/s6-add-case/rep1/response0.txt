@@ -1,0 +1,88 @@
+```python
+from dataclasses import dataclass
+
+
+@dataclass
+class Point:
+    x: int
+    y: int
+
+
+def move(dir: str, x: int, y: int) -> Point:
+    if dir == "N":
+        return Point(x=x, y=y + 1)
+    if dir == "S":
+        return Point(x=x, y=y - 1)
+    if dir == "E":
+        return Point(x=x + 1, y=y)
+    if dir == "W":
+        return Point(x=x - 1, y=y)
+    return Point(x=x, y=y)
+```
+
+You are writing Python 3.12. Use only the language itself and, when a prelude is shown, that prelude. No imports other than the ones in the prelude. The code must pass mypy --strict.
+
+==== TASK ====
+The given program moves a point on a grid for directions N, S, and E, leaving other directions unchanged. Extend it so that direction W decreases x by 1, keeping all existing behavior identical.
+
+==== PROGRAM TO MODIFY ====
+from dataclasses import dataclass
+
+
+@dataclass
+class Point:
+    x: int
+    y: int
+
+
+def move(dir: str, x: int, y: int) -> Point:
+    if dir == "N":
+        return Point(x=x, y=y + 1)
+    if dir == "S":
+        return Point(x=x, y=y - 1)
+    if dir == "E":
+        return Point(x=x + 1, y=y)
+    return Point(x=x, y=y)
+
+
+==== REQUIRED INTERFACE ====
+def move(dir: str, x: int, y: int) -> Point  (Point is a provided dataclass with int fields x, y)
+
+==== PROVIDED PRELUDE (include it verbatim at the top of your program) ====
+from dataclasses import dataclass
+
+
+@dataclass
+class Point:
+    x: int
+    y: int
+
+
+==== EXAMPLES (arguments -> expected result) ====
+  move("W", 1, 1)  ->  0 1
+  move("N", 0, 0)  ->  0 1
+  move("X", 5, 5)  ->  5 5
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete Python program that defines the required interface. No prose outside the code block. Do not print anything; only define the function(s).
+```python
+from dataclasses import dataclass
+
+
+@dataclass
+class Point:
+    x: int
+    y: int
+
+
+def move(dir: str, x: int, y: int) -> Point:
+    if dir == "N":
+        return Point(x=x, y=y + 1)
+    if dir == "S":
+        return Point(x=x, y=y - 1)
+    if dir == "E":
+        return Point(x=x + 1, y=y)
+    if dir == "W":
+        return Point(x=x - 1, y=y)
+    return Point(x=x, y=y)
+```

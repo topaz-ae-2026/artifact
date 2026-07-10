@@ -1,0 +1,13 @@
+function dot(xs: Array<int>, ys: Array<int>) -> int {
+    let mut total: int = 0
+    for i in 0..<xs.length {
+        total += xs[i] * ys[i]
+    }
+    total
+}
+
+print("{dot([1, 1, 1], [2, 3, 4])}")
+print("{dot([0, 9], [7, 0])}")
+print("{dot([2, 3], [4, 5])}")
+print("{dot([-1, 2], [3, 4])}")
+print("{dot([10], [10])}")

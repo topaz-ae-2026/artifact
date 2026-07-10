@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019f4b3b-623f-7050-b71d-3c31b038aa2d"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"function greet(name: string, hour: int) -> string {\n    if hour < 12 {\n        return \"Good morning, {name}\"\n    }\n    if hour < 18 {\n        return \"Good afternoon, {name}\"\n    }\n    return \"Good evening, {name}\"\n}\n\nprint(\"{greet(\\\"World\\\", 9)}\")"}}
+{"type":"turn.completed","usage":{"input_tokens":13049,"cached_input_tokens":9984,"output_tokens":74,"reasoning_output_tokens":0}}

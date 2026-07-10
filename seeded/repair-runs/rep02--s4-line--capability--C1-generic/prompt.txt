@@ -1,0 +1,19 @@
+function line(item: string, qty: int, price: int) -> string {
+    return "{item} x{qty} = {qty * price}"
+}
+
+let _boundary_probe = reflect("payload")
+print("{_boundary_probe}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+error[L5002]: `reflect` is not bound
+ --> seeded/cases/s4-line--capability.l:5:23
+  |
+5 | let _boundary_probe = reflect("payload")
+  |                       ^^^^^^^
+
+seeded/cases/s4-line--capability.l: 1 type diagnostic
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

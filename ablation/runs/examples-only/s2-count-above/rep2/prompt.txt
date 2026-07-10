@@ -1,0 +1,126 @@
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== LANGUAGE EXAMPLES ====
+==== example: hello.l ====
+let name = "langl"
+print("Hello, {name}!")
+
+==== example: factorial.l ====
+// factorial.l — a typed, recursive function with early return.
+// Run:   langl run examples/factorial.l
+// Build: langl build examples/factorial.l --out-dir out --run
+
+function factorial(n: int) -> int {
+    if n < 2 {
+        return 1
+    }
+    return n * factorial(n - 1)
+}
+
+print("5! = {factorial(5)}")
+print("10! = {factorial(10)}")
+
+==== example: accumulate.l ====
+// accumulate.l — mutable state (`let mut`) and accumulation over a loop.
+// Run: langl run examples/accumulate.l
+
+let scores = [88, 92, 79, 95, 84]
+
+let mut total = 0
+let mut highest = 0
+for s in scores {
+    total += s
+    if s > highest {
+        highest = s
+    }
+}
+
+print("total:   {total}")
+print("highest: {highest}")
+print("average: {total / scores.length}")
+
+==== example: pipelines.l ====
+// pipelines.l — closures, function composition (>>), the pipe operator
+// (|>), and a default argument.
+// Run: langl run examples/pipelines.l
+
+let inc = (x: int) => x + 1
+let dbl = (x: int) => x * 2
+
+// |> threads a value left-to-right; >> builds a new function.
+print("{5 |> inc |> dbl}")        // (5+1)*2 = 12
+let incThenDouble = inc >> dbl
+print("{incThenDouble(20)}")      // (20+1)*2 = 42
+
+function greet(name: string, salutation: string = "Hello") -> string {
+    return "{salutation}, {name}!"
+}
+print(greet("langl"))
+print(greet("langl", "안녕"))
+
+==== example: records.l ====
+// records.l — record literals, functional update, and destructuring.
+// Run: langl run examples/records.l
+
+let origin = { x: 0, y: 0 }
+
+// Functional update: `origin { ... }` yields a new record, origin unchanged.
+let shifted = origin { x: 3, y: 4 }
+
+let { x, y } = shifted
+print("origin stays ({origin.x}, {origin.y})")
+print("shifted is ({x}, {y})")
+
+==== example: pattern-matching.l ====
+// pattern-matching.l — match expressions with literals, guards, ranges,
+// and a catch-all, used to return a value from a function.
+// Run: langl run examples/pattern-matching.l
+
+function classify(n: int) -> string {
+    return match n {
+        case 0 => "zero"
+        case x if x < 0 => "negative"
+        case 1..9 => "single digit"
+        case _ => "large"
+    }
+}
+
+for n in [0, -3, 4, 99] {
+    print("{n} -> {classify(n)}")
+}
+
+==== example: result-pipeline.l ====
+// result-pipeline.l — Option/Result, matching Some/None, and the `?`
+// operator that short-circuits on Err.
+// Run: langl run examples/result-pipeline.l
+
+function parsePort(text: string) -> Result<int, string> {
+    return match toInt(text) {
+        case Some(port) => Ok(port)
+        case None => Err("not a number: {text}")
+    }
+}
+
+function openPort(text: string) -> Result<string, string> {
+    let port = parsePort(text)?          // unwrap, or return the Err
+    return Ok("listening on :{port}")
+}
+
+print("{openPort("8080")}")
+print("{openPort("oops")}")
+
+
+
+==== TASK ====
+Write a function that counts how many values in an integer array are strictly greater than a threshold t.
+
+==== REQUIRED INTERFACE ====
+function countAbove(xs: Array<int>, t: int) -> int
+
+==== EXAMPLES (arguments -> expected result) ====
+  countAbove([1, 5, 8], 4)  ->  2
+  countAbove(e, 0)  ->  0
+  countAbove([3, 3, 3], 3)  ->  0
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.

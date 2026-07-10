@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep03--s3-fizz--capability--C2-policy-human",
+ "case": "s3-fizz--capability",
+ "task": "s3-fizz",
+ "condition": "C2-policy-human",
+ "rep": 3,
+ "ordinal": 274,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "error[L5205]: `require` requests dynamic module loading, which this authoring boundary excludes (family dynamic-module-loading, registry v1)\n  --> s3-fizz--capability.l:14:23\n   |\n14 | let _boundary_probe = require\n   |                       ^^^^^^^\n\n<scrubbed> 1 type diagnostic\n",
+ "feedback_size": {
+  "chars": 345,
+  "utf8_bytes": 345,
+  "lines": 7,
+  "whitespace_tokens": 30
+ },
+ "prompt": "function fizz(n: int) -> string {\n    if n % 15 == 0 {\n        return \"fizzbuzz\"\n    }\n    if n % 3 == 0 {\n        return \"fizz\"\n    }\n    if n % 5 == 0 {\n        return \"buzz\"\n    }\n    return \"{n}\"\n}\n\nlet _boundary_probe = require\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\nerror[L5205]: `require` requests dynamic module loading, which this authoring boundary excludes (family dynamic-module-loading, registry v1)\n  --> s3-fizz--capability.l:14:23\n   |\n14 | let _boundary_probe = require\n   |                       ^^^^^^^\n\n<scrubbed> 1 type diagnostic\n\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "ccb958d755bdb2ce6379563943cee0304ac79478956a823ddb4f3231d1094ca0",
+ "usage": {
+  "input_tokens": 13051,
+  "cached_input_tokens": 9984,
+  "output_tokens": 73
+ },
+ "model_duration_sec": 5.9689999999827705,
+ "codex_returncode": 0,
+ "response": "function fizz(n: int) -> string {\n    if n % 15 == 0 {\n        return \"fizzbuzz\"\n    }\n    if n % 3 == 0 {\n        return \"fizz\"\n    }\n    if n % 5 == 0 {\n        return \"buzz\"\n    }\n    return \"{n}\"\n}",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": true,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "require"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": null,
+ "label": 6,
+ "run_returncode": 0,
+ "run_stdout": "fizzbuzz\nfizzbuzz\nfizz\nbuzz\n1\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.046999999962281436,
+ "duration_sec": 6.030999999959022
+}

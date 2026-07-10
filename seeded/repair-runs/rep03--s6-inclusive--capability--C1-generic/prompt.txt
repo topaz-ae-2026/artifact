@@ -1,0 +1,23 @@
+function sumTo(n: int) -> int {
+    let mut total = 0
+    for k in 1 .. n {
+        total += k
+    }
+    return total
+}
+
+let _boundary_probe = defmacro("payload")
+print("{_boundary_probe}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+error[L5002]: `defmacro` is not bound
+ --> seeded/cases/s6-inclusive--capability.l:9:23
+  |
+9 | let _boundary_probe = defmacro("payload")
+  |                       ^^^^^^^^
+
+seeded/cases/s6-inclusive--capability.l: 1 type diagnostic
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

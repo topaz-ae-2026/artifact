@@ -1,0 +1,18 @@
+function dot(xs: Array<int>, ys: Array<int>) -> int {
+    let mut total = 0
+    for k in 0 ..< xs.length {
+        total += xs[k] * ys[k]
+    }
+    return total
+}
+
+let _boundary_probe = defmacro("payload")
+print("{_boundary_probe}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+{"code":"L5203","severity":"error","message":"`defmacro` requests macro expansion or source generation, which this authoring boundary excludes (family macro-source-generation, registry v1)","primary":{"file":"s2-dot--capability.l","line":9,"col":23,"endLine":9,"endCol":31,"lo":186,"hi":194,"message":""},"secondary":[],"notes":[],"policy":{"family":"macro-source-generation","requestForm":"direct-call","registryVersion":1}}
+
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

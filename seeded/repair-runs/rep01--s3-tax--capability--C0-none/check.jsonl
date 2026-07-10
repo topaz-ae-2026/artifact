@@ -1,0 +1,2 @@
+{"code":"L2001","severity":"error","message":"expected a statement separator","primary":{"file":"gated.l","line":1,"col":4,"endLine":1,"endCol":7,"lo":3,"hi":6,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected a statement separator","primary":{"file":"gated.l","line":9,"col":4,"endLine":9,"endCol":8,"lo":161,"hi":165,"message":""},"secondary":[],"notes":[]}

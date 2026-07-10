@@ -1,0 +1,61 @@
+{
+ "status": "complete",
+ "cell_id": "rep01--s3-fizz--capability--C0-none",
+ "case": "s3-fizz--capability",
+ "task": "s3-fizz",
+ "condition": "C0-none",
+ "rep": 1,
+ "ordinal": 43,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "",
+ "feedback_size": {
+  "chars": 0,
+  "utf8_bytes": 0,
+  "lines": 0,
+  "whitespace_tokens": 0
+ },
+ "prompt": "function fizz(n: int) -> string {\n    if n % 15 == 0 {\n        return \"fizzbuzz\"\n    }\n    if n % 3 == 0 {\n        return \"fizz\"\n    }\n    if n % 5 == 0 {\n        return \"buzz\"\n    }\n    return \"{n}\"\n}\n\nlet _boundary_probe = require\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "149f9a917a587637951ba1d19b1be25add5a156aac7f841af50295b91c5237c1",
+ "usage": {
+  "input_tokens": 26155,
+  "cached_input_tokens": 24064,
+  "output_tokens": 1074
+ },
+ "model_duration_sec": 39.98399999999674,
+ "codex_returncode": 0,
+ "response": "function fizz(n: number): string\n    if n % 15 == 0 then\n        return \"fizzbuzz\"\n    end\n    if n % 3 == 0 then\n        return \"fizz\"\n    end\n    if n % 5 == 0 then\n        return \"buzz\"\n    end\n    return `{n}`\nend\n\nlocal _boundary_probe = require\nprint(`{_boundary_probe}`)",
+ "gate_accept": false,
+ "excluded_removed": false,
+ "oracle_correct": false,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "require"
+ ],
+ "registered_lexical_hits": [
+  "require"
+ ],
+ "unresolved_registered_names": [],
+ "check_returncode": 1,
+ "diagnostic_codes": [
+  "L0001",
+  "L0001",
+  "L0001",
+  "L0001",
+  "L2001",
+  "L2001",
+  "L2001",
+  "L2001",
+  "L2001"
+ ],
+ "band": "L0001",
+ "label": 2,
+ "run_returncode": null,
+ "run_stdout": null,
+ "run_stderr": null,
+ "evaluation_duration_sec": 0.0470000000204891,
+ "duration_sec": 40.03100000001723
+}

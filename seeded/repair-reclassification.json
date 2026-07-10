@@ -1,0 +1,149 @@
+{
+ "definition": {
+  "resolver_removed": "the stored post-repair gate run emits no policy-family diagnostic",
+  "note": "a parse-rejected repair trivially emits none and is captured separately by gate acceptance"
+ },
+ "condition_labels": {
+  "C0-none": "C0 rejection-only",
+  "C1-generic": "C1 generic-diagnostic",
+  "C2-policy-human": "C2 policy-text",
+  "C3-policy-structured": "C3 policy-JSON"
+ },
+ "reclassification_counts": {
+  "C0-none": {
+   "removed-clean": 63,
+   "spelling-resolved-or-inert": 1,
+   "other-registered-family-substitution": 8
+  },
+  "C1-generic": {
+   "removed-clean": 54,
+   "other-registered-family-substitution": 15,
+   "spelling-resolved-or-inert": 3
+  },
+  "C2-policy-human": {
+   "removed-clean": 67,
+   "other-registered-family-substitution": 5
+  },
+  "C3-policy-structured": {
+   "removed-clean": 67,
+   "other-registered-family-substitution": 5
+  }
+ },
+ "resolver_removed_taskmacro_pct": {
+  "C0-none": 88.9,
+  "C1-generic": 79.2,
+  "C2-policy-human": 93.1,
+  "C3-policy-structured": 93.1
+ },
+ "resolver_removed_contrasts": {
+  "C2_minus_C1": {
+   "estimate_pp": 13.9,
+   "ci95_pp": [
+    5.6,
+    23.6
+   ]
+  },
+  "C1_minus_C0": {
+   "estimate_pp": -9.7,
+   "ci95_pp": [
+    -19.4,
+    -0.0
+   ]
+  },
+  "C3_minus_C2": {
+   "estimate_pp": 0.0,
+   "ci95_pp": [
+    -4.2,
+    4.2
+   ]
+  }
+ },
+ "c2_c3_paired_discordance": {
+  "resolver_removed": {
+   "both": 65,
+   "C2-only": 2,
+   "neither": 3,
+   "C3-only": 2
+  },
+  "other_family_substitution": {
+   "neither": 65,
+   "C3-only": 2,
+   "both": 3,
+   "C2-only": 2
+  },
+  "oracle_correct": {
+   "C2-only": 13,
+   "neither": 27,
+   "both": 30,
+   "C3-only": 2
+  }
+ },
+ "c2_c1_breakdown": {
+  "family": {
+   "dynamic-evaluation": {
+    "n_tasks": 5,
+    "C2_minus_C1_pp": 13.3
+   },
+   "dynamic-module-loading": {
+    "n_tasks": 4,
+    "C2_minus_C1_pp": 8.3
+   },
+   "host-interop-ffi": {
+    "n_tasks": 5,
+    "C2_minus_C1_pp": 6.7
+   },
+   "macro-source-generation": {
+    "n_tasks": 5,
+    "C2_minus_C1_pp": 26.7
+   },
+   "runtime-reflection": {
+    "n_tasks": 5,
+    "C2_minus_C1_pp": 13.3
+   }
+  },
+  "context": {
+   "direct-call": {
+    "n_tasks": 8,
+    "C2_minus_C1_pp": 0.0
+   },
+   "template": {
+    "n_tasks": 8,
+    "C2_minus_C1_pp": 41.7
+   },
+   "value-alias": {
+    "n_tasks": 8,
+    "C2_minus_C1_pp": 0.0
+   }
+  }
+ },
+ "payload_sizes": {
+  "C0-none": {
+   "o200k_tokens_precomputed": 0,
+   "utf8_bytes_mean": 0,
+   "chars_mean": 0
+  },
+  "C1-generic": {
+   "o200k_tokens_precomputed": 68,
+   "utf8_bytes_mean": 213,
+   "chars_mean": 213
+  },
+  "C2-policy-human": {
+   "o200k_tokens_precomputed": 95,
+   "utf8_bytes_mean": 344,
+   "chars_mean": 344
+  },
+  "C3-policy-structured": {
+   "o200k_tokens_precomputed": 110,
+   "utf8_bytes_mean": 421,
+   "chars_mean": 421
+  }
+ },
+ "bootstrap": {
+  "draws": 20000,
+  "seeds": [
+   52027,
+   52127,
+   52227
+  ]
+ }
+}

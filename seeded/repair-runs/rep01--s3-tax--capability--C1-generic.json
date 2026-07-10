@@ -1,0 +1,53 @@
+{
+ "status": "complete",
+ "cell_id": "rep01--s3-tax--capability--C1-generic",
+ "case": "s3-tax--capability",
+ "task": "s3-tax",
+ "condition": "C1-generic",
+ "rep": 1,
+ "ordinal": 68,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "error[L5002]: `ffi` is not bound\n --> seeded/cases/s3-tax--capability.l:9:9\n  |\n9 | print(\"{ffi}\")\n  |         ^^^\n\nseeded/cases/s3-tax--capability.l: 1 type diagnostic",
+ "feedback_size": {
+  "chars": 174,
+  "utf8_bytes": 174,
+  "lines": 7,
+  "whitespace_tokens": 17
+ },
+ "prompt": "function tax(income: int) -> int {\n    match income {\n        case v if v <= 1000 => 0\n        case v if v <= 5000 => v - 1000\n        case v => 4000 + 3 * (v - 5000)\n    }\n}\n\nprint(\"{ffi}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\nerror[L5002]: `ffi` is not bound\n --> seeded/cases/s3-tax--capability.l:9:9\n  |\n9 | print(\"{ffi}\")\n  |         ^^^\n\nseeded/cases/s3-tax--capability.l: 1 type diagnostic\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "4807643fab83884935584c7ee0a23939ea9a4dead2a3cd0d2205cf917c096277",
+ "usage": {
+  "input_tokens": 13004,
+  "cached_input_tokens": 12032,
+  "output_tokens": 240
+ },
+ "model_duration_sec": 16.5,
+ "codex_returncode": 0,
+ "response": "function tax(income: int) -> int {\n    match income {\n        case v if v <= 1000 => 0\n        case v if v <= 5000 => v - 1000\n        case v => 4000 + 3 * (v - 5000)\n    }\n}\n\nprint(\"{{ffi}}\")",
+ "gate_accept": false,
+ "excluded_removed": false,
+ "oracle_correct": false,
+ "wrong_substitute": true,
+ "wrong_substitute_names": [
+  "ffi"
+ ],
+ "original_registered_names": [],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [
+  "ffi"
+ ],
+ "check_returncode": 1,
+ "diagnostic_codes": [
+  "L5202"
+ ],
+ "band": "L5202",
+ "label": 3,
+ "run_returncode": null,
+ "run_stdout": null,
+ "run_stderr": null,
+ "evaluation_duration_sec": 0.030999999959021807,
+ "duration_sec": 16.56199999997625
+}

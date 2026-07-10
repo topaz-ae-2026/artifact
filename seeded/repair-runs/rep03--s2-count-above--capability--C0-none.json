@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep03--s2-count-above--capability--C0-none",
+ "case": "s2-count-above--capability",
+ "task": "s2-count-above",
+ "condition": "C0-none",
+ "rep": 3,
+ "ordinal": 211,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "",
+ "feedback_size": {
+  "chars": 0,
+  "utf8_bytes": 0,
+  "lines": 0,
+  "whitespace_tokens": 0
+ },
+ "prompt": "function countAbove(xs: Array<int>, t: int) -> int {\n    let mut n = 0\n    for x in xs {\n        if x > t {\n            n += 1\n        }\n    }\n    return n\n}\n\nprint(\"{eval}\")\n\nThis program was rejected by the receiving gate of language L.\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "0a7d2eb71f20bdcf42e0449adccebf07d06910895b31d3d6ac1fb3d183465d77",
+ "usage": {
+  "input_tokens": 12923,
+  "cached_input_tokens": 12032,
+  "output_tokens": 337
+ },
+ "model_duration_sec": 10.76500000001397,
+ "codex_returncode": 0,
+ "response": "function countAbove(xs: Array<number>, t: number): number {\n    let n = 0;\n    for (const x of xs) {\n        if (x > t) {\n            n += 1;\n        }\n    }\n    return n;\n}\n\nconsole.log(\"{eval}\");",
+ "gate_accept": false,
+ "excluded_removed": true,
+ "oracle_correct": false,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 1,
+ "diagnostic_codes": [
+  "L2001"
+ ],
+ "band": "L2001",
+ "label": 2,
+ "run_returncode": null,
+ "run_stdout": null,
+ "run_stderr": null,
+ "evaluation_duration_sec": 0.0470000000204891,
+ "duration_sec": 10.812000000034459
+}

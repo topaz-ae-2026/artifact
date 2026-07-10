@@ -1,0 +1,22 @@
+{
+ "agent": "author-frontier",
+ "model": "frontier-author-model",
+ "cli": "redacted-cli",
+ "task": "s5-points",
+ "lang": "L",
+ "rep": 3,
+ "rounds": [
+  {
+   "round": 0,
+   "event": "gate-ok",
+   "secs": 26.3
+  }
+ ],
+ "started": 1783645312.3776717,
+ "effort": "medium",
+ "accepted_round": 0,
+ "label": 6,
+ "note": "correct",
+ "py_compile_draft0": null,
+ "finished": 1783645338.7321105
+}

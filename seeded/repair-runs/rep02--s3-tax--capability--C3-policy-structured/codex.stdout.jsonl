@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019f4b40-02c3-7ac0-be69-c3276e37fb6d"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"function tax(income: int) -> int {\n    match income {\n        case v if v <= 1000 => 0\n        case v if v <= 5000 => v - 1000\n        case v => 4000 + 3 * (v - 5000)\n    }\n}\n\nprint(\"{ffi}\")"}}
+{"type":"turn.completed","usage":{"input_tokens":13056,"cached_input_tokens":12032,"output_tokens":72,"reasoning_output_tokens":0}}

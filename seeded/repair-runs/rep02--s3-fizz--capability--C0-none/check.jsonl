@@ -1,0 +1,1 @@
+{"code":"L5006","severity":"error","message":"`int` has no member `to_string`","primary":{"file":"gated.l","line":11,"col":14,"endLine":11,"endCol":23,"lo":196,"hi":205,"message":""},"secondary":[],"notes":[]}

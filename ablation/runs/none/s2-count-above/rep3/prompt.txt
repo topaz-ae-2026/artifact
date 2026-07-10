@@ -1,0 +1,15 @@
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+Write a function that counts how many values in an integer array are strictly greater than a threshold t.
+
+==== REQUIRED INTERFACE ====
+function countAbove(xs: Array<int>, t: int) -> int
+
+==== EXAMPLES (arguments -> expected result) ====
+  countAbove([1, 5, 8], 4)  ->  2
+  countAbove(e, 0)  ->  0
+  countAbove([3, 3, 3], 3)  ->  0
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.

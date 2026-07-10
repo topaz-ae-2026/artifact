@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019f4b40-19be-7700-b835-961a0af688bc"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"function dist(x1: int, y1: int, x2: int, y2: int) -> int {\n    let mut dx = x1 - x2\n    if dx < 0 {\n        dx = 0 - dx\n    }\n    let mut dy = y1 - y2\n    if dy < 0 {\n        dy = 0 - dy\n    }\n    return dx + dy\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":13093,"cached_input_tokens":12032,"output_tokens":228,"reasoning_output_tokens":134}}

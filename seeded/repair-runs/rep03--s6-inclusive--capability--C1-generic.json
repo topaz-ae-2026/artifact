@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep03--s6-inclusive--capability--C1-generic",
+ "case": "s6-inclusive--capability",
+ "task": "s6-inclusive",
+ "condition": "C1-generic",
+ "rep": 3,
+ "ordinal": 225,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "error[L5002]: `defmacro` is not bound\n --> seeded/cases/s6-inclusive--capability.l:9:23\n  |\n9 | let _boundary_probe = defmacro(\"payload\")\n  |                       ^^^^^^^^\n\nseeded/cases/s6-inclusive--capability.l: 1 type diagnostic",
+ "feedback_size": {
+  "chars": 238,
+  "utf8_bytes": 238,
+  "lines": 7,
+  "whitespace_tokens": 20
+ },
+ "prompt": "function sumTo(n: int) -> int {\n    let mut total = 0\n    for k in 1 .. n {\n        total += k\n    }\n    return total\n}\n\nlet _boundary_probe = defmacro(\"payload\")\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\nerror[L5002]: `defmacro` is not bound\n --> seeded/cases/s6-inclusive--capability.l:9:23\n  |\n9 | let _boundary_probe = defmacro(\"payload\")\n  |                       ^^^^^^^^\n\nseeded/cases/s6-inclusive--capability.l: 1 type diagnostic\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "6f1a03e7bff345d1f30900c888a3b3f581abb788a2fe24ec83065e36a557860c",
+ "usage": {
+  "input_tokens": 26207,
+  "cached_input_tokens": 24064,
+  "output_tokens": 336
+ },
+ "model_duration_sec": 17.01600000000326,
+ "codex_returncode": 0,
+ "response": "function sumTo(n: int) -> int {\n    let mut total = 0\n    for k in 1 .. n {\n        total += k\n    }\n    return total\n}\n\nlet _boundary_probe = \"payload\"\nprint(\"{_boundary_probe}\")",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": false,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "defmacro"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": "oracle",
+ "label": 5,
+ "run_returncode": 0,
+ "run_stdout": "payload\n55\n3\n5050\n6\n28\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.0940000000409782,
+ "duration_sec": 17.110000000044238
+}

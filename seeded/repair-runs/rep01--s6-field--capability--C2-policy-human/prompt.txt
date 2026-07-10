@@ -1,0 +1,19 @@
+function scale(b: { w: int, h: int, d: int }, k: int) -> { w: int, h: int, d: int } {
+    return { w: b.w * k, h: b.h * k, d: b.d * k }
+}
+
+print("{reflect}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+error[L5204]: `reflect` requests runtime reflection, which this authoring boundary excludes (family runtime-reflection, registry v1)
+ --> s6-field--capability.l:5:9
+  |
+5 | print("{reflect}")
+  |         ^^^^^^^
+
+<scrubbed> 1 type diagnostic
+
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

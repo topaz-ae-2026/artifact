@@ -1,0 +1,6 @@
+function line(item: string, qty: int, price: int) -> string {
+    return "{item} x{qty} = {qty * price}"
+}
+
+let _boundary_probe = reflect("payload")
+print("{_boundary_probe}")

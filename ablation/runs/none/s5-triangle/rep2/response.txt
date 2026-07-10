@@ -1,0 +1,68 @@
+```text
+function validTriangle(a: int, b: int, c: int) -> bool {
+    return a + b > c && a + c > b && b + c > a;
+}
+
+function triangle(a: int, b: int, c: int) -> string {
+    if (!validTriangle(a, b, c)) {
+        return "invalid";
+    }
+    if (a == b && b == c) {
+        return "equilateral";
+    }
+    if (a == b || a == c || b == c) {
+        return "isosceles";
+    }
+    return "scalene";
+}
+```
+
+Reading prompt from stdin...
+OpenAI Codex v0.144.0
+--------
+workdir: <scrubbed>
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019f4a29-167b-7c81-82f3-be84b3ca6a76
+--------
+user
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+Write a function that classifies a triangle from three positive integer side lengths. If the sides cannot form a triangle under the strict triangle inequality return invalid. If all sides are equal return equilateral. If exactly two sides are equal return isosceles. Otherwise return scalene. Use a helper function for the validity test.
+
+==== REQUIRED INTERFACE ====
+function triangle(a: int, b: int, c: int) -> string
+
+==== EXAMPLES (arguments -> expected result) ====
+  triangle(3, 4, 5)  ->  scalene
+  triangle(2, 2, 2)  ->  equilateral
+  triangle(1, 1, 3)  ->  invalid
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.
+codex
+```text
+function validTriangle(a: int, b: int, c: int) -> bool {
+    return a + b > c && a + c > b && b + c > a;
+}
+
+function triangle(a: int, b: int, c: int) -> string {
+    if (!validTriangle(a, b, c)) {
+        return "invalid";
+    }
+    if (a == b && b == c) {
+        return "equilateral";
+    }
+    if (a == b || a == c || b == c) {
+        return "isosceles";
+    }
+    return "scalene";
+}
+```
+tokens used
+1,314

@@ -1,0 +1,452 @@
+{
+ "summary": {
+  "total_cases": 50,
+  "family_form_cases": 30,
+  "registry_observed_of_expected": "15/15",
+  "negative_forms": 15,
+  "controls_not_misfired": "15/15",
+  "false_refusals_on_controls": 0
+ },
+ "cases": [
+  {
+   "id": "dynamic-evaluation--direct-call",
+   "group": "family-form",
+   "family": "dynamic-evaluation",
+   "family_code": "L5201",
+   "form": "direct-call",
+   "registry_expected_to_observe": true,
+   "observed_code": "L5201",
+   "class": "registry-refusal"
+  },
+  {
+   "id": "dynamic-evaluation--alias",
+   "group": "family-form",
+   "family": "dynamic-evaluation",
+   "family_code": "L5201",
+   "form": "alias",
+   "registry_expected_to_observe": true,
+   "observed_code": "L5201",
+   "class": "registry-refusal"
+  },
+  {
+   "id": "dynamic-evaluation--template-expr",
+   "group": "family-form",
+   "family": "dynamic-evaluation",
+   "family_code": "L5201",
+   "form": "template-expr",
+   "registry_expected_to_observe": true,
+   "observed_code": "L5201",
+   "class": "registry-refusal"
+  },
+  {
+   "id": "dynamic-evaluation--qualified-member",
+   "group": "family-form",
+   "family": "dynamic-evaluation",
+   "family_code": "L5201",
+   "form": "qualified-member",
+   "registry_expected_to_observe": false,
+   "observed_code": "L5002",
+   "class": "unresolved-name"
+  },
+  {
+   "id": "dynamic-evaluation--host-import",
+   "group": "family-form",
+   "family": "dynamic-evaluation",
+   "family_code": "L5201",
+   "form": "host-import",
+   "registry_expected_to_observe": false,
+   "observed_code": "L2008",
+   "class": "parse-band"
+  },
+  {
+   "id": "dynamic-evaluation--method-idiom",
+   "group": "family-form",
+   "family": "dynamic-evaluation",
+   "family_code": "L5201",
+   "form": "method-idiom",
+   "registry_expected_to_observe": false,
+   "observed_code": "L5006",
+   "class": "other-diagnostic"
+  },
+  {
+   "id": "host-interop-ffi--direct-call",
+   "group": "family-form",
+   "family": "host-interop-ffi",
+   "family_code": "L5202",
+   "form": "direct-call",
+   "registry_expected_to_observe": true,
+   "observed_code": "L5202",
+   "class": "registry-refusal"
+  },
+  {
+   "id": "host-interop-ffi--alias",
+   "group": "family-form",
+   "family": "host-interop-ffi",
+   "family_code": "L5202",
+   "form": "alias",
+   "registry_expected_to_observe": true,
+   "observed_code": "L5202",
+   "class": "registry-refusal"
+  },
+  {
+   "id": "host-interop-ffi--template-expr",
+   "group": "family-form",
+   "family": "host-interop-ffi",
+   "family_code": "L5202",
+   "form": "template-expr",
+   "registry_expected_to_observe": true,
+   "observed_code": "L5202",
+   "class": "registry-refusal"
+  },
+  {
+   "id": "host-interop-ffi--qualified-member",
+   "group": "family-form",
+   "family": "host-interop-ffi",
+   "family_code": "L5202",
+   "form": "qualified-member",
+   "registry_expected_to_observe": false,
+   "observed_code": "L5002",
+   "class": "unresolved-name"
+  },
+  {
+   "id": "host-interop-ffi--host-import",
+   "group": "family-form",
+   "family": "host-interop-ffi",
+   "family_code": "L5202",
+   "form": "host-import",
+   "registry_expected_to_observe": false,
+   "observed_code": "L2008",
+   "class": "parse-band"
+  },
+  {
+   "id": "host-interop-ffi--method-idiom",
+   "group": "family-form",
+   "family": "host-interop-ffi",
+   "family_code": "L5202",
+   "form": "method-idiom",
+   "registry_expected_to_observe": false,
+   "observed_code": "L5006",
+   "class": "other-diagnostic"
+  },
+  {
+   "id": "macro-source-generation--direct-call",
+   "group": "family-form",
+   "family": "macro-source-generation",
+   "family_code": "L5203",
+   "form": "direct-call",
+   "registry_expected_to_observe": true,
+   "observed_code": "L5203",
+   "class": "registry-refusal"
+  },
+  {
+   "id": "macro-source-generation--alias",
+   "group": "family-form",
+   "family": "macro-source-generation",
+   "family_code": "L5203",
+   "form": "alias",
+   "registry_expected_to_observe": true,
+   "observed_code": "L5203",
+   "class": "registry-refusal"
+  },
+  {
+   "id": "macro-source-generation--template-expr",
+   "group": "family-form",
+   "family": "macro-source-generation",
+   "family_code": "L5203",
+   "form": "template-expr",
+   "registry_expected_to_observe": true,
+   "observed_code": "L5203",
+   "class": "registry-refusal"
+  },
+  {
+   "id": "macro-source-generation--qualified-member",
+   "group": "family-form",
+   "family": "macro-source-generation",
+   "family_code": "L5203",
+   "form": "qualified-member",
+   "registry_expected_to_observe": false,
+   "observed_code": "L5002",
+   "class": "unresolved-name"
+  },
+  {
+   "id": "macro-source-generation--host-import",
+   "group": "family-form",
+   "family": "macro-source-generation",
+   "family_code": "L5203",
+   "form": "host-import",
+   "registry_expected_to_observe": false,
+   "observed_code": "L2008",
+   "class": "parse-band"
+  },
+  {
+   "id": "macro-source-generation--method-idiom",
+   "group": "family-form",
+   "family": "macro-source-generation",
+   "family_code": "L5203",
+   "form": "method-idiom",
+   "registry_expected_to_observe": false,
+   "observed_code": "L5006",
+   "class": "other-diagnostic"
+  },
+  {
+   "id": "runtime-reflection--direct-call",
+   "group": "family-form",
+   "family": "runtime-reflection",
+   "family_code": "L5204",
+   "form": "direct-call",
+   "registry_expected_to_observe": true,
+   "observed_code": "L5204",
+   "class": "registry-refusal"
+  },
+  {
+   "id": "runtime-reflection--alias",
+   "group": "family-form",
+   "family": "runtime-reflection",
+   "family_code": "L5204",
+   "form": "alias",
+   "registry_expected_to_observe": true,
+   "observed_code": "L5204",
+   "class": "registry-refusal"
+  },
+  {
+   "id": "runtime-reflection--template-expr",
+   "group": "family-form",
+   "family": "runtime-reflection",
+   "family_code": "L5204",
+   "form": "template-expr",
+   "registry_expected_to_observe": true,
+   "observed_code": "L5204",
+   "class": "registry-refusal"
+  },
+  {
+   "id": "runtime-reflection--qualified-member",
+   "group": "family-form",
+   "family": "runtime-reflection",
+   "family_code": "L5204",
+   "form": "qualified-member",
+   "registry_expected_to_observe": false,
+   "observed_code": "L5002",
+   "class": "unresolved-name"
+  },
+  {
+   "id": "runtime-reflection--host-import",
+   "group": "family-form",
+   "family": "runtime-reflection",
+   "family_code": "L5204",
+   "form": "host-import",
+   "registry_expected_to_observe": false,
+   "observed_code": "L2008",
+   "class": "parse-band"
+  },
+  {
+   "id": "runtime-reflection--method-idiom",
+   "group": "family-form",
+   "family": "runtime-reflection",
+   "family_code": "L5204",
+   "form": "method-idiom",
+   "registry_expected_to_observe": false,
+   "observed_code": "L5006",
+   "class": "other-diagnostic"
+  },
+  {
+   "id": "dynamic-module-loading--direct-call",
+   "group": "family-form",
+   "family": "dynamic-module-loading",
+   "family_code": "L5205",
+   "form": "direct-call",
+   "registry_expected_to_observe": true,
+   "observed_code": "L5205",
+   "class": "registry-refusal"
+  },
+  {
+   "id": "dynamic-module-loading--alias",
+   "group": "family-form",
+   "family": "dynamic-module-loading",
+   "family_code": "L5205",
+   "form": "alias",
+   "registry_expected_to_observe": true,
+   "observed_code": "L5205",
+   "class": "registry-refusal"
+  },
+  {
+   "id": "dynamic-module-loading--template-expr",
+   "group": "family-form",
+   "family": "dynamic-module-loading",
+   "family_code": "L5205",
+   "form": "template-expr",
+   "registry_expected_to_observe": true,
+   "observed_code": "L5205",
+   "class": "registry-refusal"
+  },
+  {
+   "id": "dynamic-module-loading--qualified-member",
+   "group": "family-form",
+   "family": "dynamic-module-loading",
+   "family_code": "L5205",
+   "form": "qualified-member",
+   "registry_expected_to_observe": false,
+   "observed_code": "L5002",
+   "class": "unresolved-name"
+  },
+  {
+   "id": "dynamic-module-loading--host-import",
+   "group": "family-form",
+   "family": "dynamic-module-loading",
+   "family_code": "L5205",
+   "form": "host-import",
+   "registry_expected_to_observe": false,
+   "observed_code": "L2008",
+   "class": "parse-band"
+  },
+  {
+   "id": "dynamic-module-loading--method-idiom",
+   "group": "family-form",
+   "family": "dynamic-module-loading",
+   "family_code": "L5205",
+   "form": "method-idiom",
+   "registry_expected_to_observe": false,
+   "observed_code": "L5006",
+   "class": "other-diagnostic"
+  },
+  {
+   "id": "ind-string-assembly",
+   "group": "indirect",
+   "note": "string assembly is data, not a capability request",
+   "observed_code": null,
+   "class": "ACCEPTED"
+  },
+  {
+   "id": "ind-alias-chain",
+   "group": "indirect",
+   "note": "multi-step alias chain, refused at the first excluded reference",
+   "observed_code": "L5201",
+   "class": "registry-refusal"
+  },
+  {
+   "id": "ind-allowed-wrapper",
+   "group": "indirect",
+   "note": "an allowed wrapper whose name suggests evaluation but requests no excluded capability",
+   "observed_code": null,
+   "class": "ACCEPTED"
+  },
+  {
+   "id": "ind-nested-template",
+   "group": "indirect",
+   "note": "excluded reference nested in a template expression",
+   "observed_code": "L5201",
+   "class": "registry-refusal"
+  },
+  {
+   "id": "ind-record-holder",
+   "group": "indirect",
+   "note": "record field named like a capability is ordinary data",
+   "observed_code": null,
+   "class": "ACCEPTED"
+  },
+  {
+   "id": "ctl-typo-eval",
+   "group": "control",
+   "note": "typo of eval, ordinary unresolved",
+   "observed_code": "L5002",
+   "class": "unresolved-name"
+  },
+  {
+   "id": "ctl-string-eval",
+   "group": "control",
+   "note": "capability word in a string",
+   "observed_code": null,
+   "class": "ACCEPTED"
+  },
+  {
+   "id": "ctl-shadow-eval",
+   "group": "control",
+   "note": "exact registered name legitimately bound in local scope",
+   "observed_code": null,
+   "class": "ACCEPTED"
+  },
+  {
+   "id": "ctl-typo-ffi",
+   "group": "control",
+   "note": "typo of ffi",
+   "observed_code": "L5002",
+   "class": "unresolved-name"
+  },
+  {
+   "id": "ctl-comment-ffi",
+   "group": "control",
+   "note": "capability word in a comment",
+   "observed_code": null,
+   "class": "ACCEPTED"
+  },
+  {
+   "id": "ctl-shadow-ffi",
+   "group": "control",
+   "note": "exact registered name legitimately bound in local scope",
+   "observed_code": null,
+   "class": "ACCEPTED"
+  },
+  {
+   "id": "ctl-typo-macro",
+   "group": "control",
+   "note": "typo of macro",
+   "observed_code": "L5002",
+   "class": "unresolved-name"
+  },
+  {
+   "id": "ctl-string-macro",
+   "group": "control",
+   "note": "family word in a string",
+   "observed_code": null,
+   "class": "ACCEPTED"
+  },
+  {
+   "id": "ctl-shadow-macro",
+   "group": "control",
+   "note": "exact registered name legitimately bound in local scope",
+   "observed_code": null,
+   "class": "ACCEPTED"
+  },
+  {
+   "id": "ctl-typo-reflect",
+   "group": "control",
+   "note": "typo of reflect",
+   "observed_code": "L5002",
+   "class": "unresolved-name"
+  },
+  {
+   "id": "ctl-record-reflect",
+   "group": "control",
+   "note": "family word as a record field (data)",
+   "observed_code": null,
+   "class": "ACCEPTED"
+  },
+  {
+   "id": "ctl-shadow-reflect",
+   "group": "control",
+   "note": "exact registered name legitimately bound in local scope",
+   "observed_code": null,
+   "class": "ACCEPTED"
+  },
+  {
+   "id": "ctl-typo-require",
+   "group": "control",
+   "note": "typo of require",
+   "observed_code": "L5002",
+   "class": "unresolved-name"
+  },
+  {
+   "id": "ctl-string-require",
+   "group": "control",
+   "note": "family word in a string",
+   "observed_code": null,
+   "class": "ACCEPTED"
+  },
+  {
+   "id": "ctl-shadow-require",
+   "group": "control",
+   "note": "exact registered name legitimately bound in local scope",
+   "observed_code": null,
+   "class": "ACCEPTED"
+  }
+ ]
+}

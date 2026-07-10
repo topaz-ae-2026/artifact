@@ -1,0 +1,15 @@
+function move(dir, x, y)
+    if dir == "N" then
+        return { x = x, y = y + 1 }
+    elseif dir == "S" then
+        return { x = x, y = y - 1 }
+    elseif dir == "E" then
+        return { x = x + 1, y = y }
+    elseif dir == "W" then
+        return { x = x - 1, y = y }
+    else
+        return { x = x, y = y }
+    end
+end
+
+print("{eval}")

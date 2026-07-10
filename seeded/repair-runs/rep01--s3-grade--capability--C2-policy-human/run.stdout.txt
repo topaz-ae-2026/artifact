@@ -1,0 +1,6 @@
+reflect
+A
+B
+D
+F
+A

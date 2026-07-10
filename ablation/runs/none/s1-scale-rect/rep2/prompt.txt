@@ -1,0 +1,15 @@
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+Write a function that scales a rectangle record with integer fields w and h by an integer factor k, returning a new record with both fields multiplied by k.
+
+==== REQUIRED INTERFACE ====
+function scale(r: { w: int, h: int }, k: int) -> { w: int, h: int }
+
+==== EXAMPLES (arguments -> expected result) ====
+  scale({ w: 2, h: 3 }, 4)  ->  8 12
+  scale({ w: 1, h: 1 }, 1)  ->  1 1
+  scale({ w: 5, h: 0 }, 3)  ->  15 0
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.

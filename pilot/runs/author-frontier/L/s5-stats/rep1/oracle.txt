@@ -1,0 +1,9 @@
+exit=0
+--- stdout ---
+sum=0 max=0
+sum=60 max=30
+sum=7 max=7
+sum=24 max=9
+sum=5 max=1
+
+--- stderr ---

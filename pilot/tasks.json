@@ -1,0 +1,1122 @@
+{
+ "version": 1,
+ "note": "Frozen task corpus for the LMPL 2026 pilot. 24 tasks, 6 strata x 4. Contracts are language neutral. Interface boilerplate is language specific. Expected outputs are generated from the two reference implementations, which must agree on every case before any model run.",
+ "tasks": [
+  {
+   "id": "s1-clamp",
+   "stratum": "S1",
+   "contract": "Write a function that clamps an integer n into the closed range [lo, hi]. If n is below lo return lo. If n is above hi return hi. Otherwise return n. The caller guarantees lo <= hi.",
+   "fn_L": "clamp",
+   "fn_py": "clamp",
+   "ret": "int",
+   "sig_L": "function clamp(n: int, lo: int, hi: int) -> int",
+   "sig_py": "def clamp(n: int, lo: int, hi: int) -> int",
+   "visible": [
+    {
+     "L": "5, 0, 10",
+     "py": "5, 0, 10"
+    },
+    {
+     "L": "-3, 0, 10",
+     "py": "-3, 0, 10"
+    },
+    {
+     "L": "15, 0, 10",
+     "py": "15, 0, 10"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "0, 0, 10",
+     "py": "0, 0, 10"
+    },
+    {
+     "L": "10, 0, 10",
+     "py": "10, 0, 10"
+    },
+    {
+     "L": "7, 7, 7",
+     "py": "7, 7, 7"
+    },
+    {
+     "L": "-100, -50, 50",
+     "py": "-100, -50, 50"
+    },
+    {
+     "L": "11, 0, 10",
+     "py": "11, 0, 10"
+    }
+   ]
+  },
+  {
+   "id": "s1-manhattan",
+   "stratum": "S1",
+   "contract": "Write a function that returns the Manhattan distance between points (x1, y1) and (x2, y2), that is the sum of the absolute coordinate differences.",
+   "fn_L": "dist",
+   "fn_py": "dist",
+   "ret": "int",
+   "sig_L": "function dist(x1: int, y1: int, x2: int, y2: int) -> int",
+   "sig_py": "def dist(x1: int, y1: int, x2: int, y2: int) -> int",
+   "visible": [
+    {
+     "L": "0, 0, 3, 4",
+     "py": "0, 0, 3, 4"
+    },
+    {
+     "L": "1, 1, 1, 1",
+     "py": "1, 1, 1, 1"
+    },
+    {
+     "L": "-2, 3, 4, -1",
+     "py": "-2, 3, 4, -1"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "5, 5, 0, 0",
+     "py": "5, 5, 0, 0"
+    },
+    {
+     "L": "-3, -3, -3, -4",
+     "py": "-3, -3, -3, -4"
+    },
+    {
+     "L": "100, 0, 0, 100",
+     "py": "100, 0, 0, 100"
+    },
+    {
+     "L": "2, 9, 9, 2",
+     "py": "2, 9, 9, 2"
+    },
+    {
+     "L": "0, 0, 0, 1",
+     "py": "0, 0, 0, 1"
+    }
+   ]
+  },
+  {
+   "id": "s1-scale-rect",
+   "stratum": "S1",
+   "contract": "Write a function that scales a rectangle record with integer fields w and h by an integer factor k, returning a new record with both fields multiplied by k.",
+   "fn_L": "scale",
+   "fn_py": "scale",
+   "ret": "rec:w,h",
+   "sig_L": "function scale(r: { w: int, h: int }, k: int) -> { w: int, h: int }",
+   "sig_py": "def scale(r: Rect, k: int) -> Rect  (Rect is a provided dataclass with int fields w, h)",
+   "py_prelude": "from dataclasses import dataclass\n\n\n@dataclass\nclass Rect:\n    w: int\n    h: int\n",
+   "visible": [
+    {
+     "L": "{ w: 2, h: 3 }, 4",
+     "py": "Rect(w=2, h=3), 4"
+    },
+    {
+     "L": "{ w: 1, h: 1 }, 1",
+     "py": "Rect(w=1, h=1), 1"
+    },
+    {
+     "L": "{ w: 5, h: 0 }, 3",
+     "py": "Rect(w=5, h=0), 3"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "{ w: 0, h: 0 }, 9",
+     "py": "Rect(w=0, h=0), 9"
+    },
+    {
+     "L": "{ w: 7, h: 2 }, 0",
+     "py": "Rect(w=7, h=2), 0"
+    },
+    {
+     "L": "{ w: 3, h: 4 }, 100",
+     "py": "Rect(w=3, h=4), 100"
+    },
+    {
+     "L": "{ w: 10, h: 10 }, 10",
+     "py": "Rect(w=10, h=10), 10"
+    },
+    {
+     "L": "{ w: 1, h: 6 }, 7",
+     "py": "Rect(w=1, h=6), 7"
+    }
+   ]
+  },
+  {
+   "id": "s1-leap-label",
+   "stratum": "S1",
+   "contract": "Write a function that labels a Gregorian year. Return the string leap when the year is a leap year and the string common otherwise. A year is a leap year when it is divisible by 4, except that century years are leap years only when divisible by 400. Years are positive.",
+   "fn_L": "leapLabel",
+   "fn_py": "leap_label",
+   "ret": "string",
+   "sig_L": "function leapLabel(y: int) -> string",
+   "sig_py": "def leap_label(y: int) -> str",
+   "visible": [
+    {
+     "L": "2024",
+     "py": "2024"
+    },
+    {
+     "L": "1900",
+     "py": "1900"
+    },
+    {
+     "L": "2000",
+     "py": "2000"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "2023",
+     "py": "2023"
+    },
+    {
+     "L": "1600",
+     "py": "1600"
+    },
+    {
+     "L": "2100",
+     "py": "2100"
+    },
+    {
+     "L": "4",
+     "py": "4"
+    },
+    {
+     "L": "1",
+     "py": "1"
+    }
+   ]
+  },
+  {
+   "id": "s2-sum-evens",
+   "stratum": "S2",
+   "contract": "Write a function that returns the sum of the even values in an integer array. The empty array sums to 0. All values are non-negative.",
+   "fn_L": "sumEvens",
+   "fn_py": "sum_evens",
+   "ret": "int",
+   "sig_L": "function sumEvens(xs: Array<int>) -> int",
+   "sig_py": "def sum_evens(xs: list[int]) -> int",
+   "visible": [
+    {
+     "L": "[1, 2, 3, 4]",
+     "py": "[1, 2, 3, 4]"
+    },
+    {
+     "L_bind": "let e: Array<int> = []",
+     "L": "e",
+     "py": "[]"
+    },
+    {
+     "L": "[7, 7]",
+     "py": "[7, 7]"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "[2, 4, 6]",
+     "py": "[2, 4, 6]"
+    },
+    {
+     "L": "[0]",
+     "py": "[0]"
+    },
+    {
+     "L": "[1, 3, 5]",
+     "py": "[1, 3, 5]"
+    },
+    {
+     "L": "[10, 11, 12, 13, 14]",
+     "py": "[10, 11, 12, 13, 14]"
+    },
+    {
+     "L": "[8]",
+     "py": "[8]"
+    }
+   ]
+  },
+  {
+   "id": "s2-count-above",
+   "stratum": "S2",
+   "contract": "Write a function that counts how many values in an integer array are strictly greater than a threshold t.",
+   "fn_L": "countAbove",
+   "fn_py": "count_above",
+   "ret": "int",
+   "sig_L": "function countAbove(xs: Array<int>, t: int) -> int",
+   "sig_py": "def count_above(xs: list[int], t: int) -> int",
+   "visible": [
+    {
+     "L": "[1, 5, 8], 4",
+     "py": "[1, 5, 8], 4"
+    },
+    {
+     "L_bind": "let e: Array<int> = []",
+     "L": "e, 0",
+     "py": "[], 0"
+    },
+    {
+     "L": "[3, 3, 3], 3",
+     "py": "[3, 3, 3], 3"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "[10, 20, 30], 15",
+     "py": "[10, 20, 30], 15"
+    },
+    {
+     "L": "[-5, 0, 5], -1",
+     "py": "[-5, 0, 5], -1"
+    },
+    {
+     "L": "[1], 0",
+     "py": "[1], 0"
+    },
+    {
+     "L": "[2, 2, 2, 2], 1",
+     "py": "[2, 2, 2, 2], 1"
+    },
+    {
+     "L": "[9, 8, 7], 10",
+     "py": "[9, 8, 7], 10"
+    }
+   ]
+  },
+  {
+   "id": "s2-max",
+   "stratum": "S2",
+   "contract": "Write a function that returns the largest value in a non-empty integer array.",
+   "fn_L": "maxOf",
+   "fn_py": "max_of",
+   "ret": "int",
+   "sig_L": "function maxOf(xs: Array<int>) -> int",
+   "sig_py": "def max_of(xs: list[int]) -> int",
+   "visible": [
+    {
+     "L": "[3, 1, 4]",
+     "py": "[3, 1, 4]"
+    },
+    {
+     "L": "[5]",
+     "py": "[5]"
+    },
+    {
+     "L": "[-3, -1, -7]",
+     "py": "[-3, -1, -7]"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "[0, 0]",
+     "py": "[0, 0]"
+    },
+    {
+     "L": "[1, 2, 3, 4, 5]",
+     "py": "[1, 2, 3, 4, 5]"
+    },
+    {
+     "L": "[9, 2, 9]",
+     "py": "[9, 2, 9]"
+    },
+    {
+     "L": "[-100, -200]",
+     "py": "[-100, -200]"
+    },
+    {
+     "L": "[7, 7, 7]",
+     "py": "[7, 7, 7]"
+    }
+   ]
+  },
+  {
+   "id": "s2-dot",
+   "stratum": "S2",
+   "contract": "Write a function that returns the dot product of two integer arrays of equal length. Two empty arrays give 0.",
+   "fn_L": "dot",
+   "fn_py": "dot",
+   "ret": "int",
+   "sig_L": "function dot(xs: Array<int>, ys: Array<int>) -> int",
+   "sig_py": "def dot(xs: list[int], ys: list[int]) -> int",
+   "visible": [
+    {
+     "L": "[1, 2], [3, 4]",
+     "py": "[1, 2], [3, 4]"
+    },
+    {
+     "L_bind": "let e: Array<int> = []",
+     "L": "e, e",
+     "py": "[], []"
+    },
+    {
+     "L": "[5], [5]",
+     "py": "[5], [5]"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "[1, 1, 1], [2, 3, 4]",
+     "py": "[1, 1, 1], [2, 3, 4]"
+    },
+    {
+     "L": "[0, 9], [7, 0]",
+     "py": "[0, 9], [7, 0]"
+    },
+    {
+     "L": "[2, 3], [4, 5]",
+     "py": "[2, 3], [4, 5]"
+    },
+    {
+     "L": "[-1, 2], [3, 4]",
+     "py": "[-1, 2], [3, 4]"
+    },
+    {
+     "L": "[10], [10]",
+     "py": "[10], [10]"
+    }
+   ]
+  },
+  {
+   "id": "s3-grade",
+   "stratum": "S3",
+   "contract": "Write a function that converts a score from 0 to 100 into a letter grade string. 90 and above is A, 80 to 89 is B, 70 to 79 is C, 60 to 69 is D, anything lower is F.",
+   "fn_L": "grade",
+   "fn_py": "grade",
+   "ret": "string",
+   "sig_L": "function grade(score: int) -> string",
+   "sig_py": "def grade(score: int) -> str",
+   "visible": [
+    {
+     "L": "95",
+     "py": "95"
+    },
+    {
+     "L": "71",
+     "py": "71"
+    },
+    {
+     "L": "42",
+     "py": "42"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "90",
+     "py": "90"
+    },
+    {
+     "L": "89",
+     "py": "89"
+    },
+    {
+     "L": "60",
+     "py": "60"
+    },
+    {
+     "L": "59",
+     "py": "59"
+    },
+    {
+     "L": "100",
+     "py": "100"
+    }
+   ]
+  },
+  {
+   "id": "s3-fizz",
+   "stratum": "S3",
+   "contract": "Write a function for one fizzbuzz value. For a positive integer n return fizzbuzz when n is divisible by both 3 and 5, fizz when divisible by 3 only, buzz when divisible by 5 only, and otherwise the decimal digits of n as a string.",
+   "fn_L": "fizz",
+   "fn_py": "fizz",
+   "ret": "string",
+   "sig_L": "function fizz(n: int) -> string",
+   "sig_py": "def fizz(n: int) -> str",
+   "visible": [
+    {
+     "L": "3",
+     "py": "3"
+    },
+    {
+     "L": "5",
+     "py": "5"
+    },
+    {
+     "L": "7",
+     "py": "7"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "15",
+     "py": "15"
+    },
+    {
+     "L": "30",
+     "py": "30"
+    },
+    {
+     "L": "9",
+     "py": "9"
+    },
+    {
+     "L": "10",
+     "py": "10"
+    },
+    {
+     "L": "1",
+     "py": "1"
+    }
+   ]
+  },
+  {
+   "id": "s3-move",
+   "stratum": "S3",
+   "contract": "Write a function that moves a point one step on a grid. Direction N increases y by 1, S decreases y by 1, E increases x by 1, W decreases x by 1, and any other direction string leaves the point unchanged. Return the resulting point.",
+   "fn_L": "move",
+   "fn_py": "move",
+   "ret": "rec:x,y",
+   "sig_L": "function move(dir: string, x: int, y: int) -> { x: int, y: int }",
+   "sig_py": "def move(dir: str, x: int, y: int) -> Point  (Point is a provided dataclass with int fields x, y)",
+   "py_prelude": "from dataclasses import dataclass\n\n\n@dataclass\nclass Point:\n    x: int\n    y: int\n",
+   "visible": [
+    {
+     "L": "\"N\", 0, 0",
+     "py": "\"N\", 0, 0"
+    },
+    {
+     "L": "\"E\", 2, 3",
+     "py": "\"E\", 2, 3"
+    },
+    {
+     "L": "\"X\", 5, 5",
+     "py": "\"X\", 5, 5"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "\"S\", 0, 0",
+     "py": "\"S\", 0, 0"
+    },
+    {
+     "L": "\"W\", 1, 1",
+     "py": "\"W\", 1, 1"
+    },
+    {
+     "L": "\"N\", -3, -3",
+     "py": "\"N\", -3, -3"
+    },
+    {
+     "L": "\"E\", -1, 0",
+     "py": "\"E\", -1, 0"
+    },
+    {
+     "L": "\"Q\", 9, 9",
+     "py": "\"Q\", 9, 9"
+    }
+   ]
+  },
+  {
+   "id": "s3-tax",
+   "stratum": "S3",
+   "contract": "Write a function computing a stylized tax in whole units from a non-negative integer income. Income up to 1000 pays 0. Income from 1001 to 5000 pays income minus 1000. Income above 5000 pays 4000 plus 3 times the amount above 5000.",
+   "fn_L": "tax",
+   "fn_py": "tax",
+   "ret": "int",
+   "sig_L": "function tax(income: int) -> int",
+   "sig_py": "def tax(income: int) -> int",
+   "visible": [
+    {
+     "L": "500",
+     "py": "500"
+    },
+    {
+     "L": "3000",
+     "py": "3000"
+    },
+    {
+     "L": "6000",
+     "py": "6000"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "1000",
+     "py": "1000"
+    },
+    {
+     "L": "1001",
+     "py": "1001"
+    },
+    {
+     "L": "5000",
+     "py": "5000"
+    },
+    {
+     "L": "5001",
+     "py": "5001"
+    },
+    {
+     "L": "10000",
+     "py": "10000"
+    }
+   ]
+  },
+  {
+   "id": "s4-greet",
+   "stratum": "S4",
+   "contract": "Write a function producing a greeting for a name and an hour from 0 to 23. Before 12 the greeting is Good morning, then before 18 it is Good afternoon, otherwise Good evening. The result is the greeting, a comma and space, then the name.",
+   "fn_L": "greet",
+   "fn_py": "greet",
+   "ret": "string",
+   "sig_L": "function greet(name: string, hour: int) -> string",
+   "sig_py": "def greet(name: str, hour: int) -> str",
+   "visible": [
+    {
+     "L": "\"Ada\", 9",
+     "py": "\"Ada\", 9"
+    },
+    {
+     "L": "\"Bo\", 13",
+     "py": "\"Bo\", 13"
+    },
+    {
+     "L": "\"Cy\", 20",
+     "py": "\"Cy\", 20"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "\"Dee\", 0",
+     "py": "\"Dee\", 0"
+    },
+    {
+     "L": "\"Ed\", 11",
+     "py": "\"Ed\", 11"
+    },
+    {
+     "L": "\"Fi\", 12",
+     "py": "\"Fi\", 12"
+    },
+    {
+     "L": "\"Gil\", 17",
+     "py": "\"Gil\", 17"
+    },
+    {
+     "L": "\"한나\", 23",
+     "py": "\"한나\", 23"
+    }
+   ]
+  },
+  {
+   "id": "s4-line",
+   "stratum": "S4",
+   "contract": "Write a function producing one receipt line for an item name, a quantity, and a unit price. The format is the item, a space, the letter x directly followed by the quantity, a space, an equals sign, a space, and the total quantity times price.",
+   "fn_L": "line",
+   "fn_py": "line",
+   "ret": "string",
+   "sig_L": "function line(item: string, qty: int, price: int) -> string",
+   "sig_py": "def line(item: str, qty: int, price: int) -> str",
+   "visible": [
+    {
+     "L": "\"apple\", 3, 100",
+     "py": "\"apple\", 3, 100"
+    },
+    {
+     "L": "\"pen\", 1, 50",
+     "py": "\"pen\", 1, 50"
+    },
+    {
+     "L": "\"book\", 0, 999",
+     "py": "\"book\", 0, 999"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "\"우유\", 2, 1200",
+     "py": "\"우유\", 2, 1200"
+    },
+    {
+     "L": "\"kit\", 10, 7",
+     "py": "\"kit\", 10, 7"
+    },
+    {
+     "L": "\"z\", 1, 1",
+     "py": "\"z\", 1, 1"
+    },
+    {
+     "L": "\"gum\", 7, 0",
+     "py": "\"gum\", 7, 0"
+    },
+    {
+     "L": "\"t\", 100, 100",
+     "py": "\"t\", 100, 100"
+    }
+   ]
+  },
+  {
+   "id": "s4-plural",
+   "stratum": "S4",
+   "contract": "Write a function that formats a count of things. When n is exactly 1 the result is 1, a space, and the word. Otherwise the result is n, a space, and the word with the letter s appended.",
+   "fn_L": "plural",
+   "fn_py": "plural",
+   "ret": "string",
+   "sig_L": "function plural(word: string, n: int) -> string",
+   "sig_py": "def plural(word: str, n: int) -> str",
+   "visible": [
+    {
+     "L": "\"file\", 1",
+     "py": "\"file\", 1"
+    },
+    {
+     "L": "\"file\", 3",
+     "py": "\"file\", 3"
+    },
+    {
+     "L": "\"cat\", 0",
+     "py": "\"cat\", 0"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "\"dog\", 2",
+     "py": "\"dog\", 2"
+    },
+    {
+     "L": "\"row\", 1",
+     "py": "\"row\", 1"
+    },
+    {
+     "L": "\"byte\", 100",
+     "py": "\"byte\", 100"
+    },
+    {
+     "L": "\"egg\", 0",
+     "py": "\"egg\", 0"
+    },
+    {
+     "L": "\"책\", 5",
+     "py": "\"책\", 5"
+    }
+   ]
+  },
+  {
+   "id": "s4-bar",
+   "stratum": "S4",
+   "contract": "Write a function that returns a progress bar string of exactly n hash characters. Zero gives the empty string. n is non-negative.",
+   "fn_L": "bar",
+   "fn_py": "bar",
+   "ret": "string",
+   "sig_L": "function bar(n: int) -> string",
+   "sig_py": "def bar(n: int) -> str",
+   "visible": [
+    {
+     "L": "3",
+     "py": "3"
+    },
+    {
+     "L": "0",
+     "py": "0"
+    },
+    {
+     "L": "1",
+     "py": "1"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "5",
+     "py": "5"
+    },
+    {
+     "L": "7",
+     "py": "7"
+    },
+    {
+     "L": "2",
+     "py": "2"
+    },
+    {
+     "L": "10",
+     "py": "10"
+    },
+    {
+     "L": "4",
+     "py": "4"
+    }
+   ]
+  },
+  {
+   "id": "s5-stats",
+   "stratum": "S5",
+   "contract": "Write a function that reports the sum and maximum of a non-empty integer array as a string of the exact form sum=S max=M, using two helper functions of your own, one for the sum and one for the maximum.",
+   "fn_L": "report",
+   "fn_py": "report",
+   "ret": "string",
+   "sig_L": "function report(xs: Array<int>) -> string",
+   "sig_py": "def report(xs: list[int]) -> str",
+   "visible": [
+    {
+     "L": "[3, 1, 4]",
+     "py": "[3, 1, 4]"
+    },
+    {
+     "L": "[5]",
+     "py": "[5]"
+    },
+    {
+     "L": "[-1, -2]",
+     "py": "[-1, -2]"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "[0, 0, 0]",
+     "py": "[0, 0, 0]"
+    },
+    {
+     "L": "[10, 20, 30]",
+     "py": "[10, 20, 30]"
+    },
+    {
+     "L": "[7]",
+     "py": "[7]"
+    },
+    {
+     "L": "[2, 9, 4, 9]",
+     "py": "[2, 9, 4, 9]"
+    },
+    {
+     "L": "[1, 1, 1, 1, 1]",
+     "py": "[1, 1, 1, 1, 1]"
+    }
+   ]
+  },
+  {
+   "id": "s5-triangle",
+   "stratum": "S5",
+   "contract": "Write a function that classifies a triangle from three positive integer side lengths. If the sides cannot form a triangle under the strict triangle inequality return invalid. If all sides are equal return equilateral. If exactly two sides are equal return isosceles. Otherwise return scalene. Use a helper function for the validity test.",
+   "fn_L": "triangle",
+   "fn_py": "triangle",
+   "ret": "string",
+   "sig_L": "function triangle(a: int, b: int, c: int) -> string",
+   "sig_py": "def triangle(a: int, b: int, c: int) -> str",
+   "visible": [
+    {
+     "L": "3, 4, 5",
+     "py": "3, 4, 5"
+    },
+    {
+     "L": "2, 2, 2",
+     "py": "2, 2, 2"
+    },
+    {
+     "L": "1, 1, 3",
+     "py": "1, 1, 3"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "5, 5, 8",
+     "py": "5, 5, 8"
+    },
+    {
+     "L": "10, 6, 8",
+     "py": "10, 6, 8"
+    },
+    {
+     "L": "1, 2, 3",
+     "py": "1, 2, 3"
+    },
+    {
+     "L": "7, 7, 7",
+     "py": "7, 7, 7"
+    },
+    {
+     "L": "2, 3, 2",
+     "py": "2, 3, 2"
+    }
+   ]
+  },
+  {
+   "id": "s5-payroll",
+   "stratum": "S5",
+   "contract": "Write a function computing weekly pay from hours worked and an hourly rate. Hours up to 40 are paid at the rate. Hours above 40 are paid at double the rate. Use a helper function that returns the overtime hours.",
+   "fn_L": "pay",
+   "fn_py": "pay",
+   "ret": "int",
+   "sig_L": "function pay(hours: int, rate: int) -> int",
+   "sig_py": "def pay(hours: int, rate: int) -> int",
+   "visible": [
+    {
+     "L": "40, 10",
+     "py": "40, 10"
+    },
+    {
+     "L": "45, 10",
+     "py": "45, 10"
+    },
+    {
+     "L": "0, 99",
+     "py": "0, 99"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "41, 1",
+     "py": "41, 1"
+    },
+    {
+     "L": "60, 5",
+     "py": "60, 5"
+    },
+    {
+     "L": "39, 20",
+     "py": "39, 20"
+    },
+    {
+     "L": "50, 10",
+     "py": "50, 10"
+    },
+    {
+     "L": "40, 1",
+     "py": "40, 1"
+    }
+   ]
+  },
+  {
+   "id": "s5-points",
+   "stratum": "S5",
+   "contract": "Write a function that totals league points from an array of result strings. A win is worth 3 points, a draw 1 point, and anything else 0 points. Use a helper function that scores a single result.",
+   "fn_L": "total",
+   "fn_py": "total",
+   "ret": "int",
+   "sig_L": "function total(results: Array<string>) -> int",
+   "sig_py": "def total(results: list[str]) -> int",
+   "visible": [
+    {
+     "L": "[\"win\", \"draw\", \"loss\"]",
+     "py": "[\"win\", \"draw\", \"loss\"]"
+    },
+    {
+     "L_bind": "let e: Array<string> = []",
+     "L": "e",
+     "py": "[]"
+    },
+    {
+     "L": "[\"win\", \"win\"]",
+     "py": "[\"win\", \"win\"]"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "[\"draw\"]",
+     "py": "[\"draw\"]"
+    },
+    {
+     "L": "[\"loss\", \"loss\"]",
+     "py": "[\"loss\", \"loss\"]"
+    },
+    {
+     "L": "[\"win\", \"draw\", \"win\"]",
+     "py": "[\"win\", \"draw\", \"win\"]"
+    },
+    {
+     "L": "[\"draw\", \"draw\", \"draw\", \"draw\"]",
+     "py": "[\"draw\", \"draw\", \"draw\", \"draw\"]"
+    },
+    {
+     "L": "[\"loss\"]",
+     "py": "[\"loss\"]"
+    }
+   ]
+  },
+  {
+   "id": "s6-add-case",
+   "stratum": "S6",
+   "edit": true,
+   "contract": "The given program moves a point on a grid for directions N, S, and E, leaving other directions unchanged. Extend it so that direction W decreases x by 1, keeping all existing behavior identical.",
+   "fn_L": "move",
+   "fn_py": "move",
+   "ret": "rec:x,y",
+   "sig_L": "function move(dir: string, x: int, y: int) -> { x: int, y: int }",
+   "sig_py": "def move(dir: str, x: int, y: int) -> Point  (Point is a provided dataclass with int fields x, y)",
+   "py_prelude": "from dataclasses import dataclass\n\n\n@dataclass\nclass Point:\n    x: int\n    y: int\n",
+   "visible": [
+    {
+     "L": "\"W\", 1, 1",
+     "py": "\"W\", 1, 1"
+    },
+    {
+     "L": "\"N\", 0, 0",
+     "py": "\"N\", 0, 0"
+    },
+    {
+     "L": "\"X\", 5, 5",
+     "py": "\"X\", 5, 5"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "\"W\", 0, 0",
+     "py": "\"W\", 0, 0"
+    },
+    {
+     "L": "\"W\", -5, 2",
+     "py": "\"W\", -5, 2"
+    },
+    {
+     "L": "\"S\", 3, 3",
+     "py": "\"S\", 3, 3"
+    },
+    {
+     "L": "\"E\", 1, 0",
+     "py": "\"E\", 1, 0"
+    },
+    {
+     "L": "\"W\", 100, 50",
+     "py": "\"W\", 100, 50"
+    }
+   ]
+  },
+  {
+   "id": "s6-guard",
+   "stratum": "S6",
+   "edit": true,
+   "contract": "The given program clamps n into [lo, hi] assuming lo <= hi. Change it so that when lo is greater than hi the function returns -1 instead, keeping all other behavior identical.",
+   "fn_L": "clamp",
+   "fn_py": "clamp",
+   "ret": "int",
+   "sig_L": "function clamp(n: int, lo: int, hi: int) -> int",
+   "sig_py": "def clamp(n: int, lo: int, hi: int) -> int",
+   "visible": [
+    {
+     "L": "5, 10, 0",
+     "py": "5, 10, 0"
+    },
+    {
+     "L": "5, 0, 10",
+     "py": "5, 0, 10"
+    },
+    {
+     "L": "-3, 0, 10",
+     "py": "-3, 0, 10"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "1, 1, 0",
+     "py": "1, 1, 0"
+    },
+    {
+     "L": "0, 0, 0",
+     "py": "0, 0, 0"
+    },
+    {
+     "L": "99, 5, 5",
+     "py": "99, 5, 5"
+    },
+    {
+     "L": "7, 8, 8",
+     "py": "7, 8, 8"
+    },
+    {
+     "L": "3, 4, 2",
+     "py": "3, 4, 2"
+    }
+   ]
+  },
+  {
+   "id": "s6-inclusive",
+   "stratum": "S6",
+   "edit": true,
+   "contract": "The given program sums the integers from 1 up to but not including n. Change it to sum from 1 up to and including n, keeping the result 0 for n below 1.",
+   "fn_L": "sumTo",
+   "fn_py": "sum_to",
+   "ret": "int",
+   "sig_L": "function sumTo(n: int) -> int",
+   "sig_py": "def sum_to(n: int) -> int",
+   "visible": [
+    {
+     "L": "5",
+     "py": "5"
+    },
+    {
+     "L": "1",
+     "py": "1"
+    },
+    {
+     "L": "0",
+     "py": "0"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "10",
+     "py": "10"
+    },
+    {
+     "L": "2",
+     "py": "2"
+    },
+    {
+     "L": "100",
+     "py": "100"
+    },
+    {
+     "L": "3",
+     "py": "3"
+    },
+    {
+     "L": "7",
+     "py": "7"
+    }
+   ]
+  },
+  {
+   "id": "s6-field",
+   "stratum": "S6",
+   "edit": true,
+   "contract": "The given program scales a rectangle record with fields w and h. Extend the record to a box with an additional integer field d for depth, scaling all three fields by k.",
+   "fn_L": "scale",
+   "fn_py": "scale",
+   "ret": "rec:w,h,d",
+   "sig_L": "function scale(b: { w: int, h: int, d: int }, k: int) -> { w: int, h: int, d: int }",
+   "sig_py": "def scale(b: Box, k: int) -> Box  (Box is a provided dataclass with int fields w, h, d)",
+   "py_prelude": "from dataclasses import dataclass\n\n\n@dataclass\nclass Box:\n    w: int\n    h: int\n    d: int\n",
+   "visible": [
+    {
+     "L": "{ w: 2, h: 3, d: 4 }, 2",
+     "py": "Box(w=2, h=3, d=4), 2"
+    },
+    {
+     "L": "{ w: 1, h: 1, d: 1 }, 1",
+     "py": "Box(w=1, h=1, d=1), 1"
+    },
+    {
+     "L": "{ w: 0, h: 5, d: 9 }, 3",
+     "py": "Box(w=0, h=5, d=9), 3"
+    }
+   ],
+   "hidden": [
+    {
+     "L": "{ w: 7, h: 7, d: 7 }, 0",
+     "py": "Box(w=7, h=7, d=7), 0"
+    },
+    {
+     "L": "{ w: 1, h: 2, d: 3 }, 10",
+     "py": "Box(w=1, h=2, d=3), 10"
+    },
+    {
+     "L": "{ w: 4, h: 0, d: 6 }, 5",
+     "py": "Box(w=4, h=0, d=6), 5"
+    },
+    {
+     "L": "{ w: 3, h: 3, d: 3 }, 3",
+     "py": "Box(w=3, h=3, d=3), 3"
+    },
+    {
+     "L": "{ w: 10, h: 1, d: 1 }, 7",
+     "py": "Box(w=10, h=1, d=1), 7"
+    }
+   ]
+  }
+ ]
+}

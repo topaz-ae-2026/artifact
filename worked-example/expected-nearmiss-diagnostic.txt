@@ -1,0 +1,7 @@
+error[L5002]: `eval` is not bound
+ --> badness-nearmiss.l:3:12
+  |
+3 |     return eval("slack * slack")
+  |            ^^^^
+
+<scrubbed> 1 type diagnostic

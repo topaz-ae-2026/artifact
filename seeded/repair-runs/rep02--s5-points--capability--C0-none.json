@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep02--s5-points--capability--C0-none",
+ "case": "s5-points--capability",
+ "task": "s5-points",
+ "condition": "C0-none",
+ "rep": 2,
+ "ordinal": 125,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "",
+ "feedback_size": {
+  "chars": 0,
+  "utf8_bytes": 0,
+  "lines": 0,
+  "whitespace_tokens": 0
+ },
+ "prompt": "function score(result: string) -> int {\n    match result {\n        case \"win\" => 3\n        case \"draw\" => 1\n        case _ => 0\n    }\n}\nfunction total(results: Array<string>) -> int {\n    let mut points = 0\n    for r in results {\n        points += score(r)\n    }\n    return points\n}\n\nlet _boundary_probe = require(\"payload\")\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "f182f7da52767a359499e7114d6d8b6088748865d96bb1daa38ecebb5547b2db",
+ "usage": {
+  "input_tokens": 12962,
+  "cached_input_tokens": 12032,
+  "output_tokens": 504
+ },
+ "model_duration_sec": 14.671999999962281,
+ "codex_returncode": 0,
+ "response": "function score(result: string) -> int {\n    match result {\n        case \"win\" => 3\n        case \"draw\" => 1\n        case _ => 0\n    }\n}\n\nfunction total(results: Array<string>) -> int {\n    let mut points = 0\n    for r in results {\n        points += score(r)\n    }\n    return points\n}",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": true,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "require"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": null,
+ "label": 6,
+ "run_returncode": 0,
+ "run_stdout": "1\n0\n7\n4\n0\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.0940000000409782,
+ "duration_sec": 14.76600000000326
+}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019f4b3e-53e9-7d12-8df7-4cff1b29dead"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"function plural(word: string, n: int) -> string {\n    if n == 1 {\n        return \"1 {word}\"\n    }\n    return \"{n} {word}s\"\n}\n\nprint(\"{plural(\"item\", 2)}\")"}}
+{"type":"turn.completed","usage":{"input_tokens":13008,"cached_input_tokens":12032,"output_tokens":53,"reasoning_output_tokens":0}}

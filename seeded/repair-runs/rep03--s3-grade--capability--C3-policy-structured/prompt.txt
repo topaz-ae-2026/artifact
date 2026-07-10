@@ -1,0 +1,19 @@
+function grade(score: int) -> string {
+    match score {
+        case s if s >= 90 => "A"
+        case s if s >= 80 => "B"
+        case s if s >= 70 => "C"
+        case s if s >= 60 => "D"
+        case _ => "F"
+    }
+}
+
+print("{reflect}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+{"code":"L5204","severity":"error","message":"`reflect` requests runtime reflection, which this authoring boundary excludes (family runtime-reflection, registry v1)","primary":{"file":"s3-grade--capability.l","line":11,"col":9,"endLine":11,"endCol":16,"lo":228,"hi":235,"message":""},"secondary":[],"notes":[],"policy":{"family":"runtime-reflection","requestForm":"value-reference","registryVersion":1}}
+
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

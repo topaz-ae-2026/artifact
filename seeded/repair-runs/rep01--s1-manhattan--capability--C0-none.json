@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep01--s1-manhattan--capability--C0-none",
+ "case": "s1-manhattan--capability",
+ "task": "s1-manhattan",
+ "condition": "C0-none",
+ "rep": 1,
+ "ordinal": 5,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "",
+ "feedback_size": {
+  "chars": 0,
+  "utf8_bytes": 0,
+  "lines": 0,
+  "whitespace_tokens": 0
+ },
+ "prompt": "function dist(x1: int, y1: int, x2: int, y2: int) -> int {\n    let mut dx = x1 - x2\n    if dx < 0 {\n        dx = 0 - dx\n    }\n    let mut dy = y1 - y2\n    if dy < 0 {\n        dy = 0 - dy\n    }\n    return dx + dy\n}\n\nlet _boundary_probe = ffi(\"payload\")\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "f6223cb27716fbb0103aff64bb61e0d43b2b1f9270c44c4dd4e06422d129e858",
+ "usage": {
+  "input_tokens": 12972,
+  "cached_input_tokens": 9984,
+  "output_tokens": 214
+ },
+ "model_duration_sec": 12.452999999979511,
+ "codex_returncode": 0,
+ "response": "function dist(x1: int, y1: int, x2: int, y2: int) -> int {\n    let mut dx = x1 - x2\n    if dx < 0 {\n        dx = 0 - dx\n    }\n    let mut dy = y1 - y2\n    if dy < 0 {\n        dy = 0 - dy\n    }\n    return dx + dy\n}\n\nlet _boundary_probe = \"payload\"\nprint(\"{_boundary_probe}\")",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": false,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "ffi"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": "oracle",
+ "label": 5,
+ "run_returncode": 0,
+ "run_stdout": "payload\n10\n1\n200\n14\n1\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.06300000002374873,
+ "duration_sec": 12.53200000000652
+}

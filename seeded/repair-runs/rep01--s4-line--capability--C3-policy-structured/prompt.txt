@@ -1,0 +1,14 @@
+function line(item: string, qty: int, price: int) -> string {
+    return "{item} x{qty} = {qty * price}"
+}
+
+let _boundary_probe = reflect("payload")
+print("{_boundary_probe}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+{"code":"L5204","severity":"error","message":"`reflect` requests runtime reflection, which this authoring boundary excludes (family runtime-reflection, registry v1)","primary":{"file":"s4-line--capability.l","line":5,"col":23,"endLine":5,"endCol":30,"lo":130,"hi":137,"message":""},"secondary":[],"notes":[],"policy":{"family":"runtime-reflection","requestForm":"direct-call","registryVersion":1}}
+
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

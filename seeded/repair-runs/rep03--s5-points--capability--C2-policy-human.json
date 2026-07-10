@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep03--s5-points--capability--C2-policy-human",
+ "case": "s5-points--capability",
+ "task": "s5-points",
+ "condition": "C2-policy-human",
+ "rep": 3,
+ "ordinal": 198,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "error[L5205]: `require` requests dynamic module loading, which this authoring boundary excludes (family dynamic-module-loading, registry v1)\n  --> s5-points--capability.l:16:23\n   |\n16 | let _boundary_probe = require(\"payload\")\n   |                       ^^^^^^^\n\n<scrubbed> 1 type diagnostic\n",
+ "feedback_size": {
+  "chars": 360,
+  "utf8_bytes": 360,
+  "lines": 7,
+  "whitespace_tokens": 30
+ },
+ "prompt": "function score(result: string) -> int {\n    match result {\n        case \"win\" => 3\n        case \"draw\" => 1\n        case _ => 0\n    }\n}\nfunction total(results: Array<string>) -> int {\n    let mut points = 0\n    for r in results {\n        points += score(r)\n    }\n    return points\n}\n\nlet _boundary_probe = require(\"payload\")\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\nerror[L5205]: `require` requests dynamic module loading, which this authoring boundary excludes (family dynamic-module-loading, registry v1)\n  --> s5-points--capability.l:16:23\n   |\n16 | let _boundary_probe = require(\"payload\")\n   |                       ^^^^^^^\n\n<scrubbed> 1 type diagnostic\n\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "db21ebbc739ed8830619990167513e092d144fd40d315f315ce95eb7ad0256f6",
+ "usage": {
+  "input_tokens": 13063,
+  "cached_input_tokens": 12032,
+  "output_tokens": 82
+ },
+ "model_duration_sec": 6.077999999979511,
+ "codex_returncode": 0,
+ "response": "function score(result: string) -> int {\n    match result {\n        case \"win\" => 3\n        case \"draw\" => 1\n        case _ => 0\n    }\n}\n\nfunction total(results: Array<string>) -> int {\n    let mut points = 0\n    for r in results {\n        points += score(r)\n    }\n    return points\n}",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": true,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "require"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": null,
+ "label": 6,
+ "run_returncode": 0,
+ "run_stdout": "1\n0\n7\n4\n0\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.0470000000204891,
+ "duration_sec": 6.125
+}

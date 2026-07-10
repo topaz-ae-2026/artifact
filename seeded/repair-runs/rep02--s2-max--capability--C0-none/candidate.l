@@ -1,0 +1,12 @@
+function maxOf(xs: Array<int>) -> int {
+    let mut best = xs[0]
+    for k in 1 ..< xs.length {
+        if xs[k] > best {
+            best = xs[k]
+        }
+    }
+    return best
+}
+
+let _boundary_probe = "ffi"
+print("{_boundary_probe}")

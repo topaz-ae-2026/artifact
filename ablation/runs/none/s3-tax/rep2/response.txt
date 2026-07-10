@@ -1,0 +1,54 @@
+```
+function tax(income: int) -> int {
+    if (income <= 1000) {
+        return 0;
+    }
+    if (income <= 5000) {
+        return income - 1000;
+    }
+    return 4000 + 3 * (income - 5000);
+}
+```
+
+Reading prompt from stdin...
+OpenAI Codex v0.144.0
+--------
+workdir: <scrubbed>
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019f4a26-a88b-75c1-8093-8538478a7511
+--------
+user
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+Write a function computing a stylized tax in whole units from a non-negative integer income. Income up to 1000 pays 0. Income from 1001 to 5000 pays income minus 1000. Income above 5000 pays 4000 plus 3 times the amount above 5000.
+
+==== REQUIRED INTERFACE ====
+function tax(income: int) -> int
+
+==== EXAMPLES (arguments -> expected result) ====
+  tax(500)  ->  0
+  tax(3000)  ->  2000
+  tax(6000)  ->  7000
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.
+codex
+```
+function tax(income: int) -> int {
+    if (income <= 1000) {
+        return 0;
+    }
+    if (income <= 5000) {
+        return income - 1000;
+    }
+    return 4000 + 3 * (income - 5000);
+}
+```
+tokens used
+1,111

@@ -1,0 +1,2 @@
+def line(item: str, qty: int, price: int) -> str:
+    return f"{item} x{qty} = {qty * price}"

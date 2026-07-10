@@ -1,0 +1,24 @@
+function countAbove(xs: Array<int>, t: int) -> int {
+    let mut n = 0
+    for x in xs {
+        if x > t {
+            n += 1
+        }
+    }
+    return n
+}
+
+print("{eval}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+error[L5002]: `eval` is not bound
+  --> seeded/cases/s2-count-above--capability.l:11:9
+   |
+11 | print("{eval}")
+   |         ^^^^
+
+seeded/cases/s2-count-above--capability.l: 1 type diagnostic
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

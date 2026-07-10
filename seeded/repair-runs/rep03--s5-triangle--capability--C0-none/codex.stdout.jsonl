@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019f4b41-8107-7813-83fd-d792e0baeefd"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"func isValid(_ a: Int, _ b: Int, _ c: Int) -> String {\n    if a + b > c && b + c > a && a + c > b {\n        return \"yes\"\n    }\n    return \"no\"\n}\n\nfunc triangle(_ a: Int, _ b: Int, _ c: Int) -> String {\n    if isValid(a, b, c) == \"no\" {\n        return \"invalid\"\n    }\n    if a == b && b == c {\n        return \"equilateral\"\n    }\n    if a == b || b == c || a == c {\n        return \"isosceles\"\n    }\n    return \"scalene\"\n}\n\nprint(\"{defmacro}\")"}}
+{"type":"turn.completed","usage":{"input_tokens":13013,"cached_input_tokens":12032,"output_tokens":1127,"reasoning_output_tokens":971}}

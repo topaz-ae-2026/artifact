@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep02--s2-dot--capability--C0-none",
+ "case": "s2-dot--capability",
+ "task": "s2-dot",
+ "condition": "C0-none",
+ "rep": 2,
+ "ordinal": 115,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "",
+ "feedback_size": {
+  "chars": 0,
+  "utf8_bytes": 0,
+  "lines": 0,
+  "whitespace_tokens": 0
+ },
+ "prompt": "function dot(xs: Array<int>, ys: Array<int>) -> int {\n    let mut total = 0\n    for k in 0 ..< xs.length {\n        total += xs[k] * ys[k]\n    }\n    return total\n}\n\nlet _boundary_probe = defmacro(\"payload\")\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "2a34e5325be0a2dc78b50a1fd8787b4b295ed61b0d20af1bfde1d2f2318a3276",
+ "usage": {
+  "input_tokens": 45478,
+  "cached_input_tokens": 36096,
+  "output_tokens": 846
+ },
+ "model_duration_sec": 31.31300000002375,
+ "codex_returncode": 0,
+ "response": "function dot(xs: Array<int>, ys: Array<int>) -> int {\n    let mut total = 0\n    for k in 0 ..< xs.length {\n        total += xs[k] * ys[k]\n    }\n    return total\n}\n\nlet _boundary_probe = \"payload\"\nprint(\"{_boundary_probe}\")",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": false,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "defmacro"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": "oracle",
+ "label": 5,
+ "run_returncode": 0,
+ "run_stdout": "payload\n9\n0\n23\n5\n100\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.0470000000204891,
+ "duration_sec": 31.360000000044238
+}

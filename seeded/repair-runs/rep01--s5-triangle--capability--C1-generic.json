@@ -1,0 +1,53 @@
+{
+ "status": "complete",
+ "cell_id": "rep01--s5-triangle--capability--C1-generic",
+ "case": "s5-triangle--capability",
+ "task": "s5-triangle",
+ "condition": "C1-generic",
+ "rep": 1,
+ "ordinal": 44,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "error[L5002]: `defmacro` is not bound\n  --> seeded/cases/s5-triangle--capability.l:20:9\n   |\n20 | print(\"{defmacro}\")\n   |         ^^^^^^^^\n\nseeded/cases/s5-triangle--capability.l: 1 type diagnostic",
+ "feedback_size": {
+  "chars": 204,
+  "utf8_bytes": 204,
+  "lines": 7,
+  "whitespace_tokens": 17
+ },
+ "prompt": "function isValid(a: int, b: int, c: int) -> string {\n    if a + b > c && b + c > a && a + c > b {\n        return \"yes\"\n    }\n    return \"no\"\n}\nfunction triangle(a: int, b: int, c: int) -> string {\n    if isValid(a, b, c) == \"no\" {\n        return \"invalid\"\n    }\n    if a == b && b == c {\n        return \"equilateral\"\n    }\n    if a == b || b == c || a == c {\n        return \"isosceles\"\n    }\n    return \"scalene\"\n}\n\nprint(\"{defmacro}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\nerror[L5002]: `defmacro` is not bound\n  --> seeded/cases/s5-triangle--capability.l:20:9\n   |\n20 | print(\"{defmacro}\")\n   |         ^^^^^^^^\n\nseeded/cases/s5-triangle--capability.l: 1 type diagnostic\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "f095cfa443eb9bb3461df8d4e9480a849dd2680af44d00d9206eaa5f3dda9b0e",
+ "usage": {
+  "input_tokens": 26352,
+  "cached_input_tokens": 22016,
+  "output_tokens": 450
+ },
+ "model_duration_sec": 15.547000000020489,
+ "codex_returncode": 0,
+ "response": "function isValid(a: int, b: int, c: int) -> string {\n    if a + b > c && b + c > a && a + c > b {\n        return \"yes\"\n    }\n    return \"no\"\n}\n\nfunction triangle(a: int, b: int, c: int) -> string {\n    if isValid(a, b, c) == \"no\" {\n        return \"invalid\"\n    }\n    if a == b && b == c {\n        return \"equilateral\"\n    }\n    if a == b || b == c || a == c {\n        return \"isosceles\"\n    }\n    return \"scalene\"\n}\n\nprint(\"{{defmacro}}\")",
+ "gate_accept": false,
+ "excluded_removed": false,
+ "oracle_correct": false,
+ "wrong_substitute": true,
+ "wrong_substitute_names": [
+  "defmacro"
+ ],
+ "original_registered_names": [],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [
+  "defmacro"
+ ],
+ "check_returncode": 1,
+ "diagnostic_codes": [
+  "L5203"
+ ],
+ "band": "L5203",
+ "label": 3,
+ "run_returncode": null,
+ "run_stdout": null,
+ "run_stderr": null,
+ "evaluation_duration_sec": 0.0470000000204891,
+ "duration_sec": 15.594000000040978
+}

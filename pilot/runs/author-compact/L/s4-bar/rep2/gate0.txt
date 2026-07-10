@@ -1,0 +1,37 @@
+error[L2001]: expected a parameter name
+ --> gated0.l:2:27
+  |
+2 |   reduce(0..<n, "", (acc, _) => acc + "#")
+  |                           ^
+
+error[L2001]: expected an expression
+ --> gated0.l:2:28
+  |
+2 |   reduce(0..<n, "", (acc, _) => acc + "#")
+  |                            ^
+
+error[L2001]: expected a statement
+ --> gated0.l:2:28
+  |
+2 |   reduce(0..<n, "", (acc, _) => acc + "#")
+  |                            ^
+
+error[L2001]: expected an expression
+ --> gated0.l:2:30
+  |
+2 |   reduce(0..<n, "", (acc, _) => acc + "#")
+  |                              ^^
+
+error[L2001]: expected an expression
+ --> gated0.l:2:42
+  |
+2 |   reduce(0..<n, "", (acc, _) => acc + "#")
+  |                                          ^
+
+error[L2001]: expected a statement
+ --> gated0.l:2:42
+  |
+2 |   reduce(0..<n, "", (acc, _) => acc + "#")
+  |                                          ^
+
+<scrubbed> 6 diagnostics

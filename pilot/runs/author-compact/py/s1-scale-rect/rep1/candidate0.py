@@ -1,0 +1,11 @@
+from dataclasses import dataclass
+
+
+@dataclass
+class Rect:
+    w: int
+    h: int
+
+
+def scale(r: Rect, k: int) -> Rect:
+    return Rect(w=r.w * k, h=r.h * k)

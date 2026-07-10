@@ -1,0 +1,48 @@
+```
+function scale(b: { w: int, h: int, d: int }, k: int) -> { w: int, h: int, d: int } {
+    return { w: b.w * k, h: b.h * k, d: b.d * k }
+}
+```
+
+Reading prompt from stdin...
+OpenAI Codex v0.144.0
+--------
+workdir: <scrubbed>
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019f4a2b-1ca3-7b00-8fe4-1bee68796532
+--------
+user
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+The given program scales a rectangle record with fields w and h. Extend the record to a box with an additional integer field d for depth, scaling all three fields by k.
+
+==== PROGRAM TO MODIFY ====
+function scale(r: { w: int, h: int }, k: int) -> { w: int, h: int } {
+    return { w: r.w * k, h: r.h * k }
+}
+
+
+==== REQUIRED INTERFACE ====
+function scale(b: { w: int, h: int, d: int }, k: int) -> { w: int, h: int, d: int }
+
+==== EXAMPLES (arguments -> expected result) ====
+  scale({ w: 2, h: 3, d: 4 }, 2)  ->  4 6 8
+  scale({ w: 1, h: 1, d: 1 }, 1)  ->  1 1 1
+  scale({ w: 0, h: 5, d: 9 }, 3)  ->  0 15 27
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.
+codex
+```
+function scale(b: { w: int, h: int, d: int }, k: int) -> { w: int, h: int, d: int } {
+    return { w: b.w * k, h: b.h * k, d: b.d * k }
+}
+```
+tokens used
+1,167

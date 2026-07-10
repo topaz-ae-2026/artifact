@@ -1,0 +1,15 @@
+function countAbove(xs: Array<int>, t: int) -> int {
+    let mut n = 0
+    for x in xs {
+        if x > t {
+            n += 1
+        }
+    }
+    return n
+}
+
+print("{eval}")
+
+This program was rejected by the receiving gate of language L.
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

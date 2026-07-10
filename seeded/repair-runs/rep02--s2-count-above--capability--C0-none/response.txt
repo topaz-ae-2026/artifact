@@ -1,0 +1,13 @@
+fn countAbove(xs: &[i32], t: i32) -> i32 {
+    let mut n = 0;
+    for &x in xs {
+        if x > t {
+            n += 1;
+        }
+    }
+    n
+}
+
+fn main() {
+    print!("{{eval}}");
+}

@@ -1,0 +1,48 @@
+```text
+function plural(word: string, n: int) -> string {
+    if (n == 1) {
+        return n + " " + word;
+    }
+    return n + " " + word + "s";
+}
+```
+
+Reading prompt from stdin...
+OpenAI Codex v0.144.0
+--------
+workdir: <scrubbed>
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019f4a26-5a1b-7240-9bcc-e406b458182d
+--------
+user
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+Write a function that formats a count of things. When n is exactly 1 the result is 1, a space, and the word. Otherwise the result is n, a space, and the word with the letter s appended.
+
+==== REQUIRED INTERFACE ====
+function plural(word: string, n: int) -> string
+
+==== EXAMPLES (arguments -> expected result) ====
+  plural("file", 1)  ->  1 file
+  plural("file", 3)  ->  3 files
+  plural("cat", 0)  ->  0 cats
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.
+codex
+```text
+function plural(word: string, n: int) -> string {
+    if (n == 1) {
+        return n + " " + word;
+    }
+    return n + " " + word + "s";
+}
+```
+tokens used
+3,165

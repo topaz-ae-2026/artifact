@@ -1,0 +1,11 @@
+function countAbove(xs: Array<number>, t: number): number {
+    let n = 0;
+    for (const x of xs) {
+        if (x > t) {
+            n += 1;
+        }
+    }
+    return n;
+}
+
+console.log("{eval}");

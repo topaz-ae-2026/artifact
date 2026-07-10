@@ -1,0 +1,10 @@
+{
+ "task": "s3-move",
+ "cond": "none",
+ "rep": 1,
+ "endpoint": "frontier",
+ "label": 6,
+ "band": null,
+ "foreign": false,
+ "draft0_ok": true
+}

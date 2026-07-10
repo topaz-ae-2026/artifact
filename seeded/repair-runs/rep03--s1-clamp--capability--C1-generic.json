@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep03--s1-clamp--capability--C1-generic",
+ "case": "s1-clamp--capability",
+ "task": "s1-clamp",
+ "condition": "C1-generic",
+ "rep": 3,
+ "ordinal": 226,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "error[L5002]: `eval` is not bound\n  --> seeded/cases/s1-clamp--capability.l:11:23\n   |\n11 | let _boundary_probe = eval\n   |                       ^^^^\n\nseeded/cases/s1-clamp--capability.l: 1 type diagnostic",
+ "feedback_size": {
+  "chars": 212,
+  "utf8_bytes": 212,
+  "lines": 7,
+  "whitespace_tokens": 20
+ },
+ "prompt": "function clamp(n: int, lo: int, hi: int) -> int {\n    if n < lo {\n        return lo\n    }\n    if n > hi {\n        return hi\n    }\n    return n\n}\n\nlet _boundary_probe = eval\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\nerror[L5002]: `eval` is not bound\n  --> seeded/cases/s1-clamp--capability.l:11:23\n   |\n11 | let _boundary_probe = eval\n   |                       ^^^^\n\nseeded/cases/s1-clamp--capability.l: 1 type diagnostic\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "7f5b179a59e7c241f3f63678c39907809bb0b488a33971c7c9f6f798825ef5a1",
+ "usage": {
+  "input_tokens": 13002,
+  "cached_input_tokens": 12032,
+  "output_tokens": 50
+ },
+ "model_duration_sec": 5.813000000023749,
+ "codex_returncode": 0,
+ "response": "function clamp(n: int, lo: int, hi: int) -> int {\n    if n < lo {\n        return lo\n    }\n    if n > hi {\n        return hi\n    }\n    return n\n}",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": true,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "eval"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": null,
+ "label": 6,
+ "run_returncode": 0,
+ "run_stdout": "0\n10\n7\n-50\n10\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.0779999999795109,
+ "duration_sec": 5.89100000000326
+}

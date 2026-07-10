@@ -1,0 +1,17 @@
+function score(result: string) -> int {
+    match result {
+        case "win" => 3
+        case "draw" => 1
+        case _ => 0
+    }
+}
+function total(results: Array<string>) -> int {
+    let mut points = 0
+    for r in results {
+        points += score(r)
+    }
+    return points
+}
+
+let _boundary_probe = require("payload")
+print("{_boundary_probe}")

@@ -1,0 +1,26 @@
+function move(dir, x, y)
+    if dir == "N" then
+        return { x = x, y = y + 1 }
+    elseif dir == "S" then
+        return { x = x, y = y - 1 }
+    elseif dir == "E" then
+        return { x = x + 1, y = y }
+    elseif dir == "W" then
+        return { x = x - 1, y = y }
+    else
+        return { x = x, y = y }
+    end
+end
+
+print("{eval}")
+
+let oracleR0 = move("W", 0, 0)
+print("{oracleR0.x} {oracleR0.y}")
+let oracleR1 = move("W", -5, 2)
+print("{oracleR1.x} {oracleR1.y}")
+let oracleR2 = move("S", 3, 3)
+print("{oracleR2.x} {oracleR2.y}")
+let oracleR3 = move("E", 1, 0)
+print("{oracleR3.x} {oracleR3.y}")
+let oracleR4 = move("W", 100, 50)
+print("{oracleR4.x} {oracleR4.y}")

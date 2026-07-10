@@ -1,0 +1,15 @@
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+Write a function that returns the sum of the even values in an integer array. The empty array sums to 0. All values are non-negative.
+
+==== REQUIRED INTERFACE ====
+function sumEvens(xs: Array<int>) -> int
+
+==== EXAMPLES (arguments -> expected result) ====
+  sumEvens([1, 2, 3, 4])  ->  6
+  sumEvens(e)  ->  0
+  sumEvens([7, 7])  ->  0
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.

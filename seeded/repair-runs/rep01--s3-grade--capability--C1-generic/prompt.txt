@@ -1,0 +1,24 @@
+function grade(score: int) -> string {
+    match score {
+        case s if s >= 90 => "A"
+        case s if s >= 80 => "B"
+        case s if s >= 70 => "C"
+        case s if s >= 60 => "D"
+        case _ => "F"
+    }
+}
+
+print("{reflect}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+error[L5002]: `reflect` is not bound
+  --> seeded/cases/s3-grade--capability.l:11:9
+   |
+11 | print("{reflect}")
+   |         ^^^^^^^
+
+seeded/cases/s3-grade--capability.l: 1 type diagnostic
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

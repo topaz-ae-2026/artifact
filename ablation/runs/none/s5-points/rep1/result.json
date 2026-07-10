@@ -1,0 +1,10 @@
+{
+ "task": "s5-points",
+ "cond": "none",
+ "rep": 1,
+ "endpoint": "frontier",
+ "label": 2,
+ "band": "L1001",
+ "foreign": true,
+ "draft0_ok": false
+}

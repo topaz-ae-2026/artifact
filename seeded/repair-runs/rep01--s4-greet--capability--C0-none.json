@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep01--s4-greet--capability--C0-none",
+ "case": "s4-greet--capability",
+ "task": "s4-greet",
+ "condition": "C0-none",
+ "rep": 1,
+ "ordinal": 12,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "",
+ "feedback_size": {
+  "chars": 0,
+  "utf8_bytes": 0,
+  "lines": 0,
+  "whitespace_tokens": 0
+ },
+ "prompt": "function greet(name: string, hour: int) -> string {\n    if hour < 12 {\n        return \"Good morning, {name}\"\n    }\n    if hour < 18 {\n        return \"Good afternoon, {name}\"\n    }\n    return \"Good evening, {name}\"\n}\n\nlet _boundary_probe = defmacro\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "be0b96f47c2d7f3c4f7718630a9a5fb503fe121613f70d149c30653f0f77d547",
+ "usage": {
+  "input_tokens": 12945,
+  "cached_input_tokens": 9984,
+  "output_tokens": 494
+ },
+ "model_duration_sec": 14.375,
+ "codex_returncode": 0,
+ "response": "function greet(name: string, hour: int) -> string {\n    if hour < 12 {\n        return \"Good morning, {name}\"\n    }\n    if hour < 18 {\n        return \"Good afternoon, {name}\"\n    }\n    return \"Good evening, {name}\"\n}",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": true,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "defmacro"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": null,
+ "label": 6,
+ "run_returncode": 0,
+ "run_stdout": "Good morning, Dee\nGood morning, Ed\nGood afternoon, Fi\nGood afternoon, Gil\nGood evening, 한나\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.0470000000204891,
+ "duration_sec": 14.422000000020489
+}

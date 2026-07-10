@@ -1,0 +1,10 @@
+{
+ "task": "s6-inclusive",
+ "cond": "examples-only",
+ "rep": 1,
+ "endpoint": "frontier",
+ "label": 6,
+ "band": null,
+ "foreign": false,
+ "draft0_ok": true
+}

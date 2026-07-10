@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep01--s4-line--capability--C3-policy-structured",
+ "case": "s4-line--capability",
+ "task": "s4-line",
+ "condition": "C3-policy-structured",
+ "rep": 1,
+ "ordinal": 77,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "{\"code\":\"L5204\",\"severity\":\"error\",\"message\":\"`reflect` requests runtime reflection, which this authoring boundary excludes (family runtime-reflection, registry v1)\",\"primary\":{\"file\":\"s4-line--capability.l\",\"line\":5,\"col\":23,\"endLine\":5,\"endCol\":30,\"lo\":130,\"hi\":137,\"message\":\"\"},\"secondary\":[],\"notes\":[],\"policy\":{\"family\":\"runtime-reflection\",\"requestForm\":\"direct-call\",\"registryVersion\":1}}\n",
+ "feedback_size": {
+  "chars": 402,
+  "utf8_bytes": 402,
+  "lines": 1,
+  "whitespace_tokens": 13
+ },
+ "prompt": "function line(item: string, qty: int, price: int) -> string {\n    return \"{item} x{qty} = {qty * price}\"\n}\n\nlet _boundary_probe = reflect(\"payload\")\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\n{\"code\":\"L5204\",\"severity\":\"error\",\"message\":\"`reflect` requests runtime reflection, which this authoring boundary excludes (family runtime-reflection, registry v1)\",\"primary\":{\"file\":\"s4-line--capability.l\",\"line\":5,\"col\":23,\"endLine\":5,\"endCol\":30,\"lo\":130,\"hi\":137,\"message\":\"\"},\"secondary\":[],\"notes\":[],\"policy\":{\"family\":\"runtime-reflection\",\"requestForm\":\"direct-call\",\"registryVersion\":1}}\n\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "a398c82a73e5cc4057cb081179ed0ec6681ae9a03d7dfd6416bd2e2c1b7450b9",
+ "usage": {
+  "input_tokens": 13029,
+  "cached_input_tokens": 9984,
+  "output_tokens": 51
+ },
+ "model_duration_sec": 7.171999999962281,
+ "codex_returncode": 0,
+ "response": "function line(item: string, qty: int, price: int) -> string {\n    return \"{item} x{qty} = {qty * price}\"\n}\n\nlet _boundary_probe = \"payload\"\nprint(\"{_boundary_probe}\")",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": false,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "reflect"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": "oracle",
+ "label": 5,
+ "run_returncode": 0,
+ "run_stdout": "payload\n우유 x2 = 2400\nkit x10 = 70\nz x1 = 1\ngum x7 = 0\nt x100 = 10000\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.062000000034458935,
+ "duration_sec": 7.23399999999674
+}

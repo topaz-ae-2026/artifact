@@ -1,0 +1,15 @@
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+Write a function computing a stylized tax in whole units from a non-negative integer income. Income up to 1000 pays 0. Income from 1001 to 5000 pays income minus 1000. Income above 5000 pays 4000 plus 3 times the amount above 5000.
+
+==== REQUIRED INTERFACE ====
+function tax(income: int) -> int
+
+==== EXAMPLES (arguments -> expected result) ====
+  tax(500)  ->  0
+  tax(3000)  ->  2000
+  tax(6000)  ->  7000
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.

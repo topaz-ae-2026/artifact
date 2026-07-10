@@ -1,0 +1,44 @@
+```python
+def _is_valid_triangle(a: int, b: int, c: int) -> bool:
+    return a > 0 and b > 0 and c > 0 and a + b > c and a + c > b and b + c > a
+
+
+def triangle(a: int, b: int, c: int) -> str:
+    if not _is_valid_triangle(a, b, c):
+        return "invalid"
+    if a == b == c:
+        return "equilateral"
+    if a == b or a == c or b == c:
+        return "isosceles"
+    return "scalene"
+```
+
+You are writing Python 3.12. Use only the language itself and, when a prelude is shown, that prelude. No imports other than the ones in the prelude. The code must pass mypy --strict.
+
+==== TASK ====
+Write a function that classifies a triangle from three positive integer side lengths. If the sides cannot form a triangle under the strict triangle inequality return invalid. If all sides are equal return equilateral. If exactly two sides are equal return isosceles. Otherwise return scalene. Use a helper function for the validity test.
+
+==== REQUIRED INTERFACE ====
+def triangle(a: int, b: int, c: int) -> str
+
+==== EXAMPLES (arguments -> expected result) ====
+  triangle(3, 4, 5)  ->  scalene
+  triangle(2, 2, 2)  ->  equilateral
+  triangle(1, 1, 3)  ->  invalid
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete Python program that defines the required interface. No prose outside the code block. Do not print anything; only define the function(s).
+```python
+def _is_valid_triangle(a: int, b: int, c: int) -> bool:
+    return a > 0 and b > 0 and c > 0 and a + b > c and a + c > b and b + c > a
+
+
+def triangle(a: int, b: int, c: int) -> str:
+    if not _is_valid_triangle(a, b, c):
+        return "invalid"
+    if a == b == c:
+        return "equilateral"
+    if a == b or a == c or b == c:
+        return "isosceles"
+    return "scalene"
+```

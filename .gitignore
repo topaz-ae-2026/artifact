@@ -1,0 +1,5 @@
+_build/
+pilot/_work/
+pilot/_isolated/
+pilot/_mypy_cache/
+__pycache__/

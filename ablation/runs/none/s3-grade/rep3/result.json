@@ -1,0 +1,10 @@
+{
+ "task": "s3-grade",
+ "cond": "none",
+ "rep": 3,
+ "endpoint": "frontier",
+ "label": 6,
+ "band": null,
+ "foreign": false,
+ "draft0_ok": true
+}

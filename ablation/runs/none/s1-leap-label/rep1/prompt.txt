@@ -1,0 +1,15 @@
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+Write a function that labels a Gregorian year. Return the string leap when the year is a leap year and the string common otherwise. A year is a leap year when it is divisible by 4, except that century years are leap years only when divisible by 400. Years are positive.
+
+==== REQUIRED INTERFACE ====
+function leapLabel(y: int) -> string
+
+==== EXAMPLES (arguments -> expected result) ====
+  leapLabel(2024)  ->  leap
+  leapLabel(1900)  ->  common
+  leapLabel(2000)  ->  leap
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.

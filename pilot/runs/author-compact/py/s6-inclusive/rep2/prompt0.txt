@@ -1,0 +1,23 @@
+You are writing Python 3.12. Use only the language itself and, when a prelude is shown, that prelude. No imports other than the ones in the prelude. The code must pass mypy --strict.
+
+==== TASK ====
+The given program sums the integers from 1 up to but not including n. Change it to sum from 1 up to and including n, keeping the result 0 for n below 1.
+
+==== PROGRAM TO MODIFY ====
+def sum_to(n: int) -> int:
+    total = 0
+    for k in range(1, n):
+        total += k
+    return total
+
+
+==== REQUIRED INTERFACE ====
+def sum_to(n: int) -> int
+
+==== EXAMPLES (arguments -> expected result) ====
+  sumTo(5)  ->  15
+  sumTo(1)  ->  1
+  sumTo(0)  ->  0
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete Python program that defines the required interface. No prose outside the code block. Do not print anything; only define the function(s).

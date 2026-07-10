@@ -1,0 +1,11 @@
+function score(result: string) -> int {
+    match result {
+        case "win" => 3
+        case "draw" => 1
+        case _ => 0
+    }
+}
+
+function total(results: Array<string>) -> int {
+    reduce(results, 0, (points: int, result: string) => points + score(result))
+}

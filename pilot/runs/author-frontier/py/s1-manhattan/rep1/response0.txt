@@ -1,0 +1,24 @@
+```python
+def dist(x1: int, y1: int, x2: int, y2: int) -> int:
+    return abs(x1 - x2) + abs(y1 - y2)
+```
+
+You are writing Python 3.12. Use only the language itself and, when a prelude is shown, that prelude. No imports other than the ones in the prelude. The code must pass mypy --strict.
+
+==== TASK ====
+Write a function that returns the Manhattan distance between points (x1, y1) and (x2, y2), that is the sum of the absolute coordinate differences.
+
+==== REQUIRED INTERFACE ====
+def dist(x1: int, y1: int, x2: int, y2: int) -> int
+
+==== EXAMPLES (arguments -> expected result) ====
+  dist(0, 0, 3, 4)  ->  7
+  dist(1, 1, 1, 1)  ->  0
+  dist(-2, 3, 4, -1)  ->  10
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete Python program that defines the required interface. No prose outside the code block. Do not print anything; only define the function(s).
+```python
+def dist(x1: int, y1: int, x2: int, y2: int) -> int:
+    return abs(x1 - x2) + abs(y1 - y2)
+```

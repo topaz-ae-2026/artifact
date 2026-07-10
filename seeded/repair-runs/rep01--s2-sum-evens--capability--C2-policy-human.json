@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep01--s2-sum-evens--capability--C2-policy-human",
+ "case": "s2-sum-evens--capability",
+ "task": "s2-sum-evens",
+ "condition": "C2-policy-human",
+ "rep": 1,
+ "ordinal": 35,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "error[L5205]: `require` requests dynamic module loading, which this authoring boundary excludes (family dynamic-module-loading, registry v1)\n  --> s2-sum-evens--capability.l:11:23\n   |\n11 | let _boundary_probe = require(\"payload\")\n   |                       ^^^^^^^\n\n<scrubbed> 1 type diagnostic\n",
+ "feedback_size": {
+  "chars": 366,
+  "utf8_bytes": 366,
+  "lines": 7,
+  "whitespace_tokens": 30
+ },
+ "prompt": "function sumEvens(xs: Array<int>) -> int {\n    let mut total = 0\n    for x in xs {\n        if x % 2 == 0 {\n            total += x\n        }\n    }\n    return total\n}\n\nlet _boundary_probe = require(\"payload\")\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\nerror[L5205]: `require` requests dynamic module loading, which this authoring boundary excludes (family dynamic-module-loading, registry v1)\n  --> s2-sum-evens--capability.l:11:23\n   |\n11 | let _boundary_probe = require(\"payload\")\n   |                       ^^^^^^^\n\n<scrubbed> 1 type diagnostic\n\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "35ff8f9c03b8ae62dbc762c4e395d79e51ea1ff757f6de39ad37ec2ada6c66dc",
+ "usage": {
+  "input_tokens": 13041,
+  "cached_input_tokens": 12032,
+  "output_tokens": 54
+ },
+ "model_duration_sec": 4.125,
+ "codex_returncode": 0,
+ "response": "function sumEvens(xs: Array<int>) -> int {\n    let mut total = 0\n    for x in xs {\n        if x % 2 == 0 {\n            total += x\n        }\n    }\n    return total\n}",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": true,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "require"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": null,
+ "label": 6,
+ "run_returncode": 0,
+ "run_stdout": "12\n0\n0\n36\n8\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.0470000000204891,
+ "duration_sec": 4.187000000034459
+}

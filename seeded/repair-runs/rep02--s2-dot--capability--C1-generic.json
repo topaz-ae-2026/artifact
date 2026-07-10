@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep02--s2-dot--capability--C1-generic",
+ "case": "s2-dot--capability",
+ "task": "s2-dot",
+ "condition": "C1-generic",
+ "rep": 2,
+ "ordinal": 161,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "error[L5002]: `defmacro` is not bound\n --> seeded/cases/s2-dot--capability.l:9:23\n  |\n9 | let _boundary_probe = defmacro(\"payload\")\n  |                       ^^^^^^^^\n\nseeded/cases/s2-dot--capability.l: 1 type diagnostic",
+ "feedback_size": {
+  "chars": 226,
+  "utf8_bytes": 226,
+  "lines": 7,
+  "whitespace_tokens": 20
+ },
+ "prompt": "function dot(xs: Array<int>, ys: Array<int>) -> int {\n    let mut total = 0\n    for k in 0 ..< xs.length {\n        total += xs[k] * ys[k]\n    }\n    return total\n}\n\nlet _boundary_probe = defmacro(\"payload\")\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\nerror[L5002]: `defmacro` is not bound\n --> seeded/cases/s2-dot--capability.l:9:23\n  |\n9 | let _boundary_probe = defmacro(\"payload\")\n  |                       ^^^^^^^^\n\nseeded/cases/s2-dot--capability.l: 1 type diagnostic\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "361525eabdf2a11c33cf480f72f9ee7c53c9cbfa70be649b326fdf01d379baba",
+ "usage": {
+  "input_tokens": 13012,
+  "cached_input_tokens": 12032,
+  "output_tokens": 118
+ },
+ "model_duration_sec": 6.717999999993481,
+ "codex_returncode": 0,
+ "response": "function dot(xs: Array<int>, ys: Array<int>) -> int {\n    let mut total = 0\n    for k in 0 ..< xs.length {\n        total += xs[k] * ys[k]\n    }\n    return total\n}",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": true,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "defmacro"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": null,
+ "label": 6,
+ "run_returncode": 0,
+ "run_stdout": "9\n0\n23\n5\n100\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.11000000004423782,
+ "duration_sec": 6.828000000037719
+}

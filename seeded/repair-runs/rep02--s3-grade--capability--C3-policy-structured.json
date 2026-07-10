@@ -1,0 +1,53 @@
+{
+ "status": "complete",
+ "cell_id": "rep02--s3-grade--capability--C3-policy-structured",
+ "case": "s3-grade--capability",
+ "task": "s3-grade",
+ "condition": "C3-policy-structured",
+ "rep": 2,
+ "ordinal": 126,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "{\"code\":\"L5204\",\"severity\":\"error\",\"message\":\"`reflect` requests runtime reflection, which this authoring boundary excludes (family runtime-reflection, registry v1)\",\"primary\":{\"file\":\"s3-grade--capability.l\",\"line\":11,\"col\":9,\"endLine\":11,\"endCol\":16,\"lo\":228,\"hi\":235,\"message\":\"\"},\"secondary\":[],\"notes\":[],\"policy\":{\"family\":\"runtime-reflection\",\"requestForm\":\"value-reference\",\"registryVersion\":1}}\n",
+ "feedback_size": {
+  "chars": 408,
+  "utf8_bytes": 408,
+  "lines": 1,
+  "whitespace_tokens": 13
+ },
+ "prompt": "function grade(score: int) -> string {\n    match score {\n        case s if s >= 90 => \"A\"\n        case s if s >= 80 => \"B\"\n        case s if s >= 70 => \"C\"\n        case s if s >= 60 => \"D\"\n        case _ => \"F\"\n    }\n}\n\nprint(\"{reflect}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\n{\"code\":\"L5204\",\"severity\":\"error\",\"message\":\"`reflect` requests runtime reflection, which this authoring boundary excludes (family runtime-reflection, registry v1)\",\"primary\":{\"file\":\"s3-grade--capability.l\",\"line\":11,\"col\":9,\"endLine\":11,\"endCol\":16,\"lo\":228,\"hi\":235,\"message\":\"\"},\"secondary\":[],\"notes\":[],\"policy\":{\"family\":\"runtime-reflection\",\"requestForm\":\"value-reference\",\"registryVersion\":1}}\n\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "5642df61931434ca51d44162b102d1c2d385966ad82c37688fbfd0a406bcec4d",
+ "usage": {
+  "input_tokens": 13055,
+  "cached_input_tokens": 12032,
+  "output_tokens": 79
+ },
+ "model_duration_sec": 7.782000000006519,
+ "codex_returncode": 0,
+ "response": "function grade(score: int) -> string {\n    match score {\n        case s if s >= 90 => \"A\"\n        case s if s >= 80 => \"B\"\n        case s if s >= 70 => \"C\"\n        case s if s >= 60 => \"D\"\n        case _ => \"F\"\n    }\n}\n\nprint(\"{reflect}\")",
+ "gate_accept": false,
+ "excluded_removed": false,
+ "oracle_correct": false,
+ "wrong_substitute": true,
+ "wrong_substitute_names": [
+  "reflect"
+ ],
+ "original_registered_names": [],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [
+  "reflect"
+ ],
+ "check_returncode": 1,
+ "diagnostic_codes": [
+  "L5204"
+ ],
+ "band": "L5204",
+ "label": 3,
+ "run_returncode": null,
+ "run_stdout": null,
+ "run_stderr": null,
+ "evaluation_duration_sec": 0.030999999959021807,
+ "duration_sec": 7.827999999979511
+}

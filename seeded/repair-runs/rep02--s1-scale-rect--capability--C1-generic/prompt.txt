@@ -1,0 +1,18 @@
+function scale(r: { w: int, h: int }, k: int) -> { w: int, h: int } {
+    return { w: r.w * k, h: r.h * k }
+}
+
+print("{defmacro}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+error[L5002]: `defmacro` is not bound
+ --> seeded/cases/s1-scale-rect--capability.l:5:9
+  |
+5 | print("{defmacro}")
+  |         ^^^^^^^^
+
+seeded/cases/s1-scale-rect--capability.l: 1 type diagnostic
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

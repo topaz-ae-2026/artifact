@@ -1,0 +1,22 @@
+function plural(word: string, n: int) -> string {
+    if n == 1 {
+        return "1 {word}"
+    }
+    return "{n} {word}s"
+}
+
+print("{require}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+error[L5205]: `require` requests dynamic module loading, which this authoring boundary excludes (family dynamic-module-loading, registry v1)
+ --> s4-plural--capability.l:8:9
+  |
+8 | print("{require}")
+  |         ^^^^^^^
+
+<scrubbed> 1 type diagnostic
+
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019f4b41-9fb0-7170-8030-79b3e2b9b276"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"function isValid(a: int, b: int, c: int) -> string {\n    if a + b > c && b + c > a && a + c > b {\n        return \"yes\"\n    }\n    return \"no\"\n}\n\nfunction triangle(a: int, b: int, c: int) -> string {\n    if isValid(a, b, c) == \"no\" {\n        return \"invalid\"\n    }\n    if a == b && b == c {\n        return \"equilateral\"\n    }\n    if a == b || b == c || a == c {\n        return \"isosceles\"\n    }\n    return \"scalene\"\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":13129,"cached_input_tokens":12032,"output_tokens":143,"reasoning_output_tokens":0}}

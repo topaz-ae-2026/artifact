@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep03--s6-inclusive--capability--C2-policy-human",
+ "case": "s6-inclusive--capability",
+ "task": "s6-inclusive",
+ "condition": "C2-policy-human",
+ "rep": 3,
+ "ordinal": 214,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "error[L5203]: `defmacro` requests macro expansion or source generation, which this authoring boundary excludes (family macro-source-generation, registry v1)\n --> s6-inclusive--capability.l:9:23\n  |\n9 | let _boundary_probe = defmacro(\"payload\")\n  |                       ^^^^^^^^\n\n<scrubbed> 1 type diagnostic\n",
+ "feedback_size": {
+  "chars": 379,
+  "utf8_bytes": 379,
+  "lines": 7,
+  "whitespace_tokens": 32
+ },
+ "prompt": "function sumTo(n: int) -> int {\n    let mut total = 0\n    for k in 1 .. n {\n        total += k\n    }\n    return total\n}\n\nlet _boundary_probe = defmacro(\"payload\")\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\nerror[L5203]: `defmacro` requests macro expansion or source generation, which this authoring boundary excludes (family macro-source-generation, registry v1)\n --> s6-inclusive--capability.l:9:23\n  |\n9 | let _boundary_probe = defmacro(\"payload\")\n  |                       ^^^^^^^^\n\n<scrubbed> 1 type diagnostic\n\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "5cd888858480a3584f7b117bdcb1936f4cd0e34630838c027d2b52559c223061",
+ "usage": {
+  "input_tokens": 13027,
+  "cached_input_tokens": 12032,
+  "output_tokens": 47
+ },
+ "model_duration_sec": 7.48399999999674,
+ "codex_returncode": 0,
+ "response": "function sumTo(n: int) -> int {\n    let mut total = 0\n    for k in 1 .. n {\n        total += k\n    }\n    return total\n}\n\nprint(\"payload\")",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": false,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "defmacro"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": "oracle",
+ "label": 5,
+ "run_returncode": 0,
+ "run_stdout": "payload\n55\n3\n5050\n6\n28\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.046999999962281436,
+ "duration_sec": 7.530999999959022
+}

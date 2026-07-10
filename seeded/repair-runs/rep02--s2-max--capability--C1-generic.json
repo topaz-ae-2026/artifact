@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep02--s2-max--capability--C1-generic",
+ "case": "s2-max--capability",
+ "task": "s2-max",
+ "condition": "C1-generic",
+ "rep": 2,
+ "ordinal": 134,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "error[L5002]: `ffi` is not bound\n  --> seeded/cases/s2-max--capability.l:11:23\n   |\n11 | let _boundary_probe = ffi\n   |                       ^^^\n\nseeded/cases/s2-max--capability.l: 1 type diagnostic",
+ "feedback_size": {
+  "chars": 205,
+  "utf8_bytes": 205,
+  "lines": 7,
+  "whitespace_tokens": 20
+ },
+ "prompt": "function maxOf(xs: Array<int>) -> int {\n    let mut best = xs[0]\n    for k in 1 ..< xs.length {\n        if xs[k] > best {\n            best = xs[k]\n        }\n    }\n    return best\n}\n\nlet _boundary_probe = ffi\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\nerror[L5002]: `ffi` is not bound\n  --> seeded/cases/s2-max--capability.l:11:23\n   |\n11 | let _boundary_probe = ffi\n   |                       ^^^\n\nseeded/cases/s2-max--capability.l: 1 type diagnostic\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "42ffbdc5ed524ea4f14cde24c4f47d30cac1eefc32c518bc9ae78315e3a025d7",
+ "usage": {
+  "input_tokens": 13007,
+  "cached_input_tokens": 12032,
+  "output_tokens": 58
+ },
+ "model_duration_sec": 6.10899999999674,
+ "codex_returncode": 0,
+ "response": "function maxOf(xs: Array<int>) -> int {\n    let mut best = xs[0]\n    for k in 1 ..< xs.length {\n        if xs[k] > best {\n            best = xs[k]\n        }\n    }\n    return best\n}",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": true,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "ffi"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": null,
+ "label": 6,
+ "run_returncode": 0,
+ "run_stdout": "0\n5\n9\n-100\n7\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.06299999996554106,
+ "duration_sec": 6.171999999962281
+}

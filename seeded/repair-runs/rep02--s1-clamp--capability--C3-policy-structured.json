@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep02--s1-clamp--capability--C3-policy-structured",
+ "case": "s1-clamp--capability",
+ "task": "s1-clamp",
+ "condition": "C3-policy-structured",
+ "rep": 2,
+ "ordinal": 151,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "{\"code\":\"L5201\",\"severity\":\"error\",\"message\":\"`eval` requests dynamic source evaluation, which this authoring boundary excludes (family dynamic-evaluation, registry v1)\",\"primary\":{\"file\":\"s1-clamp--capability.l\",\"line\":11,\"col\":23,\"endLine\":11,\"endCol\":27,\"lo\":168,\"hi\":172,\"message\":\"\"},\"secondary\":[],\"notes\":[],\"policy\":{\"family\":\"dynamic-evaluation\",\"requestForm\":\"value-reference\",\"registryVersion\":1}}\n",
+ "feedback_size": {
+  "chars": 413,
+  "utf8_bytes": 413,
+  "lines": 1,
+  "whitespace_tokens": 14
+ },
+ "prompt": "function clamp(n: int, lo: int, hi: int) -> int {\n    if n < lo {\n        return lo\n    }\n    if n > hi {\n        return hi\n    }\n    return n\n}\n\nlet _boundary_probe = eval\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\n{\"code\":\"L5201\",\"severity\":\"error\",\"message\":\"`eval` requests dynamic source evaluation, which this authoring boundary excludes (family dynamic-evaluation, registry v1)\",\"primary\":{\"file\":\"s1-clamp--capability.l\",\"line\":11,\"col\":23,\"endLine\":11,\"endCol\":27,\"lo\":168,\"hi\":172,\"message\":\"\"},\"secondary\":[],\"notes\":[],\"policy\":{\"family\":\"dynamic-evaluation\",\"requestForm\":\"value-reference\",\"registryVersion\":1}}\n\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "6d503a3c897aa72a3adebc819d9ed5eb2409c28d345ec0c8f39982d12f188b7a",
+ "usage": {
+  "input_tokens": 13041,
+  "cached_input_tokens": 12032,
+  "output_tokens": 55
+ },
+ "model_duration_sec": 5.530999999959022,
+ "codex_returncode": 0,
+ "response": "function clamp(n: int, lo: int, hi: int) -> int {\n    if n < lo {\n        return lo\n    }\n    if n > hi {\n        return hi\n    }\n    return n\n}\n\nprint(\"{clamp}\")",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": false,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "eval"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": "oracle",
+ "label": 5,
+ "run_returncode": 0,
+ "run_stdout": "<function clamp>\n0\n10\n7\n-50\n10\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.06300000002374873,
+ "duration_sec": 5.60999999998603
+}

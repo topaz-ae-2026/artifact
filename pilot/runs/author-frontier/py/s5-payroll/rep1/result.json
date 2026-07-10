@@ -1,0 +1,22 @@
+{
+ "agent": "author-frontier",
+ "model": "frontier-author-model",
+ "cli": "redacted-cli",
+ "task": "s5-payroll",
+ "lang": "py",
+ "rep": 1,
+ "rounds": [
+  {
+   "round": 0,
+   "event": "gate-ok",
+   "secs": 24.7
+  }
+ ],
+ "started": 1783645718.246756,
+ "effort": "medium",
+ "accepted_round": 0,
+ "label": 6,
+ "note": "correct",
+ "py_compile_draft0": true,
+ "finished": 1783645743.57725
+}

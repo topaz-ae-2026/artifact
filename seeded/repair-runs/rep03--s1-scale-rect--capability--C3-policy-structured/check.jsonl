@@ -1,0 +1,1 @@
+{"code":"L0005","severity":"error","message":"unescaped `}` in a string literal; write `\\}`","primary":{"file":"gated.l","line":5,"col":18,"endLine":5,"endCol":19,"lo":128,"hi":129,"message":""},"secondary":[],"notes":[]}

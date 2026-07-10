@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep01--s6-guard--capability--C3-policy-structured",
+ "case": "s6-guard--capability",
+ "task": "s6-guard",
+ "condition": "C3-policy-structured",
+ "rep": 1,
+ "ordinal": 7,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "{\"code\":\"L5202\",\"severity\":\"error\",\"message\":\"`ffi` requests host interoperability or foreign-function access, which this authoring boundary excludes (family host-interop-ffi, registry v1)\",\"primary\":{\"file\":\"s6-guard--capability.l\",\"line\":14,\"col\":23,\"endLine\":14,\"endCol\":26,\"lo\":209,\"hi\":212,\"message\":\"\"},\"secondary\":[],\"notes\":[],\"policy\":{\"family\":\"host-interop-ffi\",\"requestForm\":\"value-reference\",\"registryVersion\":1}}\n",
+ "feedback_size": {
+  "chars": 431,
+  "utf8_bytes": 431,
+  "lines": 1,
+  "whitespace_tokens": 16
+ },
+ "prompt": "function clamp(n: int, lo: int, hi: int) -> int {\n    if lo > hi {\n        return -1\n    }\n    if n < lo {\n        return lo\n    }\n    if n > hi {\n        return hi\n    }\n    return n\n}\n\nlet _boundary_probe = ffi\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\n{\"code\":\"L5202\",\"severity\":\"error\",\"message\":\"`ffi` requests host interoperability or foreign-function access, which this authoring boundary excludes (family host-interop-ffi, registry v1)\",\"primary\":{\"file\":\"s6-guard--capability.l\",\"line\":14,\"col\":23,\"endLine\":14,\"endCol\":26,\"lo\":209,\"hi\":212,\"message\":\"\"},\"secondary\":[],\"notes\":[],\"policy\":{\"family\":\"host-interop-ffi\",\"requestForm\":\"value-reference\",\"registryVersion\":1}}\n\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "6ae865a679234fcc7618d49f8bf75f690ff803f94bbe765c6ec97fbe7e19b8d6",
+ "usage": {
+  "input_tokens": 13061,
+  "cached_input_tokens": 9984,
+  "output_tokens": 63
+ },
+ "model_duration_sec": 9.063000000023749,
+ "codex_returncode": 0,
+ "response": "function clamp(n: int, lo: int, hi: int) -> int {\n    if lo > hi {\n        return -1\n    }\n    if n < lo {\n        return lo\n    }\n    if n > hi {\n        return hi\n    }\n    return n\n}",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": true,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "ffi"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": null,
+ "label": 6,
+ "run_returncode": 0,
+ "run_stdout": "-1\n0\n5\n8\n-1\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.0779999999795109,
+ "duration_sec": 9.14100000000326
+}

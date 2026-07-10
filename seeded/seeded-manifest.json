@@ -1,0 +1,1575 @@
+{
+ "summary": {
+  "tasks": 24,
+  "clean_controls_survived": "24/24",
+  "records": 192,
+  "by_class": {
+   "clean-control": {
+    "kept_at_expected_stage": "24/24",
+    "achieved_stage_hist": {
+     "99": 24
+    }
+   },
+   "extraction": {
+    "kept_at_expected_stage": "24/24",
+    "achieved_stage_hist": {
+     "0": 24
+    }
+   },
+   "syntax": {
+    "kept_at_expected_stage": "24/24",
+    "achieved_stage_hist": {
+     "1": 24
+    }
+   },
+   "binding": {
+    "kept_at_expected_stage": "24/24",
+    "achieved_stage_hist": {
+     "3": 24
+    }
+   },
+   "type": {
+    "kept_at_expected_stage": "20/24",
+    "achieved_stage_hist": {
+     "3": 20,
+     "None": 4
+    }
+   },
+   "capability": {
+    "kept_at_expected_stage": "24/24",
+    "achieved_stage_hist": {
+     "4": 24
+    }
+   },
+   "runtime": {
+    "kept_at_expected_stage": "3/24",
+    "achieved_stage_hist": {
+     "5": 3,
+     "None": 21
+    }
+   },
+   "semantic": {
+    "kept_at_expected_stage": "16/24",
+    "achieved_stage_hist": {
+     "6": 16,
+     "99": 5,
+     "None": 3
+    }
+   }
+  }
+ },
+ "records": [
+  {
+   "task": "s1-clamp",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s1-manhattan",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s1-scale-rect",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s1-leap-label",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s2-sum-evens",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s2-count-above",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s2-max",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s2-dot",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s3-grade",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s3-fizz",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s3-move",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s3-tax",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s4-greet",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s4-line",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s4-plural",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s4-bar",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s5-stats",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s5-triangle",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s5-payroll",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s5-points",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s6-add-case",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s6-guard",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s6-inclusive",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s6-field",
+   "class": "clean-control",
+   "expected_stage": 99,
+   "achieved_stage": 99,
+   "kept": true
+  },
+  {
+   "task": "s1-clamp",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s1-manhattan",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s1-scale-rect",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s1-leap-label",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s2-sum-evens",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s2-count-above",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s2-max",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s2-dot",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s3-grade",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s3-fizz",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s3-move",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s3-tax",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s4-greet",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s4-line",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s4-plural",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s4-bar",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s5-stats",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s5-triangle",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s5-payroll",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s5-points",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s6-add-case",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s6-guard",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s6-inclusive",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s6-field",
+   "class": "extraction",
+   "expected_stage": 0,
+   "achieved_stage": 0,
+   "kept": true,
+   "note": "empty or prose response, no code block, caught by the extractor"
+  },
+  {
+   "task": "s1-clamp",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s1-clamp",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s1-clamp",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5001",
+   "kept": true
+  },
+  {
+   "task": "s1-clamp",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5201",
+   "kept": true
+  },
+  {
+   "task": "s1-clamp",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s1-clamp",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": 99,
+   "detail": "survivor",
+   "kept": false
+  },
+  {
+   "task": "s1-manhattan",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s1-manhattan",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s1-manhattan",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5001",
+   "kept": true
+  },
+  {
+   "task": "s1-manhattan",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5202",
+   "kept": true
+  },
+  {
+   "task": "s1-manhattan",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s1-manhattan",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": 6,
+   "detail": "oracle-mismatch",
+   "kept": true
+  },
+  {
+   "task": "s1-scale-rect",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s1-scale-rect",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s1-scale-rect",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s1-scale-rect",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5203",
+   "kept": true
+  },
+  {
+   "task": "s1-scale-rect",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s1-scale-rect",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": 6,
+   "detail": "oracle-mismatch",
+   "kept": true
+  },
+  {
+   "task": "s1-leap-label",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s1-leap-label",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s1-leap-label",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5001",
+   "kept": true
+  },
+  {
+   "task": "s1-leap-label",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5204",
+   "kept": true
+  },
+  {
+   "task": "s1-leap-label",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s1-leap-label",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": 6,
+   "detail": "oracle-mismatch",
+   "kept": true
+  },
+  {
+   "task": "s2-sum-evens",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s2-sum-evens",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s2-sum-evens",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5001",
+   "kept": true
+  },
+  {
+   "task": "s2-sum-evens",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5205",
+   "kept": true
+  },
+  {
+   "task": "s2-sum-evens",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s2-sum-evens",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": 6,
+   "detail": "oracle-mismatch",
+   "kept": true
+  },
+  {
+   "task": "s2-count-above",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s2-count-above",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s2-count-above",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5001",
+   "kept": true
+  },
+  {
+   "task": "s2-count-above",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5201",
+   "kept": true
+  },
+  {
+   "task": "s2-count-above",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s2-count-above",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": 99,
+   "detail": "survivor",
+   "kept": false
+  },
+  {
+   "task": "s2-max",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s2-max",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s2-max",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5001",
+   "kept": true
+  },
+  {
+   "task": "s2-max",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5202",
+   "kept": true
+  },
+  {
+   "task": "s2-max",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": 5,
+   "detail": "runtime-fault",
+   "kept": true
+  },
+  {
+   "task": "s2-max",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": 99,
+   "detail": "survivor",
+   "kept": false
+  },
+  {
+   "task": "s2-dot",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s2-dot",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s2-dot",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5001",
+   "kept": true
+  },
+  {
+   "task": "s2-dot",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5203",
+   "kept": true
+  },
+  {
+   "task": "s2-dot",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": 5,
+   "detail": "runtime-fault",
+   "kept": true
+  },
+  {
+   "task": "s2-dot",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": 6,
+   "detail": "oracle-mismatch",
+   "kept": true
+  },
+  {
+   "task": "s3-grade",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s3-grade",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s3-grade",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5001",
+   "kept": true
+  },
+  {
+   "task": "s3-grade",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5204",
+   "kept": true
+  },
+  {
+   "task": "s3-grade",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s3-grade",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": 6,
+   "detail": "oracle-mismatch",
+   "kept": true
+  },
+  {
+   "task": "s3-fizz",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s3-fizz",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s3-fizz",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5001",
+   "kept": true
+  },
+  {
+   "task": "s3-fizz",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5205",
+   "kept": true
+  },
+  {
+   "task": "s3-fizz",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s3-fizz",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": 6,
+   "detail": "oracle-mismatch",
+   "kept": true
+  },
+  {
+   "task": "s3-move",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s3-move",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s3-move",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s3-move",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5201",
+   "kept": true
+  },
+  {
+   "task": "s3-move",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s3-move",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": 6,
+   "detail": "oracle-mismatch",
+   "kept": true
+  },
+  {
+   "task": "s3-tax",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s3-tax",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s3-tax",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5001",
+   "kept": true
+  },
+  {
+   "task": "s3-tax",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5202",
+   "kept": true
+  },
+  {
+   "task": "s3-tax",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s3-tax",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": 6,
+   "detail": "oracle-mismatch",
+   "kept": true
+  },
+  {
+   "task": "s4-greet",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s4-greet",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s4-greet",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5001",
+   "kept": true
+  },
+  {
+   "task": "s4-greet",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5203",
+   "kept": true
+  },
+  {
+   "task": "s4-greet",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s4-greet",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": 6,
+   "detail": "oracle-mismatch",
+   "kept": true
+  },
+  {
+   "task": "s4-line",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s4-line",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s4-line",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5001",
+   "kept": true
+  },
+  {
+   "task": "s4-line",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5204",
+   "kept": true
+  },
+  {
+   "task": "s4-line",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s4-line",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": 6,
+   "detail": "oracle-mismatch",
+   "kept": true
+  },
+  {
+   "task": "s4-plural",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s4-plural",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s4-plural",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5001",
+   "kept": true
+  },
+  {
+   "task": "s4-plural",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5205",
+   "kept": true
+  },
+  {
+   "task": "s4-plural",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s4-plural",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s4-bar",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s4-bar",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s4-bar",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5001",
+   "kept": true
+  },
+  {
+   "task": "s4-bar",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5201",
+   "kept": true
+  },
+  {
+   "task": "s4-bar",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s4-bar",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": 6,
+   "detail": "oracle-mismatch",
+   "kept": true
+  },
+  {
+   "task": "s5-stats",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s5-stats",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s5-stats",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5001",
+   "kept": true
+  },
+  {
+   "task": "s5-stats",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5202",
+   "kept": true
+  },
+  {
+   "task": "s5-stats",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": 5,
+   "detail": "runtime-fault",
+   "kept": true
+  },
+  {
+   "task": "s5-stats",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": 99,
+   "detail": "survivor",
+   "kept": false
+  },
+  {
+   "task": "s5-triangle",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s5-triangle",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s5-triangle",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5001",
+   "kept": true
+  },
+  {
+   "task": "s5-triangle",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5203",
+   "kept": true
+  },
+  {
+   "task": "s5-triangle",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s5-triangle",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": 6,
+   "detail": "oracle-mismatch",
+   "kept": true
+  },
+  {
+   "task": "s5-payroll",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s5-payroll",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s5-payroll",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5001",
+   "kept": true
+  },
+  {
+   "task": "s5-payroll",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5204",
+   "kept": true
+  },
+  {
+   "task": "s5-payroll",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s5-payroll",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": 6,
+   "detail": "oracle-mismatch",
+   "kept": true
+  },
+  {
+   "task": "s5-points",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s5-points",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s5-points",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5001",
+   "kept": true
+  },
+  {
+   "task": "s5-points",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5205",
+   "kept": true
+  },
+  {
+   "task": "s5-points",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s5-points",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s6-add-case",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s6-add-case",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s6-add-case",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s6-add-case",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5201",
+   "kept": true
+  },
+  {
+   "task": "s6-add-case",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s6-add-case",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": 99,
+   "detail": "survivor",
+   "kept": false
+  },
+  {
+   "task": "s6-guard",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s6-guard",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s6-guard",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5001",
+   "kept": true
+  },
+  {
+   "task": "s6-guard",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5202",
+   "kept": true
+  },
+  {
+   "task": "s6-guard",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s6-guard",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": 6,
+   "detail": "oracle-mismatch",
+   "kept": true
+  },
+  {
+   "task": "s6-inclusive",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s6-inclusive",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s6-inclusive",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5001",
+   "kept": true
+  },
+  {
+   "task": "s6-inclusive",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5203",
+   "kept": true
+  },
+  {
+   "task": "s6-inclusive",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s6-inclusive",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s6-field",
+   "class": "syntax",
+   "expected_stage": 1,
+   "achieved_stage": 1,
+   "detail": "L2001",
+   "kept": true
+  },
+  {
+   "task": "s6-field",
+   "class": "binding",
+   "expected_stage": 3,
+   "achieved_stage": 3,
+   "detail": "L5002",
+   "kept": true
+  },
+  {
+   "task": "s6-field",
+   "class": "type",
+   "expected_stage": 3,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s6-field",
+   "class": "capability",
+   "expected_stage": 4,
+   "achieved_stage": 4,
+   "detail": "L5204",
+   "kept": true
+  },
+  {
+   "task": "s6-field",
+   "class": "runtime",
+   "expected_stage": 5,
+   "achieved_stage": null,
+   "kept": false,
+   "note": "no applicable single-site mutation"
+  },
+  {
+   "task": "s6-field",
+   "class": "semantic",
+   "expected_stage": 6,
+   "achieved_stage": 6,
+   "detail": "oracle-mismatch",
+   "kept": true
+  }
+ ]
+}

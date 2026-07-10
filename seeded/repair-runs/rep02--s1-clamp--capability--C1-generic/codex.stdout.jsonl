@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019f4b3e-d8c7-7441-ab1e-c471a95fa596"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"function clamp(n: int, lo: int, hi: int) -> int {\n    if n < lo {\n        return lo\n    }\n    if n > hi {\n        return hi\n    }\n    return n\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":13002,"cached_input_tokens":12032,"output_tokens":50,"reasoning_output_tokens":0}}

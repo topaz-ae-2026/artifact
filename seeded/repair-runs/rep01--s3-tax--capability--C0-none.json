@@ -1,0 +1,50 @@
+{
+ "status": "complete",
+ "cell_id": "rep01--s3-tax--capability--C0-none",
+ "case": "s3-tax--capability",
+ "task": "s3-tax",
+ "condition": "C0-none",
+ "rep": 1,
+ "ordinal": 92,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "",
+ "feedback_size": {
+  "chars": 0,
+  "utf8_bytes": 0,
+  "lines": 0,
+  "whitespace_tokens": 0
+ },
+ "prompt": "function tax(income: int) -> int {\n    match income {\n        case v if v <= 1000 => 0\n        case v if v <= 5000 => v - 1000\n        case v => 4000 + 3 * (v - 5000)\n    }\n}\n\nprint(\"{ffi}\")\n\nThis program was rejected by the receiving gate of language L.\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "42e84f95d98215ffda872942b4feb497149032788034fa3ab10c7b0071beab87",
+ "usage": {
+  "input_tokens": 56843,
+  "cached_input_tokens": 47104,
+  "output_tokens": 1108
+ },
+ "model_duration_sec": 41.0,
+ "codex_returncode": 0,
+ "response": "fn tax(income: i32) -> i32 {\n    match income {\n        v if v <= 1000 => 0,\n        v if v <= 5000 => v - 1000,\n        v => 4000 + 3 * (v - 5000),\n    }\n}\n\nfn main() {\n    print!(\"{{ffi}}\");\n}",
+ "gate_accept": false,
+ "excluded_removed": true,
+ "oracle_correct": false,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 1,
+ "diagnostic_codes": [
+  "L2001",
+  "L2001"
+ ],
+ "band": "L2001",
+ "label": 2,
+ "run_returncode": null,
+ "run_stdout": null,
+ "run_stderr": null,
+ "evaluation_duration_sec": 0.03200000000651926,
+ "duration_sec": 41.04699999996228
+}

@@ -1,0 +1,5 @@
+```python
+def bar(n: int) -> str:
+    return "#" * n
+```
+

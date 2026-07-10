@@ -1,0 +1,33 @@
+function isValid(a: int, b: int, c: int) -> string {
+    if a + b > c && b + c > a && a + c > b {
+        return "yes"
+    }
+    return "no"
+}
+function triangle(a: int, b: int, c: int) -> string {
+    if isValid(a, b, c) == "no" {
+        return "invalid"
+    }
+    if a == b && b == c {
+        return "equilateral"
+    }
+    if a == b || b == c || a == c {
+        return "isosceles"
+    }
+    return "scalene"
+}
+
+print("{defmacro}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+error[L5002]: `defmacro` is not bound
+  --> seeded/cases/s5-triangle--capability.l:20:9
+   |
+20 | print("{defmacro}")
+   |         ^^^^^^^^
+
+seeded/cases/s5-triangle--capability.l: 1 type diagnostic
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

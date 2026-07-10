@@ -1,0 +1,12 @@
+{
+ "v": 1,
+ "status": "ok",
+ "stdout": [
+  "zero",
+  "one",
+  "many"
+ ],
+ "files": [],
+ "defer_errors": [],
+ "fault": null
+}

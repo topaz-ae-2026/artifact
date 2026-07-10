@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep01--s3-move--capability--C0-none",
+ "case": "s3-move--capability",
+ "task": "s3-move",
+ "condition": "C0-none",
+ "rep": 1,
+ "ordinal": 58,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "",
+ "feedback_size": {
+  "chars": 0,
+  "utf8_bytes": 0,
+  "lines": 0,
+  "whitespace_tokens": 0
+ },
+ "prompt": "function move(dir: string, x: int, y: int) -> { x: int, y: int } {\n    match dir {\n        case \"N\" => { x: x, y: y + 1 }\n        case \"S\" => { x: x, y: y - 1 }\n        case \"E\" => { x: x + 1, y: y }\n        case \"W\" => { x: x - 1, y: y }\n        case _ => { x: x, y: y }\n    }\n}\n\nlet _boundary_probe = eval(\"payload\")\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "178de8165fc1fe047f2edca424c6082bc375f075bfd96eb849aea8334194305f",
+ "usage": {
+  "input_tokens": 13001,
+  "cached_input_tokens": 12032,
+  "output_tokens": 339
+ },
+ "model_duration_sec": 11.547000000020489,
+ "codex_returncode": 0,
+ "response": "function move(dir: string, x: int, y: int) -> { x: int, y: int } {\n    match dir {\n        case \"N\" => { x: x, y: y + 1 }\n        case \"S\" => { x: x, y: y - 1 }\n        case \"E\" => { x: x + 1, y: y }\n        case \"W\" => { x: x - 1, y: y }\n        case _ => { x: x, y: y }\n    }\n}",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": true,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "eval"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": null,
+ "label": 6,
+ "run_returncode": 0,
+ "run_stdout": "0 -1\n0 1\n-3 -2\n0 0\n9 9\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.09399999998277053,
+ "duration_sec": 11.64100000000326
+}

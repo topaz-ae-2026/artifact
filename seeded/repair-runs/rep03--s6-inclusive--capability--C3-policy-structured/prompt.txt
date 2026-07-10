@@ -1,0 +1,18 @@
+function sumTo(n: int) -> int {
+    let mut total = 0
+    for k in 1 .. n {
+        total += k
+    }
+    return total
+}
+
+let _boundary_probe = defmacro("payload")
+print("{_boundary_probe}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+{"code":"L5203","severity":"error","message":"`defmacro` requests macro expansion or source generation, which this authoring boundary excludes (family macro-source-generation, registry v1)","primary":{"file":"s6-inclusive--capability.l","line":9,"col":23,"endLine":9,"endCol":31,"lo":143,"hi":151,"message":""},"secondary":[],"notes":[],"policy":{"family":"macro-source-generation","requestForm":"direct-call","registryVersion":1}}
+
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep01--s1-clamp--capability--C2-policy-human",
+ "case": "s1-clamp--capability",
+ "task": "s1-clamp",
+ "condition": "C2-policy-human",
+ "rep": 1,
+ "ordinal": 63,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "error[L5201]: `eval` requests dynamic source evaluation, which this authoring boundary excludes (family dynamic-evaluation, registry v1)\n  --> s1-clamp--capability.l:11:23\n   |\n11 | let _boundary_probe = eval\n   |                       ^^^^\n\n<scrubbed> 1 type diagnostic\n",
+ "feedback_size": {
+  "chars": 337,
+  "utf8_bytes": 337,
+  "lines": 7,
+  "whitespace_tokens": 30
+ },
+ "prompt": "function clamp(n: int, lo: int, hi: int) -> int {\n    if n < lo {\n        return lo\n    }\n    if n > hi {\n        return hi\n    }\n    return n\n}\n\nlet _boundary_probe = eval\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\nerror[L5201]: `eval` requests dynamic source evaluation, which this authoring boundary excludes (family dynamic-evaluation, registry v1)\n  --> s1-clamp--capability.l:11:23\n   |\n11 | let _boundary_probe = eval\n   |                       ^^^^\n\n<scrubbed> 1 type diagnostic\n\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "d551700c83cc84bcadca65e85210571f3ecadb412ee07597ca4d2750e9f725a3",
+ "usage": {
+  "input_tokens": 13027,
+  "cached_input_tokens": 12032,
+  "output_tokens": 50
+ },
+ "model_duration_sec": 8.327999999979511,
+ "codex_returncode": 0,
+ "response": "function clamp(n: int, lo: int, hi: int) -> int {\n    if n < lo {\n        return lo\n    }\n    if n > hi {\n        return hi\n    }\n    return n\n}",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": true,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "eval"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": null,
+ "label": 6,
+ "run_returncode": 0,
+ "run_stdout": "0\n10\n7\n-50\n10\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.0470000000204891,
+ "duration_sec": 8.39100000000326
+}

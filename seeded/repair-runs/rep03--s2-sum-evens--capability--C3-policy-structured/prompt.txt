@@ -1,0 +1,20 @@
+function sumEvens(xs: Array<int>) -> int {
+    let mut total = 0
+    for x in xs {
+        if x % 2 == 0 {
+            total += x
+        }
+    }
+    return total
+}
+
+let _boundary_probe = require("payload")
+print("{_boundary_probe}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+{"code":"L5205","severity":"error","message":"`require` requests dynamic module loading, which this authoring boundary excludes (family dynamic-module-loading, registry v1)","primary":{"file":"s2-sum-evens--capability.l","line":11,"col":23,"endLine":11,"endCol":30,"lo":188,"hi":195,"message":""},"secondary":[],"notes":[],"policy":{"family":"dynamic-module-loading","requestForm":"direct-call","registryVersion":1}}
+
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

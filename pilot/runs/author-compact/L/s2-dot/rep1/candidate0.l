@@ -1,0 +1,7 @@
+function dot(xs: Array<int>, ys: Array<int>) -> int {
+  let mut sum = 0
+  for i in 0..<xs.length {
+    sum = sum + xs[i] * ys[i]
+  }
+  sum
+}

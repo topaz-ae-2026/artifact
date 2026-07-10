@@ -1,0 +1,78 @@
+```text
+function sum(xs: Array<int>) -> int {
+    let total: int = 0;
+    for (x: int in xs) {
+        total = total + x;
+    }
+    return total;
+}
+
+function maximum(xs: Array<int>) -> int {
+    let result: int = xs[0];
+    for (x: int in xs) {
+        if (x > result) {
+            result = x;
+        }
+    }
+    return result;
+}
+
+function report(xs: Array<int>) -> string {
+    return "sum=" + toString(sum(xs)) + " max=" + toString(maximum(xs));
+}
+```
+
+Reading prompt from stdin...
+OpenAI Codex v0.144.0
+--------
+workdir: <scrubbed>
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019f4a28-5bdd-7673-9b84-7b6f02921e21
+--------
+user
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+Write a function that reports the sum and maximum of a non-empty integer array as a string of the exact form sum=S max=M, using two helper functions of your own, one for the sum and one for the maximum.
+
+==== REQUIRED INTERFACE ====
+function report(xs: Array<int>) -> string
+
+==== EXAMPLES (arguments -> expected result) ====
+  report([3, 1, 4])  ->  sum=8 max=4
+  report([5])  ->  sum=5 max=5
+  report([-1, -2])  ->  sum=-3 max=-1
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.
+codex
+```text
+function sum(xs: Array<int>) -> int {
+    let total: int = 0;
+    for (x: int in xs) {
+        total = total + x;
+    }
+    return total;
+}
+
+function maximum(xs: Array<int>) -> int {
+    let result: int = xs[0];
+    for (x: int in xs) {
+        if (x > result) {
+            result = x;
+        }
+    }
+    return result;
+}
+
+function report(xs: Array<int>) -> string {
+    return "sum=" + toString(sum(xs)) + " max=" + toString(maximum(xs));
+}
+```
+tokens used
+1,301

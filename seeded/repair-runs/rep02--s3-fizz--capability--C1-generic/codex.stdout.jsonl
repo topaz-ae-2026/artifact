@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019f4b3e-d35c-7e21-b668-82b79bde2645"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"function fizz(n: int) -> string {\n    if n % 15 == 0 {\n        return \"fizzbuzz\"\n    }\n    if n % 3 == 0 {\n        return \"fizz\"\n    }\n    if n % 5 == 0 {\n        return \"buzz\"\n    }\n    return \"{n}\"\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":13026,"cached_input_tokens":12032,"output_tokens":73,"reasoning_output_tokens":0}}

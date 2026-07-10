@@ -1,0 +1,14 @@
+function dot(xs: Array<int>, ys: Array<int>) -> int {
+    let mut total = 0
+    for k in 0 ..< xs.length {
+        total += xs[k] * ys[k]
+    }
+    return total
+}
+
+let _boundary_probe = defmacro("payload")
+print("{_boundary_probe}")
+
+This program was rejected by the receiving gate of language L.
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

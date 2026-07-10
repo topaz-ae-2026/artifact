@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019f4b3f-8093-7ac3-b523-f22143f4d6b3"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"function overtime(hours: int) -> int {\n    if hours > 40 {\n        return hours - 40\n    }\n    return 0\n}\n\nfunction pay(hours: int, rate: int) -> int {\n    let extra = overtime(hours)\n    let normal = hours - extra\n    return normal * rate + extra * rate * 2\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":12955,"cached_input_tokens":12032,"output_tokens":150,"reasoning_output_tokens":71}}

@@ -1,0 +1,17 @@
+function tax(income: int) -> int {
+    match income {
+        case v if v <= 1000 => 0
+        case v if v <= 5000 => v - 1000
+        case v => 4000 + 3 * (v - 5000)
+    }
+}
+
+print("{ffi}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+{"code":"L5202","severity":"error","message":"`ffi` requests host interoperability or foreign-function access, which this authoring boundary excludes (family host-interop-ffi, registry v1)","primary":{"file":"s3-tax--capability.l","line":9,"col":9,"endLine":9,"endCol":12,"lo":184,"hi":187,"message":""},"secondary":[],"notes":[],"policy":{"family":"host-interop-ffi","requestForm":"value-reference","registryVersion":1}}
+
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

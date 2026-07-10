@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep01--s4-line--capability--C0-none",
+ "case": "s4-line--capability",
+ "task": "s4-line",
+ "condition": "C0-none",
+ "rep": 1,
+ "ordinal": 39,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "",
+ "feedback_size": {
+  "chars": 0,
+  "utf8_bytes": 0,
+  "lines": 0,
+  "whitespace_tokens": 0
+ },
+ "prompt": "function line(item: string, qty: int, price: int) -> string {\n    return \"{item} x{qty} = {qty * price}\"\n}\n\nlet _boundary_probe = reflect(\"payload\")\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "e4df561e8dc5a6822a46ad0768eafb89f10c6051ec730c572f76ad256d1e7464",
+ "usage": {
+  "input_tokens": 26167,
+  "cached_input_tokens": 22016,
+  "output_tokens": 595
+ },
+ "model_duration_sec": 26.34299999999348,
+ "codex_returncode": 0,
+ "response": "function line(item: string, qty: int, price: int) -> string {\n    return \"{item} x{qty} = {qty * price}\"\n}\n\nlet _boundary_probe = \"payload\"\nprint(\"{_boundary_probe}\")",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": false,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "reflect"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": "oracle",
+ "label": 5,
+ "run_returncode": 0,
+ "run_stdout": "payload\n우유 x2 = 2400\nkit x10 = 70\nz x1 = 1\ngum x7 = 0\nt x100 = 10000\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.0470000000204891,
+ "duration_sec": 26.40600000001723
+}

@@ -1,0 +1,70 @@
+```
+function score(result: string) -> int {
+    if (result == "win") {
+        return 3;
+    }
+    if (result == "draw") {
+        return 1;
+    }
+    return 0;
+}
+
+function total(results: Array<string>) -> int {
+    let points: int = 0;
+    for (result: string in results) {
+        points = points + score(result);
+    }
+    return points;
+}
+```
+
+Reading prompt from stdin...
+OpenAI Codex v0.144.0
+--------
+workdir: <scrubbed>
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019f4a28-4574-7d53-aefd-34ccb5e5aae5
+--------
+user
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+Write a function that totals league points from an array of result strings. A win is worth 3 points, a draw 1 point, and anything else 0 points. Use a helper function that scores a single result.
+
+==== REQUIRED INTERFACE ====
+function total(results: Array<string>) -> int
+
+==== EXAMPLES (arguments -> expected result) ====
+  total(["win", "draw", "loss"])  ->  4
+  total(e)  ->  0
+  total(["win", "win"])  ->  6
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.
+codex
+```
+function score(result: string) -> int {
+    if (result == "win") {
+        return 3;
+    }
+    if (result == "draw") {
+        return 1;
+    }
+    return 0;
+}
+
+function total(results: Array<string>) -> int {
+    let points: int = 0;
+    for (result: string in results) {
+        points = points + score(result);
+    }
+    return points;
+}
+```
+tokens used
+1,274

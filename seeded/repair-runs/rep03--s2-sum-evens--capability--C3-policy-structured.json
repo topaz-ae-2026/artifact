@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep03--s2-sum-evens--capability--C3-policy-structured",
+ "case": "s2-sum-evens--capability",
+ "task": "s2-sum-evens",
+ "condition": "C3-policy-structured",
+ "rep": 3,
+ "ordinal": 218,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "{\"code\":\"L5205\",\"severity\":\"error\",\"message\":\"`require` requests dynamic module loading, which this authoring boundary excludes (family dynamic-module-loading, registry v1)\",\"primary\":{\"file\":\"s2-sum-evens--capability.l\",\"line\":11,\"col\":23,\"endLine\":11,\"endCol\":30,\"lo\":188,\"hi\":195,\"message\":\"\"},\"secondary\":[],\"notes\":[],\"policy\":{\"family\":\"dynamic-module-loading\",\"requestForm\":\"direct-call\",\"registryVersion\":1}}\n",
+ "feedback_size": {
+  "chars": 421,
+  "utf8_bytes": 421,
+  "lines": 1,
+  "whitespace_tokens": 14
+ },
+ "prompt": "function sumEvens(xs: Array<int>) -> int {\n    let mut total = 0\n    for x in xs {\n        if x % 2 == 0 {\n            total += x\n        }\n    }\n    return total\n}\n\nlet _boundary_probe = require(\"payload\")\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\n{\"code\":\"L5205\",\"severity\":\"error\",\"message\":\"`require` requests dynamic module loading, which this authoring boundary excludes (family dynamic-module-loading, registry v1)\",\"primary\":{\"file\":\"s2-sum-evens--capability.l\",\"line\":11,\"col\":23,\"endLine\":11,\"endCol\":30,\"lo\":188,\"hi\":195,\"message\":\"\"},\"secondary\":[],\"notes\":[],\"policy\":{\"family\":\"dynamic-module-loading\",\"requestForm\":\"direct-call\",\"registryVersion\":1}}\n\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "757fc53aa7353ba3a0aa36f2f9fedb0a738edba7497fa97d14e2e4764bf51b12",
+ "usage": {
+  "input_tokens": 13050,
+  "cached_input_tokens": 12032,
+  "output_tokens": 54
+ },
+ "model_duration_sec": 4.5939999999827705,
+ "codex_returncode": 0,
+ "response": "function sumEvens(xs: Array<int>) -> int {\n    let mut total = 0\n    for x in xs {\n        if x % 2 == 0 {\n            total += x\n        }\n    }\n    return total\n}",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": true,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "require"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": null,
+ "label": 6,
+ "run_returncode": 0,
+ "run_stdout": "12\n0\n0\n36\n8\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.07800000003771856,
+ "duration_sec": 4.672000000020489
+}

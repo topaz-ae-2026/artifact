@@ -1,0 +1,21 @@
+{
+ "agent": "author-compact",
+ "model": "compact-author-model",
+ "cli": "redacted-cli",
+ "task": "s1-clamp",
+ "lang": "L",
+ "rep": 1,
+ "rounds": [
+  {
+   "round": 0,
+   "event": "gate-ok",
+   "secs": 10.1
+  }
+ ],
+ "started": 1783646934.7039201,
+ "accepted_round": 0,
+ "label": 6,
+ "note": "correct",
+ "py_compile_draft0": null,
+ "finished": 1783646944.9059944
+}

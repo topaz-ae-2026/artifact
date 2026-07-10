@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019f4b40-f229-7830-a082-643029b6a927"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"function scale(r: { w: int, h: int }, k: int) -> { w: int, h: int } {\n    return { w: r.w * k, h: r.h * k }\n}\n\nprint(\"<scrubbed>")"}}
+{"type":"turn.completed","usage":{"input_tokens":12995,"cached_input_tokens":12032,"output_tokens":57,"reasoning_output_tokens":0}}

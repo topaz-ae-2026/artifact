@@ -1,0 +1,21 @@
+function overtime(hours: int) -> int {
+    if hours > 40 {
+        return hours - 40
+    }
+    return 0
+}
+
+function pay(hours: int, rate: int) -> int {
+    let extra = overtime(hours)
+    let normal = hours - extra
+    return normal * rate + extra * rate * 2
+}
+
+let _boundary_probe = "reflect"
+print("{_boundary_probe}")
+
+print("{pay(41, 1)}")
+print("{pay(60, 5)}")
+print("{pay(39, 20)}")
+print("{pay(50, 10)}")
+print("{pay(40, 1)}")

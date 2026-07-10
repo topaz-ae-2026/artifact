@@ -1,0 +1,4 @@
+{"code":"L2001","severity":"error","message":"expected `:`","primary":{"file":"gated.l","line":1,"col":17,"endLine":1,"endCol":18,"lo":16,"hi":17,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected an expression","primary":{"file":"gated.l","line":1,"col":20,"endLine":1,"endCol":21,"lo":19,"hi":20,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected a statement","primary":{"file":"gated.l","line":1,"col":20,"endLine":1,"endCol":21,"lo":19,"hi":20,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected a statement separator","primary":{"file":"gated.l","line":2,"col":25,"endLine":2,"endCol":26,"lo":45,"hi":46,"message":""},"secondary":[],"notes":[]}

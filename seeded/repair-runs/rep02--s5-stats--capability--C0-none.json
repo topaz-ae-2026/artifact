@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep02--s5-stats--capability--C0-none",
+ "case": "s5-stats--capability",
+ "task": "s5-stats",
+ "condition": "C0-none",
+ "rep": 2,
+ "ordinal": 183,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "",
+ "feedback_size": {
+  "chars": 0,
+  "utf8_bytes": 0,
+  "lines": 0,
+  "whitespace_tokens": 0
+ },
+ "prompt": "function sumOf(xs: Array<int>) -> int {\n    let mut total = 0\n    for x in xs {\n        total += x\n    }\n    return total\n}\nfunction maxOf(xs: Array<int>) -> int {\n    let mut best = xs[0]\n    for k in 1 ..< xs.length {\n        if xs[k] > best {\n            best = xs[k]\n        }\n    }\n    return best\n}\nfunction report(xs: Array<int>) -> string {\n    return \"sum={sumOf(xs)} max={maxOf(xs)}\"\n}\n\nlet _boundary_probe = ffi(\"payload\")\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "3d0c03150e5fb60cc7deff62c25342b88050af92e2934ab5095c6c8e94af44b9",
+ "usage": {
+  "input_tokens": 13002,
+  "cached_input_tokens": 12032,
+  "output_tokens": 313
+ },
+ "model_duration_sec": 9.687000000034459,
+ "codex_returncode": 0,
+ "response": "function sumOf(xs: Array<int>) -> int {\n    let mut total = 0\n    for x in xs {\n        total += x\n    }\n    return total\n}\n\nfunction maxOf(xs: Array<int>) -> int {\n    let mut best = xs[0]\n    for k in 1 ..< xs.length {\n        if xs[k] > best {\n            best = xs[k]\n        }\n    }\n    return best\n}\n\nfunction report(xs: Array<int>) -> string {\n    return \"sum={sumOf(xs)} max={maxOf(xs)}\"\n}",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": true,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "ffi"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": null,
+ "label": 6,
+ "run_returncode": 0,
+ "run_stdout": "sum=0 max=0\nsum=60 max=30\nsum=7 max=7\nsum=24 max=9\nsum=5 max=1\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.046999999962281436,
+ "duration_sec": 9.75
+}

@@ -1,0 +1,218 @@
+{
+ "contrasts": {
+  "grammar-static": {
+   "acc_delta": -2.8,
+   "acc_ci": [
+    -8.3,
+    0.0
+   ],
+   "cor_delta": -2.8,
+   "cor_ci": [
+    -8.3,
+    0.0
+   ]
+  },
+  "examples-only": {
+   "acc_delta": 0.0,
+   "acc_ci": [
+    0.0,
+    0.0
+   ],
+   "cor_delta": -6.9,
+   "cor_ci": [
+    -18.1,
+    0.0
+   ]
+  },
+  "none": {
+   "acc_delta": -41.7,
+   "acc_ci": [
+    -62.5,
+    -20.8
+   ],
+   "cor_delta": -41.7,
+   "cor_ci": [
+    -62.5,
+    -20.8
+   ]
+  }
+ },
+ "intrusion_rows": [
+  {
+   "task": "s1-manhattan",
+   "rep": 1,
+   "band": "L2001",
+   "idioms": [
+    "semicolon-terminator",
+    "ternary-then-else"
+   ]
+  },
+  {
+   "task": "s2-sum-evens",
+   "rep": 1,
+   "band": "L1001",
+   "idioms": [
+    "semicolon-terminator",
+    "c-style-for-paren",
+    "paren-condition"
+   ]
+  },
+  {
+   "task": "s2-sum-evens",
+   "rep": 2,
+   "band": "L1001",
+   "idioms": [
+    "semicolon-terminator",
+    "c-style-for-paren",
+    "paren-condition"
+   ]
+  },
+  {
+   "task": "s2-sum-evens",
+   "rep": 3,
+   "band": "L1001",
+   "idioms": [
+    "semicolon-terminator",
+    "c-style-for-paren",
+    "paren-condition"
+   ]
+  },
+  {
+   "task": "s2-count-above",
+   "rep": 1,
+   "band": "L1001",
+   "idioms": [
+    "semicolon-terminator",
+    "c-style-for-paren",
+    "paren-condition"
+   ]
+  },
+  {
+   "task": "s2-count-above",
+   "rep": 2,
+   "band": "L1001",
+   "idioms": [
+    "semicolon-terminator",
+    "c-style-for-paren",
+    "paren-condition"
+   ]
+  },
+  {
+   "task": "s2-count-above",
+   "rep": 3,
+   "band": "L1001",
+   "idioms": [
+    "semicolon-terminator",
+    "c-style-for-paren",
+    "paren-condition"
+   ]
+  },
+  {
+   "task": "s2-max",
+   "rep": 1,
+   "band": "L1001",
+   "idioms": [
+    "semicolon-terminator",
+    "c-style-for-paren",
+    "paren-condition"
+   ]
+  },
+  {
+   "task": "s2-max",
+   "rep": 2,
+   "band": "L1001",
+   "idioms": [
+    "semicolon-terminator",
+    "c-style-for-paren",
+    "paren-condition"
+   ]
+  },
+  {
+   "task": "s2-max",
+   "rep": 3,
+   "band": "L1001",
+   "idioms": [
+    "semicolon-terminator",
+    "c-style-for-paren",
+    "paren-condition"
+   ]
+  },
+  {
+   "task": "s2-dot",
+   "rep": 2,
+   "band": "L1001",
+   "idioms": [
+    "semicolon-terminator",
+    "c-style-for-paren"
+   ]
+  },
+  {
+   "task": "s5-stats",
+   "rep": 1,
+   "band": "L1001",
+   "idioms": [
+    "semicolon-terminator",
+    "c-style-for-paren",
+    "paren-condition"
+   ]
+  },
+  {
+   "task": "s5-stats",
+   "rep": 2,
+   "band": "L1001",
+   "idioms": [
+    "semicolon-terminator",
+    "c-style-for-paren",
+    "paren-condition"
+   ]
+  },
+  {
+   "task": "s5-stats",
+   "rep": 3,
+   "band": "L2001",
+   "idioms": [
+    "semicolon-terminator",
+    "paren-condition",
+    "while-paren"
+   ]
+  },
+  {
+   "task": "s5-points",
+   "rep": 1,
+   "band": "L1001",
+   "idioms": [
+    "semicolon-terminator",
+    "c-style-for-paren",
+    "paren-condition"
+   ]
+  },
+  {
+   "task": "s5-points",
+   "rep": 2,
+   "band": "L1001",
+   "idioms": [
+    "semicolon-terminator",
+    "c-style-for-paren",
+    "paren-condition"
+   ]
+  },
+  {
+   "task": "s5-points",
+   "rep": 3,
+   "band": "L1001",
+   "idioms": [
+    "semicolon-terminator",
+    "c-style-for-paren",
+    "paren-condition"
+   ]
+  }
+ ],
+ "intrusion_tally": {
+  "semicolon-terminator": 17,
+  "ternary-then-else": 1,
+  "c-style-for-paren": 15,
+  "paren-condition": 15,
+  "while-paren": 1
+ },
+ "total_label2": 17
+}

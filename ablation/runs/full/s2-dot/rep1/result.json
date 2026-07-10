@@ -1,0 +1,10 @@
+{
+ "task": "s2-dot",
+ "cond": "full",
+ "rep": 1,
+ "endpoint": "frontier",
+ "label": 6,
+ "band": null,
+ "foreign": false,
+ "draft0_ok": true
+}

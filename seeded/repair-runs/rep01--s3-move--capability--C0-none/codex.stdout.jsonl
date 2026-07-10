@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019f4b3c-9e57-7a11-803e-d7c4f22daeea"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"function move(dir: string, x: int, y: int) -> { x: int, y: int } {\n    match dir {\n        case \"N\" => { x: x, y: y + 1 }\n        case \"S\" => { x: x, y: y - 1 }\n        case \"E\" => { x: x + 1, y: y }\n        case \"W\" => { x: x - 1, y: y }\n        case _ => { x: x, y: y }\n    }\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":13001,"cached_input_tokens":12032,"output_tokens":339,"reasoning_output_tokens":216}}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019f4b3b-a2bd-7250-84ff-e7fdbe7d1604"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"function sumTo(n: int) -> int {\n    let mut total = 0\n    for k in 1 .. n {\n        total += k\n    }\n    return total\n}\n\nprint(\"payload\")"}}
+{"type":"turn.completed","usage":{"input_tokens":13027,"cached_input_tokens":9984,"output_tokens":47,"reasoning_output_tokens":0}}

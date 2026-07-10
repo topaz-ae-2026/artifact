@@ -1,0 +1,9 @@
+function clamp(n: int, lo: int, hi: int) -> int {
+    if n < lo {
+        lo
+    } else if n > hi {
+        hi
+    } else {
+        n
+    }
+}

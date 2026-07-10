@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep03--s6-add-case--capability--C1-generic",
+ "case": "s6-add-case--capability",
+ "task": "s6-add-case",
+ "condition": "C1-generic",
+ "rep": 3,
+ "ordinal": 216,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "error[L5002]: `eval` is not bound\n  --> seeded/cases/s6-add-case--capability.l:11:9\n   |\n11 | print(\"{eval}\")\n   |         ^^^^\n\nseeded/cases/s6-add-case--capability.l: 1 type diagnostic",
+ "feedback_size": {
+  "chars": 192,
+  "utf8_bytes": 192,
+  "lines": 7,
+  "whitespace_tokens": 17
+ },
+ "prompt": "function move(dir: string, x: int, y: int) -> { x: int, y: int } {\n    match dir {\n        case \"N\" => { x: x, y: y + 1 }\n        case \"S\" => { x: x, y: y - 1 }\n        case \"E\" => { x: x + 1, y: y }\n        case \"W\" => { x: x - 1, y: y }\n        case _ => { x: x, y: y }\n    }\n}\n\nprint(\"{eval}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\nerror[L5002]: `eval` is not bound\n  --> seeded/cases/s6-add-case--capability.l:11:9\n   |\n11 | print(\"{eval}\")\n   |         ^^^^\n\nseeded/cases/s6-add-case--capability.l: 1 type diagnostic\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "5a14085fe6082ad63f4576c6cba2124f687add2c4927218eb784b0b21f21c1fe",
+ "usage": {
+  "input_tokens": 13061,
+  "cached_input_tokens": 12032,
+  "output_tokens": 525
+ },
+ "model_duration_sec": 23.46899999998277,
+ "codex_returncode": 0,
+ "response": "function move(dir: string, x: int, y: int) -> { x: int, y: int } {\n    match dir {\n        case \"N\" => { x: x, y: y + 1 }\n        case \"S\" => { x: x, y: y - 1 }\n        case \"E\" => { x: x + 1, y: y }\n        case \"W\" => { x: x - 1, y: y }\n        case _ => { x: x, y: y }\n    }\n}\n\nlet eval = move(\"N\", 0, 0)\nprint(\"{eval}\")",
+ "gate_accept": true,
+ "excluded_removed": false,
+ "oracle_correct": false,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [],
+ "registered_lexical_hits": [
+  "eval"
+ ],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": "oracle",
+ "label": 5,
+ "run_returncode": 0,
+ "run_stdout": "{ x: 0, y: 1 }\n-1 0\n-6 2\n3 2\n2 0\n99 50\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.061999999976251274,
+ "duration_sec": 23.530999999959022
+}

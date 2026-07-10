@@ -1,0 +1,54 @@
+```
+function maxOf(xs: Array<int>) -> int {
+    let max: int = xs[0];
+    for (let i: int = 1; i < xs.length; i = i + 1) {
+        if (xs[i] > max) {
+            max = xs[i];
+        }
+    }
+    return max;
+}
+```
+
+Reading prompt from stdin...
+OpenAI Codex v0.144.0
+--------
+workdir: <scrubbed>
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019f4a2b-7674-7170-b5eb-ebd2e99d2fc9
+--------
+user
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+Write a function that returns the largest value in a non-empty integer array.
+
+==== REQUIRED INTERFACE ====
+function maxOf(xs: Array<int>) -> int
+
+==== EXAMPLES (arguments -> expected result) ====
+  maxOf([3, 1, 4])  ->  4
+  maxOf([5])  ->  5
+  maxOf([-3, -1, -7])  ->  -1
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.
+codex
+```
+function maxOf(xs: Array<int>) -> int {
+    let max: int = xs[0];
+    for (let i: int = 1; i < xs.length; i = i + 1) {
+        if (xs[i] > max) {
+            max = xs[i];
+        }
+    }
+    return max;
+}
+```
+tokens used
+3,114

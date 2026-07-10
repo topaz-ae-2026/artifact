@@ -1,0 +1,13 @@
+{"code":"L2001","severity":"error","message":"expected `:`","primary":{"file":"gated.l","line":1,"col":18,"endLine":1,"endCol":19,"lo":17,"hi":18,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected an expression","primary":{"file":"gated.l","line":1,"col":24,"endLine":1,"endCol":25,"lo":23,"hi":24,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected a statement","primary":{"file":"gated.l","line":1,"col":24,"endLine":1,"endCol":25,"lo":23,"hi":24,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected `{`","primary":{"file":"gated.l","line":2,"col":19,"endLine":2,"endCol":23,"lo":43,"hi":47,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected a statement separator","primary":{"file":"gated.l","line":3,"col":23,"endLine":3,"endCol":24,"lo":70,"hi":71,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected a statement separator","primary":{"file":"gated.l","line":4,"col":12,"endLine":4,"endCol":15,"lo":95,"hi":98,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected a statement separator","primary":{"file":"gated.l","line":5,"col":23,"endLine":5,"endCol":24,"lo":133,"hi":134,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected a statement separator","primary":{"file":"gated.l","line":6,"col":12,"endLine":6,"endCol":15,"lo":158,"hi":161,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected a statement separator","primary":{"file":"gated.l","line":7,"col":27,"endLine":7,"endCol":28,"lo":200,"hi":201,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected a statement separator","primary":{"file":"gated.l","line":8,"col":12,"endLine":8,"endCol":15,"lo":221,"hi":224,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected a statement separator","primary":{"file":"gated.l","line":9,"col":27,"endLine":9,"endCol":28,"lo":263,"hi":264,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected a statement separator","primary":{"file":"gated.l","line":10,"col":5,"endLine":10,"endCol":9,"lo":277,"hi":281,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected a statement separator","primary":{"file":"gated.l","line":11,"col":23,"endLine":11,"endCol":24,"lo":304,"hi":305,"message":""},"secondary":[],"notes":[]}

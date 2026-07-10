@@ -1,0 +1,25 @@
+error[L2001]: expected `)`
+ --> gated0.l:2:18
+  |
+2 |   filter(xs, (x) -> x > t).length
+  |                  ^^
+
+error[L2001]: expected an expression
+ --> gated0.l:2:26
+  |
+2 |   filter(xs, (x) -> x > t).length
+  |                          ^
+
+error[L2001]: expected a statement
+ --> gated0.l:2:26
+  |
+2 |   filter(xs, (x) -> x > t).length
+  |                          ^
+
+error[L2001]: expected an expression
+ --> gated0.l:2:27
+  |
+2 |   filter(xs, (x) -> x > t).length
+  |                           ^
+
+<scrubbed> 4 diagnostics

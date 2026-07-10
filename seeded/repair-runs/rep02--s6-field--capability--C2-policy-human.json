@@ -1,0 +1,53 @@
+{
+ "status": "complete",
+ "cell_id": "rep02--s6-field--capability--C2-policy-human",
+ "case": "s6-field--capability",
+ "task": "s6-field",
+ "condition": "C2-policy-human",
+ "rep": 2,
+ "ordinal": 127,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "error[L5204]: `reflect` requests runtime reflection, which this authoring boundary excludes (family runtime-reflection, registry v1)\n --> s6-field--capability.l:5:9\n  |\n5 | print(\"{reflect}\")\n  |         ^^^^^^^\n\n<scrubbed> 1 type diagnostic\n",
+ "feedback_size": {
+  "chars": 308,
+  "utf8_bytes": 308,
+  "lines": 7,
+  "whitespace_tokens": 26
+ },
+ "prompt": "function scale(b: { w: int, h: int, d: int }, k: int) -> { w: int, h: int, d: int } {\n    return { w: b.w * k, h: b.h * k, d: b.d * k }\n}\n\nprint(\"{reflect}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\nerror[L5204]: `reflect` requests runtime reflection, which this authoring boundary excludes (family runtime-reflection, registry v1)\n --> s6-field--capability.l:5:9\n  |\n5 | print(\"{reflect}\")\n  |         ^^^^^^^\n\n<scrubbed> 1 type diagnostic\n\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "56626ad64a507f353626cc3e6ea9beea5d0b61f9582a1986485aa9707759e462",
+ "usage": {
+  "input_tokens": 13026,
+  "cached_input_tokens": 12032,
+  "output_tokens": 71
+ },
+ "model_duration_sec": 5.5,
+ "codex_returncode": 0,
+ "response": "function scale(b: { w: int, h: int, d: int }, k: int) -> { w: int, h: int, d: int } {\n    return { w: b.w * k, h: b.h * k, d: b.d * k }\n}\n\nprint(\"{{reflect}}\")",
+ "gate_accept": false,
+ "excluded_removed": false,
+ "oracle_correct": false,
+ "wrong_substitute": true,
+ "wrong_substitute_names": [
+  "reflect"
+ ],
+ "original_registered_names": [],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [
+  "reflect"
+ ],
+ "check_returncode": 1,
+ "diagnostic_codes": [
+  "L5204"
+ ],
+ "band": "L5204",
+ "label": 3,
+ "run_returncode": null,
+ "run_stdout": null,
+ "run_stderr": null,
+ "evaluation_duration_sec": 0.062000000034458935,
+ "duration_sec": 5.562000000034459
+}

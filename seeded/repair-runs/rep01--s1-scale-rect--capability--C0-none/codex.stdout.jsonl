@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019f4b3d-2bc3-7521-b498-447572c39434"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"function scale(r: { w: int, h: int }, k: int) -> { w: int, h: int } {\n    return { w: r.w * k, h: r.h * k }\n}\n\nprint(\"{\" + \"def\" + \"macro\" + \"}\")"}}
+{"type":"turn.completed","usage":{"input_tokens":12920,"cached_input_tokens":12032,"output_tokens":810,"reasoning_output_tokens":744}}

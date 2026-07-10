@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep03--s5-points--capability--C1-generic",
+ "case": "s5-points--capability",
+ "task": "s5-points",
+ "condition": "C1-generic",
+ "rep": 3,
+ "ordinal": 207,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "error[L5002]: `require` is not bound\n  --> seeded/cases/s5-points--capability.l:16:23\n   |\n16 | let _boundary_probe = require(\"payload\")\n   |                       ^^^^^^^\n\nseeded/cases/s5-points--capability.l: 1 type diagnostic",
+ "feedback_size": {
+  "chars": 234,
+  "utf8_bytes": 234,
+  "lines": 7,
+  "whitespace_tokens": 20
+ },
+ "prompt": "function score(result: string) -> int {\n    match result {\n        case \"win\" => 3\n        case \"draw\" => 1\n        case _ => 0\n    }\n}\nfunction total(results: Array<string>) -> int {\n    let mut points = 0\n    for r in results {\n        points += score(r)\n    }\n    return points\n}\n\nlet _boundary_probe = require(\"payload\")\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\nerror[L5002]: `require` is not bound\n  --> seeded/cases/s5-points--capability.l:16:23\n   |\n16 | let _boundary_probe = require(\"payload\")\n   |                       ^^^^^^^\n\nseeded/cases/s5-points--capability.l: 1 type diagnostic\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "2adfc688007542b2b06992fe22f3b3fc2a46fee3c32fcdd83ac00fbb156a1574",
+ "usage": {
+  "input_tokens": 13038,
+  "cached_input_tokens": 12032,
+  "output_tokens": 184
+ },
+ "model_duration_sec": 10.76600000000326,
+ "codex_returncode": 0,
+ "response": "function score(result: string) -> int {\n    match result {\n        case \"win\" => 3\n        case \"draw\" => 1\n        case _ => 0\n    }\n}\n\nfunction total(results: Array<string>) -> int {\n    let mut points = 0\n    for r in results {\n        points += score(r)\n    }\n    return points\n}",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": true,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "require"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": null,
+ "label": 6,
+ "run_returncode": 0,
+ "run_stdout": "1\n0\n7\n4\n0\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.045999999972991645,
+ "duration_sec": 10.84299999999348
+}

@@ -1,0 +1,9 @@
+function maxOf(xs: Array<int>) -> int {
+  let mut max = xs[0]
+  for x in xs {
+    if x > max {
+      max = x
+    }
+  }
+  max
+}

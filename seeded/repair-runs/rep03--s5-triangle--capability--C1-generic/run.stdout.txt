@@ -1,0 +1,6 @@
+defmacro
+isosceles
+scalene
+invalid
+equilateral
+isosceles

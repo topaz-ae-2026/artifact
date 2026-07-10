@@ -1,0 +1,53 @@
+{
+ "status": "complete",
+ "cell_id": "rep03--s2-count-above--capability--C1-generic",
+ "case": "s2-count-above--capability",
+ "task": "s2-count-above",
+ "condition": "C1-generic",
+ "rep": 3,
+ "ordinal": 263,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "error[L5002]: `eval` is not bound\n  --> seeded/cases/s2-count-above--capability.l:11:9\n   |\n11 | print(\"{eval}\")\n   |         ^^^^\n\nseeded/cases/s2-count-above--capability.l: 1 type diagnostic",
+ "feedback_size": {
+  "chars": 198,
+  "utf8_bytes": 198,
+  "lines": 7,
+  "whitespace_tokens": 17
+ },
+ "prompt": "function countAbove(xs: Array<int>, t: int) -> int {\n    let mut n = 0\n    for x in xs {\n        if x > t {\n            n += 1\n        }\n    }\n    return n\n}\n\nprint(\"{eval}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\nerror[L5002]: `eval` is not bound\n  --> seeded/cases/s2-count-above--capability.l:11:9\n   |\n11 | print(\"{eval}\")\n   |         ^^^^\n\nseeded/cases/s2-count-above--capability.l: 1 type diagnostic\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "4441ece6bbbc0d0784c342906567b94a08bda1d6ec9c40ec6c0945c561bcb8b4",
+ "usage": {
+  "input_tokens": 26166,
+  "cached_input_tokens": 24064,
+  "output_tokens": 817
+ },
+ "model_duration_sec": 31.34399999998277,
+ "codex_returncode": 0,
+ "response": "function countAbove(xs: Array<int>, t: int) -> int {\n    let mut n = 0\n    for x in xs {\n        if x > t {\n            n += 1\n        }\n    }\n    return n\n}\n\nprint(\"{{eval}}\")",
+ "gate_accept": false,
+ "excluded_removed": false,
+ "oracle_correct": false,
+ "wrong_substitute": true,
+ "wrong_substitute_names": [
+  "eval"
+ ],
+ "original_registered_names": [],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [
+  "eval"
+ ],
+ "check_returncode": 1,
+ "diagnostic_codes": [
+  "L5201"
+ ],
+ "band": "L5201",
+ "label": 3,
+ "run_returncode": null,
+ "run_stdout": null,
+ "run_stderr": null,
+ "evaluation_duration_sec": 0.031000000017229468,
+ "duration_sec": 31.40600000001723
+}

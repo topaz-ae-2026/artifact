@@ -1,0 +1,10 @@
+{
+ "task": "s2-count-above",
+ "cond": "none",
+ "rep": 2,
+ "endpoint": "frontier",
+ "label": 2,
+ "band": "L1001",
+ "foreign": true,
+ "draft0_ok": false
+}

@@ -1,0 +1,1 @@
+{"code":"L2001","severity":"error","message":"expected `{`","primary":{"file":"gated.l","line":1,"col":50,"endLine":1,"endCol":51,"lo":49,"hi":50,"message":""},"secondary":[],"notes":[]}

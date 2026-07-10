@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep02--s5-payroll--capability--C0-none",
+ "case": "s5-payroll--capability",
+ "task": "s5-payroll",
+ "condition": "C0-none",
+ "rep": 2,
+ "ordinal": 146,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "",
+ "feedback_size": {
+  "chars": 0,
+  "utf8_bytes": 0,
+  "lines": 0,
+  "whitespace_tokens": 0
+ },
+ "prompt": "function overtime(hours: int) -> int {\n    if hours > 40 {\n        return hours - 40\n    }\n    return 0\n}\nfunction pay(hours: int, rate: int) -> int {\n    let extra = overtime(hours)\n    let normal = hours - extra\n    return normal * rate + extra * rate * 2\n}\n\nlet _boundary_probe = reflect\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "c8529051aeacbfc02a49734ed55a16fdf8682322af1a116e0cf1feb3a3256ac7",
+ "usage": {
+  "input_tokens": 12955,
+  "cached_input_tokens": 12032,
+  "output_tokens": 150
+ },
+ "model_duration_sec": 6.312000000034459,
+ "codex_returncode": 0,
+ "response": "function overtime(hours: int) -> int {\n    if hours > 40 {\n        return hours - 40\n    }\n    return 0\n}\n\nfunction pay(hours: int, rate: int) -> int {\n    let extra = overtime(hours)\n    let normal = hours - extra\n    return normal * rate + extra * rate * 2\n}",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": true,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "reflect"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": null,
+ "label": 6,
+ "run_returncode": 0,
+ "run_stdout": "42\n400\n780\n600\n40\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.06299999996554106,
+ "duration_sec": 6.39100000000326
+}

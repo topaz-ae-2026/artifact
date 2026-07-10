@@ -1,0 +1,15 @@
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+Write a function producing a greeting for a name and an hour from 0 to 23. Before 12 the greeting is Good morning, then before 18 it is Good afternoon, otherwise Good evening. The result is the greeting, a comma and space, then the name.
+
+==== REQUIRED INTERFACE ====
+function greet(name: string, hour: int) -> string
+
+==== EXAMPLES (arguments -> expected result) ====
+  greet("Ada", 9)  ->  Good morning, Ada
+  greet("Bo", 13)  ->  Good afternoon, Bo
+  greet("Cy", 20)  ->  Good evening, Cy
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.

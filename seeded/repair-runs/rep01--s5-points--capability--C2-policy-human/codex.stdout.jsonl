@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019f4b3c-aab6-73a2-a0d3-30f261d7f755"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"function score(result: string) -> int {\n    match result {\n        case \"win\" => 3\n        case \"draw\" => 1\n        case _ => 0\n    }\n}\n\nfunction total(results: Array<string>) -> int {\n    let mut points = 0\n    for r in results {\n        points += score(r)\n    }\n    return points\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":13063,"cached_input_tokens":9984,"output_tokens":82,"reasoning_output_tokens":0}}

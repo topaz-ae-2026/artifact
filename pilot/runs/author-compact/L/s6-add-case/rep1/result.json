@@ -1,0 +1,21 @@
+{
+ "agent": "author-compact",
+ "model": "compact-author-model",
+ "cli": "redacted-cli",
+ "task": "s6-add-case",
+ "lang": "L",
+ "rep": 1,
+ "rounds": [
+  {
+   "round": 0,
+   "event": "gate-ok",
+   "secs": 8.7
+  }
+ ],
+ "started": 1783646869.0403607,
+ "accepted_round": 0,
+ "label": 6,
+ "note": "correct",
+ "py_compile_draft0": null,
+ "finished": 1783646877.7983685
+}

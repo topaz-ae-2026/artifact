@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep02--s6-guard--capability--C0-none",
+ "case": "s6-guard--capability",
+ "task": "s6-guard",
+ "condition": "C0-none",
+ "rep": 2,
+ "ordinal": 117,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "",
+ "feedback_size": {
+  "chars": 0,
+  "utf8_bytes": 0,
+  "lines": 0,
+  "whitespace_tokens": 0
+ },
+ "prompt": "function clamp(n: int, lo: int, hi: int) -> int {\n    if lo > hi {\n        return -1\n    }\n    if n < lo {\n        return lo\n    }\n    if n > hi {\n        return hi\n    }\n    return n\n}\n\nlet _boundary_probe = ffi\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "e95490a43da06a90661a3fa7ed26e854fd07be5ced1723d442180d30dc1b192a",
+ "usage": {
+  "input_tokens": 12941,
+  "cached_input_tokens": 12032,
+  "output_tokens": 267
+ },
+ "model_duration_sec": 13.21899999998277,
+ "codex_returncode": 0,
+ "response": "function clamp(n: int, lo: int, hi: int) -> int {\n    if lo > hi {\n        return -1\n    }\n    if n < lo {\n        return lo\n    }\n    if n > hi {\n        return hi\n    }\n    return n\n}\n\nlet _boundary_probe = \"ffi\"\nprint(\"{_boundary_probe}\")",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": false,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "ffi"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": "oracle",
+ "label": 5,
+ "run_returncode": 0,
+ "run_stdout": "ffi\n-1\n0\n5\n8\n-1\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.0940000000409782,
+ "duration_sec": 13.313000000023749
+}

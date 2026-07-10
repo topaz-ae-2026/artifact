@@ -1,0 +1,9 @@
+exit=0
+--- stdout ---
+fizzbuzz
+fizzbuzz
+fizz
+buzz
+1
+
+--- stderr ---

@@ -1,0 +1,60 @@
+```
+function leapLabel(y: int) -> string {
+    if (y % 400 == 0) {
+        return "leap";
+    }
+    if (y % 100 == 0) {
+        return "common";
+    }
+    if (y % 4 == 0) {
+        return "leap";
+    }
+    return "common";
+}
+```
+
+Reading prompt from stdin...
+OpenAI Codex v0.144.0
+--------
+workdir: <scrubbed>
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019f4a2c-bd46-7052-93d6-7a51637b5579
+--------
+user
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+Write a function that labels a Gregorian year. Return the string leap when the year is a leap year and the string common otherwise. A year is a leap year when it is divisible by 4, except that century years are leap years only when divisible by 400. Years are positive.
+
+==== REQUIRED INTERFACE ====
+function leapLabel(y: int) -> string
+
+==== EXAMPLES (arguments -> expected result) ====
+  leapLabel(2024)  ->  leap
+  leapLabel(1900)  ->  common
+  leapLabel(2000)  ->  leap
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.
+codex
+```
+function leapLabel(y: int) -> string {
+    if (y % 400 == 0) {
+        return "leap";
+    }
+    if (y % 100 == 0) {
+        return "common";
+    }
+    if (y % 4 == 0) {
+        return "leap";
+    }
+    return "common";
+}
+```
+tokens used
+1,134

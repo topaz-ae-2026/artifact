@@ -1,0 +1,10 @@
+{
+ "v": 1,
+ "status": "ok",
+ "stdout": [
+  "crate 15"
+ ],
+ "files": [],
+ "defer_errors": [],
+ "fault": null
+}

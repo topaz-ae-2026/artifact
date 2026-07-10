@@ -1,0 +1,21 @@
+{
+ "agent": "author-compact",
+ "model": "compact-author-model",
+ "cli": "redacted-cli",
+ "task": "s5-payroll",
+ "lang": "L",
+ "rep": 1,
+ "rounds": [
+  {
+   "round": 0,
+   "event": "gate-ok",
+   "secs": 11.1
+  }
+ ],
+ "started": 1783646957.8913534,
+ "accepted_round": 0,
+ "label": 6,
+ "note": "correct",
+ "py_compile_draft0": null,
+ "finished": 1783646969.0473282
+}

@@ -1,0 +1,13 @@
+function scale(r: { w: int, h: int }, k: int) -> { w: int, h: int } {
+    return { w: r.w * k, h: r.h * k }
+}
+
+print("{defmacro}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+{"code":"L5203","severity":"error","message":"`defmacro` requests macro expansion or source generation, which this authoring boundary excludes (family macro-source-generation, registry v1)","primary":{"file":"s1-scale-rect--capability.l","line":5,"col":9,"endLine":5,"endCol":17,"lo":119,"hi":127,"message":""},"secondary":[],"notes":[],"policy":{"family":"macro-source-generation","requestForm":"value-reference","registryVersion":1}}
+
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

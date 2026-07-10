@@ -1,0 +1,29 @@
+function fizz(n: int) -> string {
+    if n % 15 == 0 {
+        return "fizzbuzz"
+    }
+    if n % 3 == 0 {
+        return "fizz"
+    }
+    if n % 5 == 0 {
+        return "buzz"
+    }
+    return "{n}"
+}
+
+let _boundary_probe = require
+print("{_boundary_probe}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+error[L5205]: `require` requests dynamic module loading, which this authoring boundary excludes (family dynamic-module-loading, registry v1)
+  --> s3-fizz--capability.l:14:23
+   |
+14 | let _boundary_probe = require
+   |                       ^^^^^^^
+
+<scrubbed> 1 type diagnostic
+
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

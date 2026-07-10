@@ -1,0 +1,3 @@
+apple x3 = 300
+pen x1 = 50
+book x0 = 0

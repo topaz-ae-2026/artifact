@@ -1,0 +1,52 @@
+{
+ "status": "complete",
+ "cell_id": "rep02--s2-count-above--capability--C0-none",
+ "case": "s2-count-above--capability",
+ "task": "s2-count-above",
+ "condition": "C0-none",
+ "rep": 2,
+ "ordinal": 181,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "",
+ "feedback_size": {
+  "chars": 0,
+  "utf8_bytes": 0,
+  "lines": 0,
+  "whitespace_tokens": 0
+ },
+ "prompt": "function countAbove(xs: Array<int>, t: int) -> int {\n    let mut n = 0\n    for x in xs {\n        if x > t {\n            n += 1\n        }\n    }\n    return n\n}\n\nprint(\"{eval}\")\n\nThis program was rejected by the receiving gate of language L.\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "0a7d2eb71f20bdcf42e0449adccebf07d06910895b31d3d6ac1fb3d183465d77",
+ "usage": {
+  "input_tokens": 39677,
+  "cached_input_tokens": 34048,
+  "output_tokens": 1308
+ },
+ "model_duration_sec": 47.95400000002701,
+ "codex_returncode": 0,
+ "response": "fn countAbove(xs: &[i32], t: i32) -> i32 {\n    let mut n = 0;\n    for &x in xs {\n        if x > t {\n            n += 1;\n        }\n    }\n    n\n}\n\nfn main() {\n    print!(\"{{eval}}\");\n}",
+ "gate_accept": false,
+ "excluded_removed": true,
+ "oracle_correct": false,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 1,
+ "diagnostic_codes": [
+  "L0001",
+  "L0001",
+  "L2001",
+  "L2001"
+ ],
+ "band": "L0001",
+ "label": 2,
+ "run_returncode": null,
+ "run_stdout": null,
+ "run_stderr": null,
+ "evaluation_duration_sec": 0.031000000017229468,
+ "duration_sec": 47.98500000004424
+}

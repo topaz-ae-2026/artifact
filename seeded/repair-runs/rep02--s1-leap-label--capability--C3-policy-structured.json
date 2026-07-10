@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep02--s1-leap-label--capability--C3-policy-structured",
+ "case": "s1-leap-label--capability",
+ "task": "s1-leap-label",
+ "condition": "C3-policy-structured",
+ "rep": 2,
+ "ordinal": 149,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "{\"code\":\"L5204\",\"severity\":\"error\",\"message\":\"`reflect` requests runtime reflection, which this authoring boundary excludes (family runtime-reflection, registry v1)\",\"primary\":{\"file\":\"s1-leap-label--capability.l\",\"line\":14,\"col\":23,\"endLine\":14,\"endCol\":30,\"lo\":234,\"hi\":241,\"message\":\"\"},\"secondary\":[],\"notes\":[],\"policy\":{\"family\":\"runtime-reflection\",\"requestForm\":\"value-reference\",\"registryVersion\":1}}\n",
+ "feedback_size": {
+  "chars": 414,
+  "utf8_bytes": 414,
+  "lines": 1,
+  "whitespace_tokens": 13
+ },
+ "prompt": "function leapLabel(y: int) -> string {\n    if y % 400 == 0 {\n        return \"leap\"\n    }\n    if y % 100 == 0 {\n        return \"common\"\n    }\n    if y % 4 == 0 {\n        return \"leap\"\n    }\n    return \"common\"\n}\n\nlet _boundary_probe = reflect\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\n{\"code\":\"L5204\",\"severity\":\"error\",\"message\":\"`reflect` requests runtime reflection, which this authoring boundary excludes (family runtime-reflection, registry v1)\",\"primary\":{\"file\":\"s1-leap-label--capability.l\",\"line\":14,\"col\":23,\"endLine\":14,\"endCol\":30,\"lo\":234,\"hi\":241,\"message\":\"\"},\"secondary\":[],\"notes\":[],\"policy\":{\"family\":\"runtime-reflection\",\"requestForm\":\"value-reference\",\"registryVersion\":1}}\n\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "04f6ba1063792648832ca1c75574a7f0a98ed5b6783f765107c891c1ab7c959b",
+ "usage": {
+  "input_tokens": 13064,
+  "cached_input_tokens": 12032,
+  "output_tokens": 73
+ },
+ "model_duration_sec": 4.782000000006519,
+ "codex_returncode": 0,
+ "response": "function leapLabel(y: int) -> string {\n    if y % 400 == 0 {\n        return \"leap\"\n    }\n    if y % 100 == 0 {\n        return \"common\"\n    }\n    if y % 4 == 0 {\n        return \"leap\"\n    }\n    return \"common\"\n}",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": true,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "reflect"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": null,
+ "label": 6,
+ "run_returncode": 0,
+ "run_stdout": "common\nleap\ncommon\nleap\ncommon\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.045999999972991645,
+ "duration_sec": 4.842999999993481
+}

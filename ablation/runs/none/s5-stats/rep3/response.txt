@@ -1,0 +1,92 @@
+```
+function sumArray(xs: Array<int>) -> int {
+    var total: int = 0;
+    var i: int = 0;
+    while (i < xs.length) {
+        total = total + xs[i];
+        i = i + 1;
+    }
+    return total;
+}
+
+function maxArray(xs: Array<int>) -> int {
+    var maximum: int = xs[0];
+    var i: int = 1;
+    while (i < xs.length) {
+        if (xs[i] > maximum) {
+            maximum = xs[i];
+        }
+        i = i + 1;
+    }
+    return maximum;
+}
+
+function report(xs: Array<int>) -> string {
+    return "sum=" + toString(sumArray(xs)) + " max=" + toString(maxArray(xs));
+}
+```
+
+Reading prompt from stdin...
+OpenAI Codex v0.144.0
+--------
+workdir: <scrubbed>
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019f4a28-d56b-7280-9892-91f523b453c6
+--------
+user
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+Write a function that reports the sum and maximum of a non-empty integer array as a string of the exact form sum=S max=M, using two helper functions of your own, one for the sum and one for the maximum.
+
+==== REQUIRED INTERFACE ====
+function report(xs: Array<int>) -> string
+
+==== EXAMPLES (arguments -> expected result) ====
+  report([3, 1, 4])  ->  sum=8 max=4
+  report([5])  ->  sum=5 max=5
+  report([-1, -2])  ->  sum=-3 max=-1
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.
+exec
+"<scrubbed>" -Command 'Get-ChildItem -Force | Select-Object Name,Length,Mode' in <scrubbed>
+2026-07-10T03:53:49.832862Z ERROR codex_core::exec: exec error: windows sandbox: helper_unknown_error: apply deny-read ACLs
+2026-07-10T03:53:49.833096Z ERROR codex_core::tools::router: error=execution error: Io(Custom { kind: Other, error: "windows sandbox: helper_unknown_error: apply deny-read ACLs" })
+ exited -1 in 0ms:
+execution error: Io(Custom { kind: Other, error: "windows sandbox: helper_unknown_error: apply deny-read ACLs" })
+codex
+```
+function sumArray(xs: Array<int>) -> int {
+    var total: int = 0;
+    var i: int = 0;
+    while (i < xs.length) {
+        total = total + xs[i];
+        i = i + 1;
+    }
+    return total;
+}
+
+function maxArray(xs: Array<int>) -> int {
+    var maximum: int = xs[0];
+    var i: int = 1;
+    while (i < xs.length) {
+        if (xs[i] > maximum) {
+            maximum = xs[i];
+        }
+        i = i + 1;
+    }
+    return maximum;
+}
+
+function report(xs: Array<int>) -> string {
+    return "sum=" + toString(sumArray(xs)) + " max=" + toString(maxArray(xs));
+}
+```
+tokens used
+2,869

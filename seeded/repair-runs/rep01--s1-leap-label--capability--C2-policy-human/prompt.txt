@@ -1,0 +1,29 @@
+function leapLabel(y: int) -> string {
+    if y % 400 == 0 {
+        return "leap"
+    }
+    if y % 100 == 0 {
+        return "common"
+    }
+    if y % 4 == 0 {
+        return "leap"
+    }
+    return "common"
+}
+
+let _boundary_probe = reflect
+print("{_boundary_probe}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+error[L5204]: `reflect` requests runtime reflection, which this authoring boundary excludes (family runtime-reflection, registry v1)
+  --> s1-leap-label--capability.l:14:23
+   |
+14 | let _boundary_probe = reflect
+   |                       ^^^^^^^
+
+<scrubbed> 1 type diagnostic
+
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

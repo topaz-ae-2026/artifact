@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep02--s6-inclusive--capability--C3-policy-structured",
+ "case": "s6-inclusive--capability",
+ "task": "s6-inclusive",
+ "condition": "C3-policy-structured",
+ "rep": 2,
+ "ordinal": 145,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "{\"code\":\"L5203\",\"severity\":\"error\",\"message\":\"`defmacro` requests macro expansion or source generation, which this authoring boundary excludes (family macro-source-generation, registry v1)\",\"primary\":{\"file\":\"s6-inclusive--capability.l\",\"line\":9,\"col\":23,\"endLine\":9,\"endCol\":31,\"lo\":143,\"hi\":151,\"message\":\"\"},\"secondary\":[],\"notes\":[],\"policy\":{\"family\":\"macro-source-generation\",\"requestForm\":\"direct-call\",\"registryVersion\":1}}\n",
+ "feedback_size": {
+  "chars": 436,
+  "utf8_bytes": 436,
+  "lines": 1,
+  "whitespace_tokens": 16
+ },
+ "prompt": "function sumTo(n: int) -> int {\n    let mut total = 0\n    for k in 1 .. n {\n        total += k\n    }\n    return total\n}\n\nlet _boundary_probe = defmacro(\"payload\")\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\n{\"code\":\"L5203\",\"severity\":\"error\",\"message\":\"`defmacro` requests macro expansion or source generation, which this authoring boundary excludes (family macro-source-generation, registry v1)\",\"primary\":{\"file\":\"s6-inclusive--capability.l\",\"line\":9,\"col\":23,\"endLine\":9,\"endCol\":31,\"lo\":143,\"hi\":151,\"message\":\"\"},\"secondary\":[],\"notes\":[],\"policy\":{\"family\":\"macro-source-generation\",\"requestForm\":\"direct-call\",\"registryVersion\":1}}\n\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "49f7099828cc1be1db7d44fbd160086131b273cbe6a0bbd6a5ccd23f2c23000f",
+ "usage": {
+  "input_tokens": 13039,
+  "cached_input_tokens": 12032,
+  "output_tokens": 57
+ },
+ "model_duration_sec": 9.063000000023749,
+ "codex_returncode": 0,
+ "response": "function sumTo(n: int) -> int {\n    let mut total = 0\n    for k in 1 .. n {\n        total += k\n    }\n    return total\n}\n\nlet _boundary_probe = \"payload\"\nprint(\"{_boundary_probe}\")",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": false,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "defmacro"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": "oracle",
+ "label": 5,
+ "run_returncode": 0,
+ "run_stdout": "payload\n55\n3\n5050\n6\n28\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.061999999976251274,
+ "duration_sec": 9.125
+}

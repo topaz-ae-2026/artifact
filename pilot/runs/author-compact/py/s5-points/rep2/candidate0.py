@@ -1,0 +1,10 @@
+def score(result: str) -> int:
+    if result == "win":
+        return 3
+    elif result == "draw":
+        return 1
+    else:
+        return 0
+
+def total(results: list[str]) -> int:
+    return sum(score(r) for r in results)

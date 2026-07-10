@@ -1,0 +1,27 @@
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+The given program clamps n into [lo, hi] assuming lo <= hi. Change it so that when lo is greater than hi the function returns -1 instead, keeping all other behavior identical.
+
+==== PROGRAM TO MODIFY ====
+function clamp(n: int, lo: int, hi: int) -> int {
+    if n < lo {
+        return lo
+    }
+    if n > hi {
+        return hi
+    }
+    return n
+}
+
+
+==== REQUIRED INTERFACE ====
+function clamp(n: int, lo: int, hi: int) -> int
+
+==== EXAMPLES (arguments -> expected result) ====
+  clamp(5, 10, 0)  ->  -1
+  clamp(5, 0, 10)  ->  5
+  clamp(-3, 0, 10)  ->  0
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.

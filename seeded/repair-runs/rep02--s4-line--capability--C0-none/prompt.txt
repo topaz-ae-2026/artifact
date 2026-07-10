@@ -1,0 +1,10 @@
+function line(item: string, qty: int, price: int) -> string {
+    return "{item} x{qty} = {qty * price}"
+}
+
+let _boundary_probe = reflect("payload")
+print("{_boundary_probe}")
+
+This program was rejected by the receiving gate of language L.
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

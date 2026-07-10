@@ -1,0 +1,20 @@
+function maxOf(xs: Array<int>) -> int {
+    let mut best = xs[0]
+    for k in 1 ..< xs.length {
+        if xs[k] > best {
+            best = xs[k]
+        }
+    }
+    return best
+}
+
+let _boundary_probe = ffi
+print("{_boundary_probe}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+{"code":"L5202","severity":"error","message":"`ffi` requests host interoperability or foreign-function access, which this authoring boundary excludes (family host-interop-ffi, registry v1)","primary":{"file":"s2-max--capability.l","line":11,"col":23,"endLine":11,"endCol":26,"lo":204,"hi":207,"message":""},"secondary":[],"notes":[],"policy":{"family":"host-interop-ffi","requestForm":"value-reference","registryVersion":1}}
+
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

@@ -1,0 +1,40 @@
+```python
+def grade(score: int) -> str:
+    if score >= 90:
+        return "A"
+    if score >= 80:
+        return "B"
+    if score >= 70:
+        return "C"
+    if score >= 60:
+        return "D"
+    return "F"
+```
+
+You are writing Python 3.12. Use only the language itself and, when a prelude is shown, that prelude. No imports other than the ones in the prelude. The code must pass mypy --strict.
+
+==== TASK ====
+Write a function that converts a score from 0 to 100 into a letter grade string. 90 and above is A, 80 to 89 is B, 70 to 79 is C, 60 to 69 is D, anything lower is F.
+
+==== REQUIRED INTERFACE ====
+def grade(score: int) -> str
+
+==== EXAMPLES (arguments -> expected result) ====
+  grade(95)  ->  A
+  grade(71)  ->  C
+  grade(42)  ->  F
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete Python program that defines the required interface. No prose outside the code block. Do not print anything; only define the function(s).
+```python
+def grade(score: int) -> str:
+    if score >= 90:
+        return "A"
+    if score >= 80:
+        return "B"
+    if score >= 70:
+        return "C"
+    if score >= 60:
+        return "D"
+    return "F"
+```

@@ -1,0 +1,21 @@
+function plural(word: string, n: int) -> string {
+    if n == 1 {
+        return "1 {word}"
+    }
+    return "{n} {word}s"
+}
+
+print("{require}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+error[L5002]: `require` is not bound
+ --> seeded/cases/s4-plural--capability.l:8:9
+  |
+8 | print("{require}")
+  |         ^^^^^^^
+
+seeded/cases/s4-plural--capability.l: 1 type diagnostic
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

@@ -1,0 +1,8 @@
+{"code":"L2002","severity":"error","message":"unknown template tag `def`; the v5.1 registry is `p`, `r`, `sh`, `sql`","primary":{"file":"gated.l","line":5,"col":9,"endLine":5,"endCol":12,"lo":119,"hi":122,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected `}`","primary":{"file":"gated.l","line":5,"col":17,"endLine":5,"endCol":22,"lo":127,"hi":132,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected an expression","primary":{"file":"gated.l","line":5,"col":22,"endLine":5,"endCol":23,"lo":132,"hi":133,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected a statement","primary":{"file":"gated.l","line":5,"col":22,"endLine":5,"endCol":23,"lo":132,"hi":133,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected an expression","primary":{"file":"gated.l","line":5,"col":23,"endLine":5,"endCol":24,"lo":133,"hi":134,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected a statement","primary":{"file":"gated.l","line":5,"col":23,"endLine":5,"endCol":24,"lo":133,"hi":134,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected an expression","primary":{"file":"gated.l","line":5,"col":24,"endLine":5,"endCol":25,"lo":134,"hi":135,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected a statement","primary":{"file":"gated.l","line":5,"col":24,"endLine":5,"endCol":25,"lo":134,"hi":135,"message":""},"secondary":[],"notes":[]}

@@ -1,0 +1,72 @@
+```
+function clamp(n: int, lo: int, hi: int) -> int {
+    if lo > hi {
+        return -1
+    }
+    if n < lo {
+        return lo
+    }
+    if n > hi {
+        return hi
+    }
+    return n
+}
+```
+
+Reading prompt from stdin...
+OpenAI Codex v0.144.0
+--------
+workdir: <scrubbed>
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019f4a28-2c7d-7f00-8d00-5eca7e5cc0d0
+--------
+user
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+The given program clamps n into [lo, hi] assuming lo <= hi. Change it so that when lo is greater than hi the function returns -1 instead, keeping all other behavior identical.
+
+==== PROGRAM TO MODIFY ====
+function clamp(n: int, lo: int, hi: int) -> int {
+    if n < lo {
+        return lo
+    }
+    if n > hi {
+        return hi
+    }
+    return n
+}
+
+
+==== REQUIRED INTERFACE ====
+function clamp(n: int, lo: int, hi: int) -> int
+
+==== EXAMPLES (arguments -> expected result) ====
+  clamp(5, 10, 0)  ->  -1
+  clamp(5, 0, 10)  ->  5
+  clamp(-3, 0, 10)  ->  0
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.
+codex
+```
+function clamp(n: int, lo: int, hi: int) -> int {
+    if lo > hi {
+        return -1
+    }
+    if n < lo {
+        return lo
+    }
+    if n > hi {
+        return hi
+    }
+    return n
+}
+```
+tokens used
+1,109

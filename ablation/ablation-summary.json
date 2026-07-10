@@ -1,0 +1,93 @@
+{
+ "cells": 288,
+ "conditions": {
+  "full": {
+   "n": 72,
+   "draft0_accept": 100.0,
+   "draft0_ci": [
+    100.0,
+    100.0
+   ],
+   "correct": 100.0,
+   "correct_ci": [
+    100.0,
+    100.0
+   ],
+   "foreign_intrusion": 0.0,
+   "label_dist": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 72
+   }
+  },
+  "grammar-static": {
+   "n": 72,
+   "draft0_accept": 97.2,
+   "draft0_ci": [
+    91.7,
+    100.0
+   ],
+   "correct": 97.2,
+   "correct_ci": [
+    91.7,
+    100.0
+   ],
+   "foreign_intrusion": 0.0,
+   "label_dist": {
+    "1": 0,
+    "2": 0,
+    "3": 2,
+    "4": 0,
+    "5": 0,
+    "6": 70
+   }
+  },
+  "examples-only": {
+   "n": 72,
+   "draft0_accept": 100.0,
+   "draft0_ci": [
+    100.0,
+    100.0
+   ],
+   "correct": 93.1,
+   "correct_ci": [
+    81.9,
+    100.0
+   ],
+   "foreign_intrusion": 0.0,
+   "label_dist": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 2,
+    "5": 3,
+    "6": 67
+   }
+  },
+  "none": {
+   "n": 72,
+   "draft0_accept": 58.3,
+   "draft0_ci": [
+    37.5,
+    79.2
+   ],
+   "correct": 58.3,
+   "correct_ci": [
+    37.5,
+    79.2
+   ],
+   "foreign_intrusion": 23.6,
+   "label_dist": {
+    "1": 0,
+    "2": 17,
+    "3": 13,
+    "4": 0,
+    "5": 0,
+    "6": 42
+   }
+  }
+ }
+}

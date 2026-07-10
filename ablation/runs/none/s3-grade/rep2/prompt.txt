@@ -1,0 +1,15 @@
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+Write a function that converts a score from 0 to 100 into a letter grade string. 90 and above is A, 80 to 89 is B, 70 to 79 is C, 60 to 69 is D, anything lower is F.
+
+==== REQUIRED INTERFACE ====
+function grade(score: int) -> string
+
+==== EXAMPLES (arguments -> expected result) ====
+  grade(95)  ->  A
+  grade(71)  ->  C
+  grade(42)  ->  F
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.

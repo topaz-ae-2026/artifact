@@ -1,0 +1,3 @@
+function line(item: string, qty: int, price: int) -> string {
+    "{item} x{qty} = {qty * price}"
+}

@@ -1,0 +1,3 @@
+function sumEvens(xs: Array<int>) -> int {
+  reduce(filter(xs, x => x % 2 == 0), 0, (acc, x) => acc + x)
+}

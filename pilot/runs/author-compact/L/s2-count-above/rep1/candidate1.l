@@ -1,0 +1,3 @@
+function countAbove(xs: Array<int>, t: int) -> int {
+  filter(xs, x => x > t).length
+}

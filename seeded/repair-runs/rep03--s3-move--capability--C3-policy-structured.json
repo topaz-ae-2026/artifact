@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep03--s3-move--capability--C3-policy-structured",
+ "case": "s3-move--capability",
+ "task": "s3-move",
+ "condition": "C3-policy-structured",
+ "rep": 3,
+ "ordinal": 254,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "{\"code\":\"L5201\",\"severity\":\"error\",\"message\":\"`eval` requests dynamic source evaluation, which this authoring boundary excludes (family dynamic-evaluation, registry v1)\",\"primary\":{\"file\":\"s3-move--capability.l\",\"line\":11,\"col\":23,\"endLine\":11,\"endCol\":27,\"lo\":303,\"hi\":307,\"message\":\"\"},\"secondary\":[],\"notes\":[],\"policy\":{\"family\":\"dynamic-evaluation\",\"requestForm\":\"direct-call\",\"registryVersion\":1}}\n",
+ "feedback_size": {
+  "chars": 408,
+  "utf8_bytes": 408,
+  "lines": 1,
+  "whitespace_tokens": 14
+ },
+ "prompt": "function move(dir: string, x: int, y: int) -> { x: int, y: int } {\n    match dir {\n        case \"N\" => { x: x, y: y + 1 }\n        case \"S\" => { x: x, y: y - 1 }\n        case \"E\" => { x: x + 1, y: y }\n        case \"W\" => { x: x - 1, y: y }\n        case _ => { x: x, y: y }\n    }\n}\n\nlet _boundary_probe = eval(\"payload\")\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\n{\"code\":\"L5201\",\"severity\":\"error\",\"message\":\"`eval` requests dynamic source evaluation, which this authoring boundary excludes (family dynamic-evaluation, registry v1)\",\"primary\":{\"file\":\"s3-move--capability.l\",\"line\":11,\"col\":23,\"endLine\":11,\"endCol\":27,\"lo\":303,\"hi\":307,\"message\":\"\"},\"secondary\":[],\"notes\":[],\"policy\":{\"family\":\"dynamic-evaluation\",\"requestForm\":\"direct-call\",\"registryVersion\":1}}\n\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "ddab2eedf43e47835d7109eabea4d7b01bcdd60b2098a6cdcd0de17be0bad114",
+ "usage": {
+  "input_tokens": 13114,
+  "cached_input_tokens": 12032,
+  "output_tokens": 121
+ },
+ "model_duration_sec": 6.811999999976251,
+ "codex_returncode": 0,
+ "response": "function move(dir: string, x: int, y: int) -> { x: int, y: int } {\n    match dir {\n        case \"N\" => { x: x, y: y + 1 }\n        case \"S\" => { x: x, y: y - 1 }\n        case \"E\" => { x: x + 1, y: y }\n        case \"W\" => { x: x - 1, y: y }\n        case _ => { x: x, y: y }\n    }\n}",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": true,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "eval"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": null,
+ "label": 6,
+ "run_returncode": 0,
+ "run_stdout": "0 -1\n0 1\n-3 -2\n0 0\n9 9\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.0779999999795109,
+ "duration_sec": 6.889999999955762
+}

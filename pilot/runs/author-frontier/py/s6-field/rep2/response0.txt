@@ -1,0 +1,69 @@
+```python
+from dataclasses import dataclass
+
+
+@dataclass
+class Box:
+    w: int
+    h: int
+    d: int
+
+
+def scale(b: Box, k: int) -> Box:
+    return Box(w=b.w * k, h=b.h * k, d=b.d * k)
+```
+
+You are writing Python 3.12. Use only the language itself and, when a prelude is shown, that prelude. No imports other than the ones in the prelude. The code must pass mypy --strict.
+
+==== TASK ====
+The given program scales a rectangle record with fields w and h. Extend the record to a box with an additional integer field d for depth, scaling all three fields by k.
+
+==== PROGRAM TO MODIFY ====
+from dataclasses import dataclass
+
+
+@dataclass
+class Rect:
+    w: int
+    h: int
+
+
+def scale(r: Rect, k: int) -> Rect:
+    return Rect(w=r.w * k, h=r.h * k)
+
+
+==== REQUIRED INTERFACE ====
+def scale(b: Box, k: int) -> Box  (Box is a provided dataclass with int fields w, h, d)
+
+==== PROVIDED PRELUDE (include it verbatim at the top of your program) ====
+from dataclasses import dataclass
+
+
+@dataclass
+class Box:
+    w: int
+    h: int
+    d: int
+
+
+==== EXAMPLES (arguments -> expected result) ====
+  scale({ w: 2, h: 3, d: 4 }, 2)  ->  4 6 8
+  scale({ w: 1, h: 1, d: 1 }, 1)  ->  1 1 1
+  scale({ w: 0, h: 5, d: 9 }, 3)  ->  0 15 27
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete Python program that defines the required interface. No prose outside the code block. Do not print anything; only define the function(s).
+```python
+from dataclasses import dataclass
+
+
+@dataclass
+class Box:
+    w: int
+    h: int
+    d: int
+
+
+def scale(b: Box, k: int) -> Box:
+    return Box(w=b.w * k, h=b.h * k, d=b.d * k)
+```

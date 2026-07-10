@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep01--s3-move--capability--C1-generic",
+ "case": "s3-move--capability",
+ "task": "s3-move",
+ "condition": "C1-generic",
+ "rep": 1,
+ "ordinal": 81,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "error[L5002]: `eval` is not bound\n  --> seeded/cases/s3-move--capability.l:11:23\n   |\n11 | let _boundary_probe = eval(\"payload\")\n   |                       ^^^^\n\nseeded/cases/s3-move--capability.l: 1 type diagnostic",
+ "feedback_size": {
+  "chars": 221,
+  "utf8_bytes": 221,
+  "lines": 7,
+  "whitespace_tokens": 20
+ },
+ "prompt": "function move(dir: string, x: int, y: int) -> { x: int, y: int } {\n    match dir {\n        case \"N\" => { x: x, y: y + 1 }\n        case \"S\" => { x: x, y: y - 1 }\n        case \"E\" => { x: x + 1, y: y }\n        case \"W\" => { x: x - 1, y: y }\n        case _ => { x: x, y: y }\n    }\n}\n\nlet _boundary_probe = eval(\"payload\")\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\nerror[L5002]: `eval` is not bound\n  --> seeded/cases/s3-move--capability.l:11:23\n   |\n11 | let _boundary_probe = eval(\"payload\")\n   |                       ^^^^\n\nseeded/cases/s3-move--capability.l: 1 type diagnostic\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "867e43a784fa59d91b8796ba620691abad00a4d5019d0c00a1c5d914e4ae1de6",
+ "usage": {
+  "input_tokens": 13077,
+  "cached_input_tokens": 9984,
+  "output_tokens": 192
+ },
+ "model_duration_sec": 9.64100000000326,
+ "codex_returncode": 0,
+ "response": "function move(dir: string, x: int, y: int) -> { x: int, y: int } {\n    match dir {\n        case \"N\" => { x: x, y: y + 1 }\n        case \"S\" => { x: x, y: y - 1 }\n        case \"E\" => { x: x + 1, y: y }\n        case \"W\" => { x: x - 1, y: y }\n        case _ => { x: x, y: y }\n    }\n}",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": true,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "eval"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": null,
+ "label": 6,
+ "run_returncode": 0,
+ "run_stdout": "0 -1\n0 1\n-3 -2\n0 0\n9 9\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.1559999999590218,
+ "duration_sec": 9.796999999962281
+}

@@ -1,0 +1,54 @@
+```python
+def array_sum(xs: list[int]) -> int:
+    total = 0
+    for x in xs:
+        total += x
+    return total
+
+
+def array_max(xs: list[int]) -> int:
+    maximum = xs[0]
+    for x in xs[1:]:
+        if x > maximum:
+            maximum = x
+    return maximum
+
+
+def report(xs: list[int]) -> str:
+    return f"sum={array_sum(xs)} max={array_max(xs)}"
+```
+
+You are writing Python 3.12. Use only the language itself and, when a prelude is shown, that prelude. No imports other than the ones in the prelude. The code must pass mypy --strict.
+
+==== TASK ====
+Write a function that reports the sum and maximum of a non-empty integer array as a string of the exact form sum=S max=M, using two helper functions of your own, one for the sum and one for the maximum.
+
+==== REQUIRED INTERFACE ====
+def report(xs: list[int]) -> str
+
+==== EXAMPLES (arguments -> expected result) ====
+  report([3, 1, 4])  ->  sum=8 max=4
+  report([5])  ->  sum=5 max=5
+  report([-1, -2])  ->  sum=-3 max=-1
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete Python program that defines the required interface. No prose outside the code block. Do not print anything; only define the function(s).
+```python
+def array_sum(xs: list[int]) -> int:
+    total = 0
+    for x in xs:
+        total += x
+    return total
+
+
+def array_max(xs: list[int]) -> int:
+    maximum = xs[0]
+    for x in xs[1:]:
+        if x > maximum:
+            maximum = x
+    return maximum
+
+
+def report(xs: list[int]) -> str:
+    return f"sum={array_sum(xs)} max={array_max(xs)}"
+```

@@ -1,0 +1,15 @@
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+Write a function that classifies a triangle from three positive integer side lengths. If the sides cannot form a triangle under the strict triangle inequality return invalid. If all sides are equal return equilateral. If exactly two sides are equal return isosceles. Otherwise return scalene. Use a helper function for the validity test.
+
+==== REQUIRED INTERFACE ====
+function triangle(a: int, b: int, c: int) -> string
+
+==== EXAMPLES (arguments -> expected result) ====
+  triangle(3, 4, 5)  ->  scalene
+  triangle(2, 2, 2)  ->  equilateral
+  triangle(1, 1, 3)  ->  invalid
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.

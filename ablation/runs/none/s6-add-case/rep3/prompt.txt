@@ -1,0 +1,26 @@
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+The given program moves a point on a grid for directions N, S, and E, leaving other directions unchanged. Extend it so that direction W decreases x by 1, keeping all existing behavior identical.
+
+==== PROGRAM TO MODIFY ====
+function move(dir: string, x: int, y: int) -> { x: int, y: int } {
+    match dir {
+        case "N" => { x: x, y: y + 1 }
+        case "S" => { x: x, y: y - 1 }
+        case "E" => { x: x + 1, y: y }
+        case _ => { x: x, y: y }
+    }
+}
+
+
+==== REQUIRED INTERFACE ====
+function move(dir: string, x: int, y: int) -> { x: int, y: int }
+
+==== EXAMPLES (arguments -> expected result) ====
+  move("W", 1, 1)  ->  0 1
+  move("N", 0, 0)  ->  0 1
+  move("X", 5, 5)  ->  5 5
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.

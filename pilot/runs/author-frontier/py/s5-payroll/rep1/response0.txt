@@ -1,0 +1,36 @@
+```python
+def overtime_hours(hours: int) -> int:
+    return max(0, hours - 40)
+
+
+def pay(hours: int, rate: int) -> int:
+    overtime = overtime_hours(hours)
+    regular = hours - overtime
+    return regular * rate + overtime * rate * 2
+```
+
+You are writing Python 3.12. Use only the language itself and, when a prelude is shown, that prelude. No imports other than the ones in the prelude. The code must pass mypy --strict.
+
+==== TASK ====
+Write a function computing weekly pay from hours worked and an hourly rate. Hours up to 40 are paid at the rate. Hours above 40 are paid at double the rate. Use a helper function that returns the overtime hours.
+
+==== REQUIRED INTERFACE ====
+def pay(hours: int, rate: int) -> int
+
+==== EXAMPLES (arguments -> expected result) ====
+  pay(40, 10)  ->  400
+  pay(45, 10)  ->  500
+  pay(0, 99)  ->  0
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete Python program that defines the required interface. No prose outside the code block. Do not print anything; only define the function(s).
+```python
+def overtime_hours(hours: int) -> int:
+    return max(0, hours - 40)
+
+
+def pay(hours: int, rate: int) -> int:
+    overtime = overtime_hours(hours)
+    regular = hours - overtime
+    return regular * rate + overtime * rate * 2
+```

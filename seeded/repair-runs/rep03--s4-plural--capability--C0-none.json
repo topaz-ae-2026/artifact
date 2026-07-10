@@ -1,0 +1,53 @@
+{
+ "status": "complete",
+ "cell_id": "rep03--s4-plural--capability--C0-none",
+ "case": "s4-plural--capability",
+ "task": "s4-plural",
+ "condition": "C0-none",
+ "rep": 3,
+ "ordinal": 273,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "",
+ "feedback_size": {
+  "chars": 0,
+  "utf8_bytes": 0,
+  "lines": 0,
+  "whitespace_tokens": 0
+ },
+ "prompt": "function plural(word: string, n: int) -> string {\n    if n == 1 {\n        return \"1 {word}\"\n    }\n    return \"{n} {word}s\"\n}\n\nprint(\"{require}\")\n\nThis program was rejected by the receiving gate of language L.\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "a63d72d12a4505701385ce510de48a612ad054f670e334500cfe90027b316a61",
+ "usage": {
+  "input_tokens": 44515,
+  "cached_input_tokens": 34048,
+  "output_tokens": 1298
+ },
+ "model_duration_sec": 42.96799999999348,
+ "codex_returncode": 0,
+ "response": "function plural(word: string, n: int) -> string {\n    if n == 1 {\n        return \"1 {word}\"\n    }\n    return \"{n} {word}s\"\n}\n\nprint(\"{{require}}\")",
+ "gate_accept": false,
+ "excluded_removed": false,
+ "oracle_correct": false,
+ "wrong_substitute": true,
+ "wrong_substitute_names": [
+  "require"
+ ],
+ "original_registered_names": [],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [
+  "require"
+ ],
+ "check_returncode": 1,
+ "diagnostic_codes": [
+  "L5205"
+ ],
+ "band": "L5205",
+ "label": 3,
+ "run_returncode": null,
+ "run_stdout": null,
+ "run_stderr": null,
+ "evaluation_duration_sec": 0.03200000000651926,
+ "duration_sec": 43.0
+}

@@ -1,0 +1,15 @@
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+Write a function producing one receipt line for an item name, a quantity, and a unit price. The format is the item, a space, the letter x directly followed by the quantity, a space, an equals sign, a space, and the total quantity times price.
+
+==== REQUIRED INTERFACE ====
+function line(item: string, qty: int, price: int) -> string
+
+==== EXAMPLES (arguments -> expected result) ====
+  line("apple", 3, 100)  ->  apple x3 = 300
+  line("pen", 1, 50)  ->  pen x1 = 50
+  line("book", 0, 999)  ->  book x0 = 0
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.

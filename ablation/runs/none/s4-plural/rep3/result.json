@@ -1,0 +1,10 @@
+{
+ "task": "s4-plural",
+ "cond": "none",
+ "rep": 3,
+ "endpoint": "frontier",
+ "label": 3,
+ "band": "L5001",
+ "foreign": false,
+ "draft0_ok": false
+}

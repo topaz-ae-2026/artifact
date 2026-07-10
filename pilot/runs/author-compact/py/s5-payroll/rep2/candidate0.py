@@ -1,0 +1,7 @@
+def overtime_hours(hours: int) -> int:
+    return max(0, hours - 40)
+
+def pay(hours: int, rate: int) -> int:
+    ot_hours = overtime_hours(hours)
+    regular_hours = hours - ot_hours
+    return regular_hours * rate + ot_hours * rate * 2

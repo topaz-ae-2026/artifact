@@ -1,0 +1,123 @@
+{
+ "cells": 288,
+ "author-frontier-L": {
+  "n": 72,
+  "draft0_gate_acceptance": 0.9861111111111112,
+  "draft0_ci": [
+   0.9583333333333334,
+   1.0
+  ],
+  "accepted_and_correct": 1.0,
+  "yield_ci": [
+   1.0,
+   1.0
+  ],
+  "post_acceptance_escape": 0.0,
+  "cumulative_acceptance": {
+   "0": 0.9861111111111112,
+   "1": 1.0,
+   "2": 1.0,
+   "3": 1.0
+  },
+  "outcome_distribution": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 72
+  },
+  "unresolved_draft0_rate": 0.0,
+  "py_compile_draft0": null
+ },
+ "author-frontier-py": {
+  "n": 72,
+  "draft0_gate_acceptance": 1.0,
+  "draft0_ci": [
+   1.0,
+   1.0
+  ],
+  "accepted_and_correct": 1.0,
+  "yield_ci": [
+   1.0,
+   1.0
+  ],
+  "post_acceptance_escape": 0.0,
+  "cumulative_acceptance": {
+   "0": 1.0,
+   "1": 1.0,
+   "2": 1.0,
+   "3": 1.0
+  },
+  "outcome_distribution": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 72
+  },
+  "unresolved_draft0_rate": 0.0,
+  "py_compile_draft0": 1.0
+ },
+ "author-compact-L": {
+  "n": 72,
+  "draft0_gate_acceptance": 0.9722222222222222,
+  "draft0_ci": [
+   0.9305555555555556,
+   1.0
+  ],
+  "accepted_and_correct": 1.0,
+  "yield_ci": [
+   1.0,
+   1.0
+  ],
+  "post_acceptance_escape": 0.0,
+  "cumulative_acceptance": {
+   "0": 0.9722222222222222,
+   "1": 1.0,
+   "2": 1.0,
+   "3": 1.0
+  },
+  "outcome_distribution": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 72
+  },
+  "unresolved_draft0_rate": 0.0,
+  "py_compile_draft0": null
+ },
+ "author-compact-py": {
+  "n": 72,
+  "draft0_gate_acceptance": 1.0,
+  "draft0_ci": [
+   1.0,
+   1.0
+  ],
+  "accepted_and_correct": 1.0,
+  "yield_ci": [
+   1.0,
+   1.0
+  ],
+  "post_acceptance_escape": 0.0,
+  "cumulative_acceptance": {
+   "0": 1.0,
+   "1": 1.0,
+   "2": 1.0,
+   "3": 1.0
+  },
+  "outcome_distribution": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 72
+  },
+  "unresolved_draft0_rate": 0.0,
+  "py_compile_draft0": 1.0
+ }
+}

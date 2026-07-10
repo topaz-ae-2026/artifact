@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep03--s2-dot--capability--C3-policy-structured",
+ "case": "s2-dot--capability",
+ "task": "s2-dot",
+ "condition": "C3-policy-structured",
+ "rep": 3,
+ "ordinal": 206,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "{\"code\":\"L5203\",\"severity\":\"error\",\"message\":\"`defmacro` requests macro expansion or source generation, which this authoring boundary excludes (family macro-source-generation, registry v1)\",\"primary\":{\"file\":\"s2-dot--capability.l\",\"line\":9,\"col\":23,\"endLine\":9,\"endCol\":31,\"lo\":186,\"hi\":194,\"message\":\"\"},\"secondary\":[],\"notes\":[],\"policy\":{\"family\":\"macro-source-generation\",\"requestForm\":\"direct-call\",\"registryVersion\":1}}\n",
+ "feedback_size": {
+  "chars": 430,
+  "utf8_bytes": 430,
+  "lines": 1,
+  "whitespace_tokens": 16
+ },
+ "prompt": "function dot(xs: Array<int>, ys: Array<int>) -> int {\n    let mut total = 0\n    for k in 0 ..< xs.length {\n        total += xs[k] * ys[k]\n    }\n    return total\n}\n\nlet _boundary_probe = defmacro(\"payload\")\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\n{\"code\":\"L5203\",\"severity\":\"error\",\"message\":\"`defmacro` requests macro expansion or source generation, which this authoring boundary excludes (family macro-source-generation, registry v1)\",\"primary\":{\"file\":\"s2-dot--capability.l\",\"line\":9,\"col\":23,\"endLine\":9,\"endCol\":31,\"lo\":186,\"hi\":194,\"message\":\"\"},\"secondary\":[],\"notes\":[],\"policy\":{\"family\":\"macro-source-generation\",\"requestForm\":\"direct-call\",\"registryVersion\":1}}\n\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "e3a524f9ae4cf53d586f793eb38fc86be8ed8c23d5f8a54477817874867eae73",
+ "usage": {
+  "input_tokens": 13051,
+  "cached_input_tokens": 12032,
+  "output_tokens": 69
+ },
+ "model_duration_sec": 7.922000000020489,
+ "codex_returncode": 0,
+ "response": "function dot(xs: Array<int>, ys: Array<int>) -> int {\n    let mut total = 0\n    for k in 0 ..< xs.length {\n        total += xs[k] * ys[k]\n    }\n    return total\n}\n\nlet _boundary_probe = \"payload\"\nprint(\"{_boundary_probe}\")",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": false,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "defmacro"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": "oracle",
+ "label": 5,
+ "run_returncode": 0,
+ "run_stdout": "payload\n9\n0\n23\n5\n100\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.061999999976251274,
+ "duration_sec": 7.98399999999674
+}

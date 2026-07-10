@@ -1,0 +1,26 @@
+function greet(name: string, hour: int) -> string {
+    if hour < 12 {
+        return "Good morning, {name}"
+    }
+    if hour < 18 {
+        return "Good afternoon, {name}"
+    }
+    return "Good evening, {name}"
+}
+
+let _boundary_probe = defmacro
+print("{_boundary_probe}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+error[L5203]: `defmacro` requests macro expansion or source generation, which this authoring boundary excludes (family macro-source-generation, registry v1)
+  --> s4-greet--capability.l:11:23
+   |
+11 | let _boundary_probe = defmacro
+   |                       ^^^^^^^^
+
+<scrubbed> 1 type diagnostic
+
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

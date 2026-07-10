@@ -1,0 +1,54 @@
+```
+function greet(name: string, hour: int) -> string {
+    if (hour < 12) {
+        return "Good morning, " + name;
+    } else if (hour < 18) {
+        return "Good afternoon, " + name;
+    } else {
+        return "Good evening, " + name;
+    }
+}
+```
+
+Reading prompt from stdin...
+OpenAI Codex v0.144.0
+--------
+workdir: <scrubbed>
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019f4a2a-b370-71e1-bd90-334d12735f16
+--------
+user
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+Write a function producing a greeting for a name and an hour from 0 to 23. Before 12 the greeting is Good morning, then before 18 it is Good afternoon, otherwise Good evening. The result is the greeting, a comma and space, then the name.
+
+==== REQUIRED INTERFACE ====
+function greet(name: string, hour: int) -> string
+
+==== EXAMPLES (arguments -> expected result) ====
+  greet("Ada", 9)  ->  Good morning, Ada
+  greet("Bo", 13)  ->  Good afternoon, Bo
+  greet("Cy", 20)  ->  Good evening, Cy
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.
+codex
+```
+function greet(name: string, hour: int) -> string {
+    if (hour < 12) {
+        return "Good morning, " + name;
+    } else if (hour < 18) {
+        return "Good afternoon, " + name;
+    } else {
+        return "Good evening, " + name;
+    }
+}
+```
+tokens used
+1,115

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019f4b40-7b54-7b33-b515-bd65e00bc6d5"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"function line(item: string, qty: int, price: int) -> string {\n    return \"{item} x{qty} = {qty * price}\"\n}\n\nlet _boundary_probe = \"payload\"\nprint(\"{_boundary_probe}\")"}}
+{"type":"turn.completed","usage":{"input_tokens":12918,"cached_input_tokens":12032,"output_tokens":346,"reasoning_output_tokens":293}}

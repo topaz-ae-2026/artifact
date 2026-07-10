@@ -1,0 +1,8 @@
+function plural(word: string, n: int) -> string {
+    if n == 1 {
+        return "1 {word}"
+    }
+    return "{n} {word}s"
+}
+
+print("{require}")

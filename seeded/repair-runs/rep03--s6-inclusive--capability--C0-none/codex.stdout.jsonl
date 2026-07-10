@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019f4b42-bb70-7d70-8784-5490b83602b2"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"function sumTo(n: int) -> int {\n    let mut total = 0\n    for k in 1 .. n {\n        total += k\n    }\n    return total\n}\n\nlet _boundary_probe = \"payload\"\nprint(\"{_boundary_probe}\")"}}
+{"type":"turn.completed","usage":{"input_tokens":12924,"cached_input_tokens":12032,"output_tokens":272,"reasoning_output_tokens":213}}

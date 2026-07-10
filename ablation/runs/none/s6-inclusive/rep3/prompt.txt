@@ -1,0 +1,25 @@
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+The given program sums the integers from 1 up to but not including n. Change it to sum from 1 up to and including n, keeping the result 0 for n below 1.
+
+==== PROGRAM TO MODIFY ====
+function sumTo(n: int) -> int {
+    let mut total = 0
+    for k in 1 ..< n {
+        total += k
+    }
+    return total
+}
+
+
+==== REQUIRED INTERFACE ====
+function sumTo(n: int) -> int
+
+==== EXAMPLES (arguments -> expected result) ====
+  sumTo(5)  ->  15
+  sumTo(1)  ->  1
+  sumTo(0)  ->  0
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.

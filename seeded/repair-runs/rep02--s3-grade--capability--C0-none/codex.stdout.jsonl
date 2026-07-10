@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019f4b3e-6be9-7f72-88ec-f75065dba9eb"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"fn grade(score: i32) -> &'static str {\n    match score {\n        s if s >= 90 => \"A\",\n        s if s >= 80 => \"B\",\n        s if s >= 70 => \"C\",\n        s if s >= 60 => \"D\",\n        _ => \"F\",\n    }\n}\n\nfn main() {\n    println!(\"{{reflect}}\");\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":12944,"cached_input_tokens":12032,"output_tokens":430,"reasoning_output_tokens":343}}

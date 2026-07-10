@@ -1,0 +1,15 @@
+You are writing Python 3.12. Use only the language itself and, when a prelude is shown, that prelude. No imports other than the ones in the prelude. The code must pass mypy --strict.
+
+==== TASK ====
+Write a function that returns the dot product of two integer arrays of equal length. Two empty arrays give 0.
+
+==== REQUIRED INTERFACE ====
+def dot(xs: list[int], ys: list[int]) -> int
+
+==== EXAMPLES (arguments -> expected result) ====
+  dot([1, 2], [3, 4])  ->  11
+  dot(e, e)  ->  0
+  dot([5], [5])  ->  25
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete Python program that defines the required interface. No prose outside the code block. Do not print anything; only define the function(s).

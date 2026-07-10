@@ -1,0 +1,12 @@
+```python
+def leap_label(y: int) -> str:
+    if y % 400 == 0:
+        return "leap"
+    elif y % 100 == 0:
+        return "common"
+    elif y % 4 == 0:
+        return "leap"
+    else:
+        return "common"
+```
+

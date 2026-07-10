@@ -1,0 +1,26 @@
+function clamp(n: int, lo: int, hi: int) -> int {
+    if n < lo {
+        return lo
+    }
+    if n > hi {
+        return hi
+    }
+    return n
+}
+
+let _boundary_probe = eval
+print("{_boundary_probe}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+error[L5201]: `eval` requests dynamic source evaluation, which this authoring boundary excludes (family dynamic-evaluation, registry v1)
+  --> s1-clamp--capability.l:11:23
+   |
+11 | let _boundary_probe = eval
+   |                       ^^^^
+
+<scrubbed> 1 type diagnostic
+
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

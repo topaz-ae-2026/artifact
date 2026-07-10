@@ -1,0 +1,9 @@
+exit=0
+--- stdout ---
+Good morning, Dee
+Good morning, Ed
+Good afternoon, Fi
+Good afternoon, Gil
+Good evening, 한나
+
+--- stderr ---

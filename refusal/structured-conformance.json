@@ -1,0 +1,564 @@
+{
+ "compiler": "<scrubbed>",
+ "recognized_cases": 17,
+ "summary": [
+  {
+   "property": "recognized_inputs",
+   "correct": 17,
+   "total": 17
+  },
+  {
+   "property": "expected_code",
+   "correct": 17,
+   "total": 17
+  },
+  {
+   "property": "family",
+   "correct": 17,
+   "total": 17
+  },
+  {
+   "property": "request_form",
+   "correct": 17,
+   "total": 17
+  },
+  {
+   "property": "registry_version",
+   "correct": 17,
+   "total": 17
+  },
+  {
+   "property": "required_fields_and_types",
+   "correct": 17,
+   "total": 17
+  },
+  {
+   "property": "registered_token_span",
+   "correct": 17,
+   "total": 17
+  },
+  {
+   "property": "exactly_one_L52",
+   "correct": 17,
+   "total": 17
+  },
+  {
+   "property": "human_json_same_code",
+   "correct": 17,
+   "total": 17
+  }
+ ],
+ "all_conform": true,
+ "cases": [
+  {
+   "case": "dynamic-evaluation--alias",
+   "path": "<scrubbed>",
+   "expected": {
+    "code": "L5201",
+    "family": "dynamic-evaluation",
+    "requestForm": "value-reference",
+    "token": "eval"
+   },
+   "returncodes": {
+    "human": 1,
+    "json": 1
+   },
+   "human_codes": [
+    "L5201"
+   ],
+   "json_codes": [
+    "L5201"
+   ],
+   "checks": {
+    "expected_code": true,
+    "family": true,
+    "request_form": true,
+    "registry_version": true,
+    "required_fields_and_types": true,
+    "registered_token_span": true,
+    "exactly_one_L52": true,
+    "human_json_same_code": true
+   }
+  },
+  {
+   "case": "dynamic-evaluation--direct-call",
+   "path": "<scrubbed>",
+   "expected": {
+    "code": "L5201",
+    "family": "dynamic-evaluation",
+    "requestForm": "direct-call",
+    "token": "eval"
+   },
+   "returncodes": {
+    "human": 1,
+    "json": 1
+   },
+   "human_codes": [
+    "L5201"
+   ],
+   "json_codes": [
+    "L5201"
+   ],
+   "checks": {
+    "expected_code": true,
+    "family": true,
+    "request_form": true,
+    "registry_version": true,
+    "required_fields_and_types": true,
+    "registered_token_span": true,
+    "exactly_one_L52": true,
+    "human_json_same_code": true
+   }
+  },
+  {
+   "case": "dynamic-evaluation--template-expr",
+   "path": "<scrubbed>",
+   "expected": {
+    "code": "L5201",
+    "family": "dynamic-evaluation",
+    "requestForm": "direct-call",
+    "token": "eval"
+   },
+   "returncodes": {
+    "human": 1,
+    "json": 1
+   },
+   "human_codes": [
+    "L5201"
+   ],
+   "json_codes": [
+    "L5201"
+   ],
+   "checks": {
+    "expected_code": true,
+    "family": true,
+    "request_form": true,
+    "registry_version": true,
+    "required_fields_and_types": true,
+    "registered_token_span": true,
+    "exactly_one_L52": true,
+    "human_json_same_code": true
+   }
+  },
+  {
+   "case": "dynamic-module-loading--alias",
+   "path": "<scrubbed>",
+   "expected": {
+    "code": "L5205",
+    "family": "dynamic-module-loading",
+    "requestForm": "value-reference",
+    "token": "require"
+   },
+   "returncodes": {
+    "human": 1,
+    "json": 1
+   },
+   "human_codes": [
+    "L5205"
+   ],
+   "json_codes": [
+    "L5205"
+   ],
+   "checks": {
+    "expected_code": true,
+    "family": true,
+    "request_form": true,
+    "registry_version": true,
+    "required_fields_and_types": true,
+    "registered_token_span": true,
+    "exactly_one_L52": true,
+    "human_json_same_code": true
+   }
+  },
+  {
+   "case": "dynamic-module-loading--direct-call",
+   "path": "<scrubbed>",
+   "expected": {
+    "code": "L5205",
+    "family": "dynamic-module-loading",
+    "requestForm": "direct-call",
+    "token": "require"
+   },
+   "returncodes": {
+    "human": 1,
+    "json": 1
+   },
+   "human_codes": [
+    "L5205"
+   ],
+   "json_codes": [
+    "L5205"
+   ],
+   "checks": {
+    "expected_code": true,
+    "family": true,
+    "request_form": true,
+    "registry_version": true,
+    "required_fields_and_types": true,
+    "registered_token_span": true,
+    "exactly_one_L52": true,
+    "human_json_same_code": true
+   }
+  },
+  {
+   "case": "dynamic-module-loading--template-expr",
+   "path": "<scrubbed>",
+   "expected": {
+    "code": "L5205",
+    "family": "dynamic-module-loading",
+    "requestForm": "direct-call",
+    "token": "require"
+   },
+   "returncodes": {
+    "human": 1,
+    "json": 1
+   },
+   "human_codes": [
+    "L5205"
+   ],
+   "json_codes": [
+    "L5205"
+   ],
+   "checks": {
+    "expected_code": true,
+    "family": true,
+    "request_form": true,
+    "registry_version": true,
+    "required_fields_and_types": true,
+    "registered_token_span": true,
+    "exactly_one_L52": true,
+    "human_json_same_code": true
+   }
+  },
+  {
+   "case": "host-interop-ffi--alias",
+   "path": "<scrubbed>",
+   "expected": {
+    "code": "L5202",
+    "family": "host-interop-ffi",
+    "requestForm": "value-reference",
+    "token": "ffi"
+   },
+   "returncodes": {
+    "human": 1,
+    "json": 1
+   },
+   "human_codes": [
+    "L5202"
+   ],
+   "json_codes": [
+    "L5202"
+   ],
+   "checks": {
+    "expected_code": true,
+    "family": true,
+    "request_form": true,
+    "registry_version": true,
+    "required_fields_and_types": true,
+    "registered_token_span": true,
+    "exactly_one_L52": true,
+    "human_json_same_code": true
+   }
+  },
+  {
+   "case": "host-interop-ffi--direct-call",
+   "path": "<scrubbed>",
+   "expected": {
+    "code": "L5202",
+    "family": "host-interop-ffi",
+    "requestForm": "direct-call",
+    "token": "ffi"
+   },
+   "returncodes": {
+    "human": 1,
+    "json": 1
+   },
+   "human_codes": [
+    "L5202"
+   ],
+   "json_codes": [
+    "L5202"
+   ],
+   "checks": {
+    "expected_code": true,
+    "family": true,
+    "request_form": true,
+    "registry_version": true,
+    "required_fields_and_types": true,
+    "registered_token_span": true,
+    "exactly_one_L52": true,
+    "human_json_same_code": true
+   }
+  },
+  {
+   "case": "host-interop-ffi--template-expr",
+   "path": "<scrubbed>",
+   "expected": {
+    "code": "L5202",
+    "family": "host-interop-ffi",
+    "requestForm": "direct-call",
+    "token": "ffi"
+   },
+   "returncodes": {
+    "human": 1,
+    "json": 1
+   },
+   "human_codes": [
+    "L5202"
+   ],
+   "json_codes": [
+    "L5202"
+   ],
+   "checks": {
+    "expected_code": true,
+    "family": true,
+    "request_form": true,
+    "registry_version": true,
+    "required_fields_and_types": true,
+    "registered_token_span": true,
+    "exactly_one_L52": true,
+    "human_json_same_code": true
+   }
+  },
+  {
+   "case": "ind-alias-chain",
+   "path": "<scrubbed>",
+   "expected": {
+    "code": "L5201",
+    "family": "dynamic-evaluation",
+    "requestForm": "value-reference",
+    "token": "eval"
+   },
+   "returncodes": {
+    "human": 1,
+    "json": 1
+   },
+   "human_codes": [
+    "L5201"
+   ],
+   "json_codes": [
+    "L5201"
+   ],
+   "checks": {
+    "expected_code": true,
+    "family": true,
+    "request_form": true,
+    "registry_version": true,
+    "required_fields_and_types": true,
+    "registered_token_span": true,
+    "exactly_one_L52": true,
+    "human_json_same_code": true
+   }
+  },
+  {
+   "case": "ind-nested-template",
+   "path": "<scrubbed>",
+   "expected": {
+    "code": "L5201",
+    "family": "dynamic-evaluation",
+    "requestForm": "direct-call",
+    "token": "eval"
+   },
+   "returncodes": {
+    "human": 1,
+    "json": 1
+   },
+   "human_codes": [
+    "L5201"
+   ],
+   "json_codes": [
+    "L5201"
+   ],
+   "checks": {
+    "expected_code": true,
+    "family": true,
+    "request_form": true,
+    "registry_version": true,
+    "required_fields_and_types": true,
+    "registered_token_span": true,
+    "exactly_one_L52": true,
+    "human_json_same_code": true
+   }
+  },
+  {
+   "case": "macro-source-generation--alias",
+   "path": "<scrubbed>",
+   "expected": {
+    "code": "L5203",
+    "family": "macro-source-generation",
+    "requestForm": "value-reference",
+    "token": "macro"
+   },
+   "returncodes": {
+    "human": 1,
+    "json": 1
+   },
+   "human_codes": [
+    "L5203"
+   ],
+   "json_codes": [
+    "L5203"
+   ],
+   "checks": {
+    "expected_code": true,
+    "family": true,
+    "request_form": true,
+    "registry_version": true,
+    "required_fields_and_types": true,
+    "registered_token_span": true,
+    "exactly_one_L52": true,
+    "human_json_same_code": true
+   }
+  },
+  {
+   "case": "macro-source-generation--direct-call",
+   "path": "<scrubbed>",
+   "expected": {
+    "code": "L5203",
+    "family": "macro-source-generation",
+    "requestForm": "direct-call",
+    "token": "macro"
+   },
+   "returncodes": {
+    "human": 1,
+    "json": 1
+   },
+   "human_codes": [
+    "L5203"
+   ],
+   "json_codes": [
+    "L5203"
+   ],
+   "checks": {
+    "expected_code": true,
+    "family": true,
+    "request_form": true,
+    "registry_version": true,
+    "required_fields_and_types": true,
+    "registered_token_span": true,
+    "exactly_one_L52": true,
+    "human_json_same_code": true
+   }
+  },
+  {
+   "case": "macro-source-generation--template-expr",
+   "path": "<scrubbed>",
+   "expected": {
+    "code": "L5203",
+    "family": "macro-source-generation",
+    "requestForm": "direct-call",
+    "token": "macro"
+   },
+   "returncodes": {
+    "human": 1,
+    "json": 1
+   },
+   "human_codes": [
+    "L5203"
+   ],
+   "json_codes": [
+    "L5203"
+   ],
+   "checks": {
+    "expected_code": true,
+    "family": true,
+    "request_form": true,
+    "registry_version": true,
+    "required_fields_and_types": true,
+    "registered_token_span": true,
+    "exactly_one_L52": true,
+    "human_json_same_code": true
+   }
+  },
+  {
+   "case": "runtime-reflection--alias",
+   "path": "<scrubbed>",
+   "expected": {
+    "code": "L5204",
+    "family": "runtime-reflection",
+    "requestForm": "value-reference",
+    "token": "reflect"
+   },
+   "returncodes": {
+    "human": 1,
+    "json": 1
+   },
+   "human_codes": [
+    "L5204"
+   ],
+   "json_codes": [
+    "L5204"
+   ],
+   "checks": {
+    "expected_code": true,
+    "family": true,
+    "request_form": true,
+    "registry_version": true,
+    "required_fields_and_types": true,
+    "registered_token_span": true,
+    "exactly_one_L52": true,
+    "human_json_same_code": true
+   }
+  },
+  {
+   "case": "runtime-reflection--direct-call",
+   "path": "<scrubbed>",
+   "expected": {
+    "code": "L5204",
+    "family": "runtime-reflection",
+    "requestForm": "direct-call",
+    "token": "reflect"
+   },
+   "returncodes": {
+    "human": 1,
+    "json": 1
+   },
+   "human_codes": [
+    "L5204"
+   ],
+   "json_codes": [
+    "L5204"
+   ],
+   "checks": {
+    "expected_code": true,
+    "family": true,
+    "request_form": true,
+    "registry_version": true,
+    "required_fields_and_types": true,
+    "registered_token_span": true,
+    "exactly_one_L52": true,
+    "human_json_same_code": true
+   }
+  },
+  {
+   "case": "runtime-reflection--template-expr",
+   "path": "<scrubbed>",
+   "expected": {
+    "code": "L5204",
+    "family": "runtime-reflection",
+    "requestForm": "direct-call",
+    "token": "reflect"
+   },
+   "returncodes": {
+    "human": 1,
+    "json": 1
+   },
+   "human_codes": [
+    "L5204"
+   ],
+   "json_codes": [
+    "L5204"
+   ],
+   "checks": {
+    "expected_code": true,
+    "family": true,
+    "request_form": true,
+    "registry_version": true,
+    "required_fields_and_types": true,
+    "registered_token_span": true,
+    "exactly_one_L52": true,
+    "human_json_same_code": true
+   }
+  }
+ ]
+}

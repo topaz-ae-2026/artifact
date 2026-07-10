@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep03--s4-greet--capability--C0-none",
+ "case": "s4-greet--capability",
+ "task": "s4-greet",
+ "condition": "C0-none",
+ "rep": 3,
+ "ordinal": 270,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "",
+ "feedback_size": {
+  "chars": 0,
+  "utf8_bytes": 0,
+  "lines": 0,
+  "whitespace_tokens": 0
+ },
+ "prompt": "function greet(name: string, hour: int) -> string {\n    if hour < 12 {\n        return \"Good morning, {name}\"\n    }\n    if hour < 18 {\n        return \"Good afternoon, {name}\"\n    }\n    return \"Good evening, {name}\"\n}\n\nlet _boundary_probe = defmacro\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "be0b96f47c2d7f3c4f7718630a9a5fb503fe121613f70d149c30653f0f77d547",
+ "usage": {
+  "input_tokens": 26088,
+  "cached_input_tokens": 24064,
+  "output_tokens": 405
+ },
+ "model_duration_sec": 16.82799999997951,
+ "codex_returncode": 0,
+ "response": "function greet(name: string, hour: int) -> string {\n    if hour < 12 {\n        return \"Good morning, {name}\"\n    }\n    if hour < 18 {\n        return \"Good afternoon, {name}\"\n    }\n    return \"Good evening, {name}\"\n}\n\nlet _boundary_probe = \"defmacro\"\nprint(\"{_boundary_probe}\")",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": false,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "defmacro"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": "oracle",
+ "label": 5,
+ "run_returncode": 0,
+ "run_stdout": "defmacro\nGood morning, Dee\nGood morning, Ed\nGood afternoon, Fi\nGood afternoon, Gil\nGood evening, 한나\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.07900000002700835,
+ "duration_sec": 16.90700000000652
+}

@@ -1,0 +1,2 @@
+{"code":"L0004","severity":"error","message":"invalid escape `\\u` in a string literal","primary":{"file":"gated.l","line":5,"col":8,"endLine":5,"endCol":10,"lo":118,"hi":120,"message":""},"secondary":[],"notes":[]}
+{"code":"L0004","severity":"error","message":"invalid escape `\\u` in a string literal","primary":{"file":"gated.l","line":5,"col":22,"endLine":5,"endCol":24,"lo":132,"hi":134,"message":""},"secondary":[],"notes":[]}

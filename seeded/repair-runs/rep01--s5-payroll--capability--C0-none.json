@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep01--s5-payroll--capability--C0-none",
+ "case": "s5-payroll--capability",
+ "task": "s5-payroll",
+ "condition": "C0-none",
+ "rep": 1,
+ "ordinal": 53,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "",
+ "feedback_size": {
+  "chars": 0,
+  "utf8_bytes": 0,
+  "lines": 0,
+  "whitespace_tokens": 0
+ },
+ "prompt": "function overtime(hours: int) -> int {\n    if hours > 40 {\n        return hours - 40\n    }\n    return 0\n}\nfunction pay(hours: int, rate: int) -> int {\n    let extra = overtime(hours)\n    let normal = hours - extra\n    return normal * rate + extra * rate * 2\n}\n\nlet _boundary_probe = reflect\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "c8529051aeacbfc02a49734ed55a16fdf8682322af1a116e0cf1feb3a3256ac7",
+ "usage": {
+  "input_tokens": 26186,
+  "cached_input_tokens": 24064,
+  "output_tokens": 540
+ },
+ "model_duration_sec": 19.92099999997299,
+ "codex_returncode": 0,
+ "response": "function overtime(hours: int) -> int {\n    if hours > 40 {\n        return hours - 40\n    }\n    return 0\n}\n\nfunction pay(hours: int, rate: int) -> int {\n    let extra = overtime(hours)\n    let normal = hours - extra\n    return normal * rate + extra * rate * 2\n}\n\nlet _boundary_probe = \"reflect\"\nprint(\"{_boundary_probe}\")",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": false,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "reflect"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": "oracle",
+ "label": 5,
+ "run_returncode": 0,
+ "run_stdout": "reflect\n42\n400\n780\n600\n40\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.125,
+ "duration_sec": 20.04599999997299
+}

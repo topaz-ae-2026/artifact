@@ -1,0 +1,10 @@
+{
+ "task": "s1-manhattan",
+ "cond": "none",
+ "rep": 2,
+ "endpoint": "frontier",
+ "label": 3,
+ "band": "L5003",
+ "foreign": false,
+ "draft0_ok": false
+}

@@ -1,0 +1,19 @@
+function leapLabel(y: int) -> string {
+    if y % 400 == 0 {
+        return "leap"
+    }
+    if y % 100 == 0 {
+        return "common"
+    }
+    if y % 4 == 0 {
+        return "leap"
+    }
+    return "common"
+}
+
+let _boundary_probe = reflect
+print("{_boundary_probe}")
+
+This program was rejected by the receiving gate of language L.
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

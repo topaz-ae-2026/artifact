@@ -1,0 +1,15 @@
+function grade(score: int) -> string {
+    match score {
+        case s if s >= 90 => "A"
+        case s if s >= 80 => "B"
+        case s if s >= 70 => "C"
+        case s if s >= 60 => "D"
+        case _ => "F"
+    }
+}
+
+print("{reflect}")
+
+This program was rejected by the receiving gate of language L.
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

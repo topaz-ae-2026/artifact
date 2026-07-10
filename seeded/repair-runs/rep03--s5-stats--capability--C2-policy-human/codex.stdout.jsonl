@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019f4b41-5c74-70a2-a3dc-5fdaff4a8778"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"function sumOf(xs: Array<int>) -> int {\n    let mut total = 0\n    for x in xs {\n        total += x\n    }\n    return total\n}\nfunction maxOf(xs: Array<int>) -> int {\n    let mut best = xs[0]\n    for k in 1 ..< xs.length {\n        if xs[k] > best {\n            best = xs[k]\n        }\n    }\n    return best\n}\nfunction report(xs: Array<int>) -> string {\n    return \"sum={sumOf(xs)} max={maxOf(xs)}\"\n}"}}
+{"type":"turn.completed","usage":{"input_tokens":13107,"cached_input_tokens":12032,"output_tokens":122,"reasoning_output_tokens":0}}

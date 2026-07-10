@@ -1,0 +1,12 @@
+function plural(word: string, n: int) -> string {
+    if n == 1 {
+        return "1 {word}"
+    }
+    return "{n} {word}s"
+}
+
+print("{require}")
+
+This program was rejected by the receiving gate of language L.
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

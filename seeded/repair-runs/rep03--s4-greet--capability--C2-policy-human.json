@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep03--s4-greet--capability--C2-policy-human",
+ "case": "s4-greet--capability",
+ "task": "s4-greet",
+ "condition": "C2-policy-human",
+ "rep": 3,
+ "ordinal": 197,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "error[L5203]: `defmacro` requests macro expansion or source generation, which this authoring boundary excludes (family macro-source-generation, registry v1)\n  --> s4-greet--capability.l:11:23\n   |\n11 | let _boundary_probe = defmacro\n   |                       ^^^^^^^^\n\n<scrubbed> 1 type diagnostic\n",
+ "feedback_size": {
+  "chars": 365,
+  "utf8_bytes": 365,
+  "lines": 7,
+  "whitespace_tokens": 32
+ },
+ "prompt": "function greet(name: string, hour: int) -> string {\n    if hour < 12 {\n        return \"Good morning, {name}\"\n    }\n    if hour < 18 {\n        return \"Good afternoon, {name}\"\n    }\n    return \"Good evening, {name}\"\n}\n\nlet _boundary_probe = defmacro\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\nerror[L5203]: `defmacro` requests macro expansion or source generation, which this authoring boundary excludes (family macro-source-generation, registry v1)\n  --> s4-greet--capability.l:11:23\n   |\n11 | let _boundary_probe = defmacro\n   |                       ^^^^^^^^\n\n<scrubbed> 1 type diagnostic\n\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "1647bcda39672dafcf1caa8345168038f788a2eecbdf429fe58f997c87b33403",
+ "usage": {
+  "input_tokens": 13049,
+  "cached_input_tokens": 12032,
+  "output_tokens": 63
+ },
+ "model_duration_sec": 5.125,
+ "codex_returncode": 0,
+ "response": "function greet(name: string, hour: int) -> string {\n    if hour < 12 {\n        return \"Good morning, {name}\"\n    }\n    if hour < 18 {\n        return \"Good afternoon, {name}\"\n    }\n    return \"Good evening, {name}\"\n}",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": true,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "defmacro"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": null,
+ "label": 6,
+ "run_returncode": 0,
+ "run_stdout": "Good morning, Dee\nGood morning, Ed\nGood afternoon, Fi\nGood afternoon, Gil\nGood evening, 한나\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.09399999998277053,
+ "duration_sec": 5.2189999999827705
+}

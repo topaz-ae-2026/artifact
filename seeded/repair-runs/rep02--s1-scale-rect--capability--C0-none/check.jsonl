@@ -1,0 +1,7 @@
+{"code":"L2001","severity":"error","message":"expected `}`","primary":{"file":"gated.l","line":5,"col":14,"endLine":5,"endCol":23,"lo":124,"hi":133,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected an expression","primary":{"file":"gated.l","line":5,"col":27,"endLine":5,"endCol":28,"lo":137,"hi":138,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected a statement","primary":{"file":"gated.l","line":5,"col":27,"endLine":5,"endCol":28,"lo":137,"hi":138,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected an expression","primary":{"file":"gated.l","line":5,"col":28,"endLine":5,"endCol":29,"lo":138,"hi":139,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected a statement","primary":{"file":"gated.l","line":5,"col":28,"endLine":5,"endCol":29,"lo":138,"hi":139,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected an expression","primary":{"file":"gated.l","line":5,"col":29,"endLine":5,"endCol":30,"lo":139,"hi":140,"message":""},"secondary":[],"notes":[]}
+{"code":"L2001","severity":"error","message":"expected a statement","primary":{"file":"gated.l","line":5,"col":29,"endLine":5,"endCol":30,"lo":139,"hi":140,"message":""},"secondary":[],"notes":[]}

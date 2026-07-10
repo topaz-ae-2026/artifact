@@ -1,0 +1,3 @@
+function scale(r: { w: int, h: int }, k: int) -> { w: int, h: int } {
+    { w: r.w * k, h: r.h * k }
+}

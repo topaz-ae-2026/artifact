@@ -1,0 +1,1 @@
+{"code":"L5002","severity":"error","message":"`evaluation` is not bound","primary":{"file":"gated.l","line":11,"col":9,"endLine":11,"endCol":19,"lo":289,"hi":299,"message":""},"secondary":[],"notes":[]}

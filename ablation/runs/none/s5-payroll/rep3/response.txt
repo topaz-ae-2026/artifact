@@ -1,0 +1,58 @@
+```
+function overtime(hours: int) -> int {
+    if (hours > 40) {
+        return hours - 40;
+    }
+    return 0;
+}
+
+function pay(hours: int, rate: int) -> int {
+    let extra: int = overtime(hours);
+    return (hours - extra) * rate + extra * rate * 2;
+}
+```
+
+Reading prompt from stdin...
+OpenAI Codex v0.144.0
+--------
+workdir: <scrubbed>
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 019f4a27-b246-74e3-9042-b1abf48e7c87
+--------
+user
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+Write a function computing weekly pay from hours worked and an hourly rate. Hours up to 40 are paid at the rate. Hours above 40 are paid at double the rate. Use a helper function that returns the overtime hours.
+
+==== REQUIRED INTERFACE ====
+function pay(hours: int, rate: int) -> int
+
+==== EXAMPLES (arguments -> expected result) ====
+  pay(40, 10)  ->  400
+  pay(45, 10)  ->  500
+  pay(0, 99)  ->  0
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.
+codex
+```
+function overtime(hours: int) -> int {
+    if (hours > 40) {
+        return hours - 40;
+    }
+    return 0;
+}
+
+function pay(hours: int, rate: int) -> int {
+    let extra: int = overtime(hours);
+    return (hours - extra) * rate + extra * rate * 2;
+}
+```
+tokens used
+1,167

@@ -1,0 +1,9 @@
+function scale(r: { w: int, h: int }, k: int) -> { w: int, h: int } {
+    return { w: r.w * k, h: r.h * k }
+}
+
+print("{defmacro}")
+
+This program was rejected by the receiving gate of language L.
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.

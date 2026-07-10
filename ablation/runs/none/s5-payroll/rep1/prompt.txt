@@ -1,0 +1,15 @@
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+Write a function computing weekly pay from hours worked and an hourly rate. Hours up to 40 are paid at the rate. Hours above 40 are paid at double the rate. Use a helper function that returns the overtime hours.
+
+==== REQUIRED INTERFACE ====
+function pay(hours: int, rate: int) -> int
+
+==== EXAMPLES (arguments -> expected result) ====
+  pay(40, 10)  ->  400
+  pay(45, 10)  ->  500
+  pay(0, 99)  ->  0
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.

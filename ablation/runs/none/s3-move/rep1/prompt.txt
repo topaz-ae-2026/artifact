@@ -1,0 +1,15 @@
+You are writing a program in a small statically typed language. Define exactly the required interface. Reply with one fenced code block and nothing else.
+
+==== TASK ====
+Write a function that moves a point one step on a grid. Direction N increases y by 1, S decreases y by 1, E increases x by 1, W decreases x by 1, and any other direction string leaves the point unchanged. Return the resulting point.
+
+==== REQUIRED INTERFACE ====
+function move(dir: string, x: int, y: int) -> { x: int, y: int }
+
+==== EXAMPLES (arguments -> expected result) ====
+  move("N", 0, 0)  ->  0 1
+  move("E", 2, 3)  ->  3 3
+  move("X", 5, 5)  ->  5 5
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete program that defines the required interface. No prose. Do not print; only define.

@@ -1,0 +1,49 @@
+{
+ "status": "complete",
+ "cell_id": "rep03--s3-fizz--capability--C0-none",
+ "case": "s3-fizz--capability",
+ "task": "s3-fizz",
+ "condition": "C0-none",
+ "rep": 3,
+ "ordinal": 194,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "",
+ "feedback_size": {
+  "chars": 0,
+  "utf8_bytes": 0,
+  "lines": 0,
+  "whitespace_tokens": 0
+ },
+ "prompt": "function fizz(n: int) -> string {\n    if n % 15 == 0 {\n        return \"fizzbuzz\"\n    }\n    if n % 3 == 0 {\n        return \"fizz\"\n    }\n    if n % 5 == 0 {\n        return \"buzz\"\n    }\n    return \"{n}\"\n}\n\nlet _boundary_probe = require\nprint(\"{_boundary_probe}\")\n\nThis program was rejected by the receiving gate of language L.\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "149f9a917a587637951ba1d19b1be25add5a156aac7f841af50295b91c5237c1",
+ "usage": {
+  "input_tokens": 12952,
+  "cached_input_tokens": 12032,
+  "output_tokens": 212
+ },
+ "model_duration_sec": 8.827999999979511,
+ "codex_returncode": 0,
+ "response": "function fizz(n: int) -> string {\n    if n % 15 == 0 {\n        return \"fizzbuzz\"\n    }\n    if n % 3 == 0 {\n        return \"fizz\"\n    }\n    if n % 5 == 0 {\n        return \"buzz\"\n    }\n    return \"{n}\"\n}\n\nprint(\"{fizz(15)}\")",
+ "gate_accept": true,
+ "excluded_removed": true,
+ "oracle_correct": false,
+ "wrong_substitute": false,
+ "wrong_substitute_names": [],
+ "original_registered_names": [
+  "require"
+ ],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [],
+ "check_returncode": 0,
+ "diagnostic_codes": [],
+ "band": "oracle",
+ "label": 5,
+ "run_returncode": 0,
+ "run_stdout": "fizzbuzz\nfizzbuzz\nfizzbuzz\nfizz\nbuzz\n1\n",
+ "run_stderr": "",
+ "evaluation_duration_sec": 0.0940000000409782,
+ "duration_sec": 8.922000000020489
+}

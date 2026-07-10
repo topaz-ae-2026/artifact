@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"019f4b3e-2710-7401-a978-ed5035e6891c"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"function scale(r: { w: int, h: int }, k: int) -> { w: int, h: int } {\n    return { w: r.w * k, h: r.h * k }\n}\n\nprint(\"defmacro\")"}}
+{"type":"turn.completed","usage":{"input_tokens":13037,"cached_input_tokens":12032,"output_tokens":55,"reasoning_output_tokens":0}}

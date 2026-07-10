@@ -1,0 +1,68 @@
+```python
+from dataclasses import dataclass
+
+
+@dataclass
+class Point:
+    x: int
+    y: int
+
+
+def move(dir: str, x: int, y: int) -> Point:
+    if dir == "N":
+        y += 1
+    elif dir == "S":
+        y -= 1
+    elif dir == "E":
+        x += 1
+    elif dir == "W":
+        x -= 1
+    return Point(x, y)
+```
+
+You are writing Python 3.12. Use only the language itself and, when a prelude is shown, that prelude. No imports other than the ones in the prelude. The code must pass mypy --strict.
+
+==== TASK ====
+Write a function that moves a point one step on a grid. Direction N increases y by 1, S decreases y by 1, E increases x by 1, W decreases x by 1, and any other direction string leaves the point unchanged. Return the resulting point.
+
+==== REQUIRED INTERFACE ====
+def move(dir: str, x: int, y: int) -> Point  (Point is a provided dataclass with int fields x, y)
+
+==== PROVIDED PRELUDE (include it verbatim at the top of your program) ====
+from dataclasses import dataclass
+
+
+@dataclass
+class Point:
+    x: int
+    y: int
+
+
+==== EXAMPLES (arguments -> expected result) ====
+  move("N", 0, 0)  ->  0 1
+  move("E", 2, 3)  ->  3 3
+  move("X", 5, 5)  ->  5 5
+
+==== RESPONSE CONTRACT ====
+Reply with exactly one fenced code block containing one complete Python program that defines the required interface. No prose outside the code block. Do not print anything; only define the function(s).
+```python
+from dataclasses import dataclass
+
+
+@dataclass
+class Point:
+    x: int
+    y: int
+
+
+def move(dir: str, x: int, y: int) -> Point:
+    if dir == "N":
+        y += 1
+    elif dir == "S":
+        y -= 1
+    elif dir == "E":
+        x += 1
+    elif dir == "W":
+        x -= 1
+    return Point(x, y)
+```

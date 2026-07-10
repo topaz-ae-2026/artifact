@@ -1,0 +1,53 @@
+{
+ "status": "complete",
+ "cell_id": "rep03--s4-plural--capability--C1-generic",
+ "case": "s4-plural--capability",
+ "task": "s4-plural",
+ "condition": "C1-generic",
+ "rep": 3,
+ "ordinal": 280,
+ "schedule_seed": 52026,
+ "endpoint": "frontier",
+ "model": "gpt-5.6-sol",
+ "model_reasoning_effort": "medium",
+ "feedback": "error[L5002]: `require` is not bound\n --> seeded/cases/s4-plural--capability.l:8:9\n  |\n8 | print(\"{require}\")\n  |         ^^^^^^^\n\nseeded/cases/s4-plural--capability.l: 1 type diagnostic",
+ "feedback_size": {
+  "chars": 192,
+  "utf8_bytes": 192,
+  "lines": 7,
+  "whitespace_tokens": 17
+ },
+ "prompt": "function plural(word: string, n: int) -> string {\n    if n == 1 {\n        return \"1 {word}\"\n    }\n    return \"{n} {word}s\"\n}\n\nprint(\"{require}\")\n\nThis program was rejected by the receiving gate of language L.\n\nThe gate reported:\nerror[L5002]: `require` is not bound\n --> seeded/cases/s4-plural--capability.l:8:9\n  |\n8 | print(\"{require}\")\n  |         ^^^^^^^\n\nseeded/cases/s4-plural--capability.l: 1 type diagnostic\n\nProduce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.\n",
+ "prompt_sha256": "e977b6ed16fc92a4c089d381f24ae9aa1a5375fda6574445aeff4087070e2e49",
+ "usage": {
+  "input_tokens": 26147,
+  "cached_input_tokens": 24064,
+  "output_tokens": 695
+ },
+ "model_duration_sec": 30.60899999999674,
+ "codex_returncode": 0,
+ "response": "function plural(word: string, n: int) -> string {\n    if n == 1 {\n        return \"1 {word}\"\n    }\n    return \"{n} {word}s\"\n}\n\nprint(\"{{require}}\")",
+ "gate_accept": false,
+ "excluded_removed": false,
+ "oracle_correct": false,
+ "wrong_substitute": true,
+ "wrong_substitute_names": [
+  "require"
+ ],
+ "original_registered_names": [],
+ "registered_lexical_hits": [],
+ "unresolved_registered_names": [
+  "require"
+ ],
+ "check_returncode": 1,
+ "diagnostic_codes": [
+  "L5205"
+ ],
+ "band": "L5205",
+ "label": 3,
+ "run_returncode": null,
+ "run_stdout": null,
+ "run_stderr": null,
+ "evaluation_duration_sec": 0.0470000000204891,
+ "duration_sec": 30.67200000002049
+}

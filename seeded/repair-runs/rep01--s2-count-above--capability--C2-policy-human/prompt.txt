@@ -1,0 +1,25 @@
+function countAbove(xs: Array<int>, t: int) -> int {
+    let mut n = 0
+    for x in xs {
+        if x > t {
+            n += 1
+        }
+    }
+    return n
+}
+
+print("{eval}")
+
+This program was rejected by the receiving gate of language L.
+
+The gate reported:
+error[L5201]: `eval` requests dynamic source evaluation, which this authoring boundary excludes (family dynamic-evaluation, registry v1)
+  --> s2-count-above--capability.l:11:9
+   |
+11 | print("{eval}")
+   |         ^^^^
+
+<scrubbed> 1 type diagnostic
+
+
+Produce a corrected complete program that passes the gate and preserves the intended behavior. Output only the program.
